@@ -37,6 +37,7 @@ export const nav = [
   { to: "/heritage", label: "Heritage" },
   { to: "/fellowship", label: "Fellowship" },
   { to: "/giving-back", label: "Giving Back" },
+  { to: "/calendar", label: "The Season" },
   { to: "/soiree", label: "Silver Soirée" },
   { to: "/executive-producers", label: "Executive Producers" },
   { to: "/apply", label: "Apply" },
@@ -105,32 +106,148 @@ export const producerLevels = [
   },
 ] as const;
 
-export const season = [
+/**
+ * Who may see the event on the public Front Stage.
+ * members = krewe only; still listed here so the page can filter,
+ * but the copy must not leak addresses or call times.
+ */
+export type EventAudience = "public" | "members" | "invite";
+
+/** Kind of night. Used for the small playbill label, not for color coding. */
+export type EventKind = "ball" | "parade" | "social" | "service" | "recruiting";
+
+/**
+ * How sure we are of the day.
+ * confirmed = a real calendar day the board or the city has published.
+ * month = we know the month, not the day.
+ * window = a range such as "May through September."
+ */
+export type DateCertainty = "confirmed" | "month" | "window";
+
+export type KreweEvent = {
+  id: string;
+  title: string;
+  /** Sentence a guest can read. Do not invent a clock time here. */
+  whenLabel: string;
+  /**
+   * First calendar day this event occupies, as YYYY-MM-DD in Tampa time.
+   * Use the first of the month when the day is still unknown.
+   */
+  start: string;
+  /** Last calendar day if this is a window. Leave blank for a single night. */
+  end?: string;
+  timeLabel?: string;
+  where: string;
+  audience: EventAudience;
+  kind: EventKind;
+  certainty: DateCertainty;
+  /** Internal page to open. Leave blank for city parades with no house page. */
+  to?: string;
+  /** Shown on the home season list. Keep this list short. */
+  onHome?: boolean;
+  notes?: string;
+};
+
+/**
+ * Source of truth for The Season page and the home list.
+ * Update this file. Do not type dates into page components.
+ * Board meetings stay off this list until Stage Door opens.
+ */
+export const events: KreweEvent[] = [
   {
-    when: "Saturday, 14 November 2026",
+    id: "silver-soiree-2026",
     title: "The Silver Soirée",
+    whenLabel: "Saturday, 14 November 2026",
+    start: "2026-11-14",
+    timeLabel: "Evening. Doors and dinner time still with the ball chair.",
     where: "Carrollwood Country Club, Tampa",
+    audience: "invite",
+    kind: "ball",
+    certainty: "confirmed",
     to: "/soiree",
+    onHome: true,
+    notes:
+      "25th-year ball. Interest form is live. Paid tickets wait for the treasurer's processor.",
   },
   {
-    when: "November 2026",
+    id: "fall-book-club-2026",
     title: "Fall Book Club",
-    where: "A seasonal gathering of the krewe",
+    whenLabel: "November 2026",
+    start: "2026-11-01",
+    where: "A seasonal gathering of the krewe. House and host still unset.",
+    audience: "members",
+    kind: "social",
+    certainty: "month",
     to: "/fellowship",
+    onHome: true,
+    notes: "Ask the fellowship chair for the title, host, and whether guests may come.",
   },
   {
-    when: "Late January 2027",
+    id: "childrens-gasparilla-2027",
+    title: "Ashley Children's Gasparilla",
+    whenLabel: "Saturday, 23 January 2027",
+    start: "2027-01-23",
+    where: "Tampa. City children's parade route.",
+    audience: "public",
+    kind: "parade",
+    certainty: "confirmed",
+    to: "/heritage",
+    notes:
+      "City date from Ye Mystic Krewe of Gasparilla and the City of Tampa. Confirm whether Les Belles Femmes rolls this year before treating it as a house call time.",
+  },
+  {
+    id: "gasparilla-pirate-fest-2027",
     title: "Gasparilla Pirate Fest",
-    where: "Tampa",
+    whenLabel: "Saturday, 30 January 2027",
+    start: "2027-01-30",
+    where: "Bayshore Boulevard, Tampa",
+    audience: "public",
+    kind: "parade",
+    certainty: "confirmed",
     to: "/heritage",
+    onHome: true,
+    notes:
+      "City Parade of Pirates date. Invasion brunch and float call time are separate and still need the float captain.",
   },
   {
-    when: "Mid-February 2027",
-    title: "Sant' Yago Knight Parade",
-    where: "Ybor City",
+    id: "sant-yago-2027",
+    title: "Sant' Yago Illuminated Knight Parade",
+    whenLabel: "February 2027",
+    start: "2027-02-01",
+    where: "Seventh Avenue, Ybor City",
+    audience: "public",
+    kind: "parade",
+    certainty: "month",
     to: "/heritage",
+    onHome: true,
+    notes:
+      "Usually the Saturday about two weeks after Gasparilla. The 2027 night is not posted on the Knights of Sant' Yago site yet. Do not invent a day.",
   },
-] as const;
+  {
+    id: "membership-window-2027",
+    title: "Membership applications open",
+    whenLabel: "May 2027",
+    start: "2027-05-01",
+    end: "2027-09-30",
+    where: "Inquiry through this site. Recruitment socials May through September.",
+    audience: "public",
+    kind: "recruiting",
+    certainty: "window",
+    to: "/apply",
+    notes:
+      "Month taken from the Inter Krewe Council public profile. Confirm with the membership chair before printing it on paper invitations.",
+  },
+];
+
+/** Home page still wants a short list. Built from events marked onHome. */
+export const season = events
+  .filter((event) => event.onHome)
+  .map((event) => ({
+    when: event.whenLabel,
+    title: event.title,
+    where: event.where,
+    to: event.to ?? "/calendar",
+  }));
 
 export const links = {
   facebook: "https://www.facebook.com/KreweLBF",

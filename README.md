@@ -16,6 +16,7 @@ Open the address Vite prints, usually `http://localhost:5173`.
 ## What ships in October
 
 - Home with motto, parade photograph, three acts, and the season list
+- The Season calendar. Dates live in `src/content.ts`. Do not type dates into page files.
 - Heritage, Fellowship, Giving Back
 - Silver Soirée interest form
 - Apply to Join

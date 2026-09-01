@@ -90,7 +90,13 @@ export default function Home() {
             <h2 className="section-title">The season, as it stands</h2>
             <p className="note" style={{ margin: "0.8rem 0 0", textAlign: "left" }}>
               Tickets and guest lists will run through this house so officers are not chasing a
-              headcount in a group text. The Stage Door stays locked until January 2027.
+              headcount in a group text. The full calendar, including what is still only a month,
+              lives on The Season. The Stage Door stays locked until January 2027.
+            </p>
+            <p style={{ margin: "0.9rem 0 0" }}>
+              <Link className="ticket" to="/calendar">
+                Open the calendar
+              </Link>
             </p>
             <img
               className="season-stub"
