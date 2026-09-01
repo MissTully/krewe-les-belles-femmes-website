@@ -35,10 +35,10 @@ export const art = {
 
 export const nav = [
   { to: "/heritage", label: "Overture" },
-  { to: "/fellowship", label: "Green Room" },
+  { to: "/fellowship", label: "Sisterhood" },
   { to: "/giving-back", label: "Benefit" },
   { to: "/calendar", label: "Playbill" },
-  { to: "/soiree", label: "Soirée" },
+  { to: "/soiree", label: "Soir\u00e9e" },
   { to: "/executive-producers", label: "Producers" },
   { to: "/apply", label: "Casting" },
 ] as const;
@@ -55,7 +55,7 @@ export const acts = [
   {
     to: "/fellowship",
     act: "Act II",
-    title: "The Green Room",
+    title: "Sisterhood",
     copy: "Belles and Les Beaux. Ages mixed. The room is a sisterhood, not a chorus line.",
     image: art.dressing,
     alt: "Top hat, crimson feathers, silver beads, and cream gloves on a dressing table.",
@@ -85,7 +85,7 @@ export const partners = [
   },
   {
     name: "Humane Society of Tampa Bay",
-    note: "Care for animals across the bay — a quiet partner in a loud season.",
+    note: "Care for animals across the bay. A quiet partner in a loud season.",
   },
   {
     name: "Koncert 4 Kids",
@@ -105,6 +105,145 @@ export const producerLevels = [
     note: "Named with a short line in the program. No homepage banner.",
   },
 ] as const;
+
+/**
+ * Rhythm of a public year. Months only. Do not invent parade call times here.
+ * Keep this short enough for the home page.
+ */
+export const yearRhythm = [
+  {
+    when: "May through September",
+    title: "Casting season",
+    note: "Recruitment socials. A guest who wants to join should be in the room at least three times.",
+  },
+  {
+    when: "November",
+    title: "Book club and the Silver Soir\u00e9e",
+    note: "A quiet member night, then opening night of the silver season. The ball is not the whole year.",
+  },
+  {
+    when: "Late January",
+    title: "Gasparilla",
+    note: "Children's route and the Parade of Pirates. City days are on the Playbill. House call time is not.",
+  },
+  {
+    when: "February",
+    title: "Sant' Yago in Ybor",
+    note: "Night parade on Seventh Avenue when the Knights post the date.",
+  },
+  {
+    when: "Holiday routes",
+    title: "Local holiday parades",
+    note: "Smaller crowds. Good first rides if the float captain has a spot.",
+  },
+] as const;
+
+/**
+ * First-year money. Only dues are a published number.
+ * Everything else is a category the treasurer or membership chair still prices.
+ */
+export const firstYearCosts = [
+  {
+    item: "Annual dues",
+    amount: "$450",
+    note: "Invited by an officer. Do not send dues through this site.",
+  },
+  {
+    item: "Costume and boots",
+    amount: "Plan for it",
+    note: "Corset, ruffles, boa, hat, feathers, boots. Borrow before you buy if a sister offers.",
+  },
+  {
+    item: "Ball ticket",
+    amount: "Separate from dues",
+    note: "Silver Soir\u00e9e is its own seat. A woman who skips the gala can still belong.",
+  },
+  {
+    item: "Parade weekend time",
+    amount: "Days, not dollars",
+    note: "Gasparilla weekend is a work problem for nurses and teachers. Ask before you promise the float.",
+  },
+] as const;
+
+/** Steps a guest follows before dues. */
+export const joiningSteps = [
+  {
+    step: "1",
+    title: "Be asked",
+    note: "Someone already in the krewe should know your name. Cold forms get a polite wait.",
+  },
+  {
+    step: "2",
+    title: "Come to three socials",
+    note: "May through September. Prior parade guesting or security work can stand in. Ask membership.",
+  },
+  {
+    step: "3",
+    title: "Leave your name here",
+    note: "Casting collects a reach-back. It does not admit you and it does not take money.",
+  },
+  {
+    step: "4",
+    title: "Wait for an officer",
+    note: "Dues and the roster come from membership, not from a button.",
+  },
+] as const;
+
+/** Les Beaux is the gentlemen's auxiliary. Keep this visible, not a footnote. */
+export const lesBeaux = {
+  name: "Les Beaux",
+  title: "How a man becomes a Beau",
+  copy: "Les Beaux is the gentlemen's auxiliary of a women's krewe. A husband, brother, or friend belongs in the room with the same dignity as a Belle. He does not become a Belle. Ask a member to walk him to membership the same way a woman is asked.",
+};
+
+/** Lines that already live on the dressing-room mirror. Do not invent new slogans. */
+export const houseLines = [
+  "Wear the outfit.",
+  "Add the sparkle.",
+  "Buy the boots.",
+  "Dream big.",
+  "Laugh loudly.",
+  "Never dull your sparkle.",
+  "Be generous.",
+  "Choose kindness.",
+  "Be unapologetically you.",
+] as const;
+
+/** Other Tampa krewes we already stand next to. Confirm each night before printing a flyer. */
+export const interKrewe = [
+  {
+    name: "Notorious Krewe of the Peg Leg Pirates",
+    note: "Bingo and other shared nights. Fellowship across the bay, not only inside this house.",
+  },
+] as const;
+
+/**
+ * What a first ride feels like when call time is still missing.
+ * Do not put a clock or a street corner staging lot here.
+ */
+export const paradeWeekend = [
+  {
+    title: "Costume",
+    note: "Parisian cabaret: corset, ruffles, boa, top hat, feathers, boots. The float carries the windmill and a small Eiffel Tower.",
+  },
+  {
+    title: "The day",
+    note: "Standing, weather, beads, and a long wait before the first turn. Ask who watches whose bag.",
+  },
+  {
+    title: "Call time",
+    note: "The float captain still holds invasion brunch and float call. This page will not guess a Saturday morning hour.",
+  },
+] as const;
+
+/** Placeholder until founders send approved memories. */
+export const memoryCall = {
+  title: "The house is collecting its own story",
+  copy: "Founders and longtime members are being asked for short memories, not a polished history. When a sister approves a paragraph and a photograph, it will live on The Overture. Until then this page will not invent a name.",
+};
+
+export const benefitStance =
+  "Partners below are the public list. A dollar figure or a named drive waits for the board. Guests should judge us by what reached those partners, not by a logo row.";
 
 /**
  * Who may see the event on the public Front Stage.
@@ -156,7 +295,7 @@ export type KreweEvent = {
 export const events: KreweEvent[] = [
   {
     id: "silver-soiree-2026",
-    title: "The Silver Soirée",
+    title: "The Silver Soir\u00e9e",
     whenLabel: "Saturday, 14 November 2026",
     start: "2026-11-14",
     timeLabel: "Evening. Doors and dinner time still with the ball chair.",
