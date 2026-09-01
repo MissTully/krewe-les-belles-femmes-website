@@ -43,7 +43,7 @@ export default function Calendar() {
       <div className="prose" style={{ marginTop: "1.25rem" }}>
         <p>
           The public program for the anniversary year. Confirmed city parade days sit next to
-          company nights that still need a chair to lock the clock. Company-only rooms do not list
+          krewe nights that still need a chair to lock the clock. Member-only rooms do not list
           a street address here.
         </p>
       </div>
@@ -59,7 +59,7 @@ export default function Calendar() {
           House seats
         </FilterButton>
         <FilterButton current={filter} value="members" onPick={setFilter}>
-          Company
+          Members
         </FilterButton>
       </div>
 
@@ -135,8 +135,8 @@ export default function Calendar() {
         <h2 className="section-title">Every listing we can stand behind</h2>
         <ol className="season-list cal-full">
           {visible.map((event) => (
-            <EventRow key={event.id} event={event} />
-          ))}
+            <EventRow key={event.id} event={event} />)
+          )}
         </ol>
       </section>
     </article>
