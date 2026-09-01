@@ -1,6 +1,6 @@
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
-import { partners } from "../content";
+import { art, partners } from "../content";
 
 export default function GivingBack() {
   return (
@@ -17,10 +17,10 @@ export default function GivingBack() {
           </p>
         </div>
         <PhotoPlate
-          src="/art/giving.jpg"
-          alt="Still life of books, a stuffed dog, a burgundy ribbon, and a basin of spring water."
+          src={art.gift}
+          alt="Gloved hands offering a wrapped gift and a bouquet of red flowers."
           caption="The year is measured by what reached the partners."
-          imgClassName="photo-landscape"
+          imgClassName="photo-square"
         />
       </div>
       <div className="charity-grid">
