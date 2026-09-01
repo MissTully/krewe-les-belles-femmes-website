@@ -6,7 +6,7 @@ import { art, producerLevels } from "../content";
 export default function ExecutiveProducers() {
   return (
     <article className="page wrap">
-      <p className="eyebrow">Playbill credits</p>
+      <p className="eyebrow">Program credits</p>
       <h1>Executive Producers</h1>
       <Ornament />
       <div className="split">
@@ -23,7 +23,7 @@ export default function ExecutiveProducers() {
             all.
           </p>
           <Link className="ticket" to="/apply">
-            Speak with membership
+            Speak with casting
           </Link>
         </div>
         <PhotoPlate
