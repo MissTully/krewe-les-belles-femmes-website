@@ -1,6 +1,6 @@
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
-import { art, partners } from "../content";
+import { art, benefitStance, partners } from "../content";
 
 export default function GivingBack() {
   return (
@@ -10,11 +10,8 @@ export default function GivingBack() {
       <Ornament />
       <div className="split">
         <div className="prose">
-          <p>
-            Beauty with purpose. The public photographs the float. The krewe measures the year by
-            what reached the partners below. Confirm names and gift language with the board before
-            treating this list as final.
-          </p>
+          <p>Beauty with purpose. The public photographs the float.</p>
+          <p>{benefitStance}</p>
         </div>
         <PhotoPlate
           src={art.gift}
