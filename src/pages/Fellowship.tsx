@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
-import { art } from "../content";
+import { art, houseLines, interKrewe, lesBeaux } from "../content";
 
 export default function Fellowship() {
   return (
     <article className="page wrap">
-      <p className="eyebrow">Act II · Sisterhood</p>
-      <h1>The Green Room</h1>
+      <p className="eyebrow">Act II · The room</p>
+      <h1>Sisterhood</h1>
       <Ornament />
       <div className="split reverse">
         <PhotoPlate
@@ -18,26 +18,15 @@ export default function Fellowship() {
         />
         <div className="prose">
           <p>
-            This is a sisterhood of Belles, with Les Beaux as the gentlemen's auxiliary.
-            The digital home treats both with the same dignity. No generated dancer stands in for a
-            real member on the roster. The playbill art on this page is costume, not a portrait of
-            anyone in the krewe.
+            About fifty to seventy-five of us. Ages mixed. Belles first. Les Beaux beside them.
+            No generated dancer stands in for a real member on the roster. The playbill art on this
+            page is costume, not a portrait of anyone in the krewe.
           </p>
           <p>
-            About fifty to seventy-five of us. Ages mixed. The featured line of the house is simple
-            enough to live on a dressing-room mirror: wear the outfit, add the sparkle, buy the
-            boots, dream big, laugh loudly, never dull your sparkle, be generous, choose kindness,
-            be unapologetically you.
+            The product is the room: book club, a shared Saturday with another Tampa krewe, and a
+            dressing-room rule that still fits on a mirror.
           </p>
           <p className="display italic cabaret">What would Dolly do?</p>
-          <p>
-            The member directory, dues status, and photo permissions live behind the Stage Door.
-            That door opens in January 2027, after the Front Stage anniversary pages are live.
-          </p>
-          <p>
-            If you have been asked to join, use Casting. If you already belong, wait for your officer
-            to send the Stage Door invitation. Do not expect a public roster here.
-          </p>
           <div className="hero-actions" style={{ justifyContent: "flex-start" }}>
             <Link className="ticket red" to="/apply">
               Casting Call
@@ -48,6 +37,34 @@ export default function Fellowship() {
           </div>
         </div>
       </div>
+
+      <section className="stack-gap">
+        <p className="eyebrow">The mirror</p>
+        <h2 className="section-title">Lines the house already keeps</h2>
+        <ul className="house-lines">
+          {houseLines.map((line) => (
+            <li key={line}>{line}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="stack-gap split">
+        <div className="panel">
+          <p className="eyebrow">Gentlemen</p>
+          <h2>{lesBeaux.title}</h2>
+          <p>{lesBeaux.copy}</p>
+        </div>
+        <div className="panel">
+          <p className="eyebrow">Across the bay</p>
+          <h2>Other houses</h2>
+          {interKrewe.map((night) => (
+            <p key={night.name}>
+              <strong>{night.name}.</strong> {night.note}
+            </p>
+          ))}
+        </div>
+      </section>
+
       <div className="stack-gap">
         <PhotoPlate
           src={art.dressing}
