@@ -35,7 +35,7 @@ export const art = {
 
 export const nav = [
   { to: "/heritage", label: "Overture" },
-  { to: "/fellowship", label: "Company" },
+  { to: "/fellowship", label: "Green Room" },
   { to: "/giving-back", label: "Benefit" },
   { to: "/calendar", label: "Playbill" },
   { to: "/soiree", label: "Soirée" },
@@ -55,7 +55,7 @@ export const acts = [
   {
     to: "/fellowship",
     act: "Act II",
-    title: "The Company",
+    title: "The Green Room",
     copy: "Belles and Les Beaux. Ages mixed. The room is a sisterhood, not a chorus line.",
     image: art.dressing,
     alt: "Top hat, crimson feathers, silver beads, and cream gloves on a dressing table.",
@@ -174,13 +174,13 @@ export const events: KreweEvent[] = [
     title: "Fall Book Club",
     whenLabel: "November 2026",
     start: "2026-11-01",
-    where: "A seasonal gathering of the company. House and host still unset.",
+    where: "A seasonal gathering of the krewe. House and host still unset.",
     audience: "members",
     kind: "social",
     certainty: "month",
     to: "/fellowship",
     onHome: true,
-    notes: "Ask the company chair for the title, host, and whether guests may come.",
+    notes: "Ask the fellowship chair for the title, host, and whether guests may come.",
   },
   {
     id: "childrens-gasparilla-2027",
