@@ -6,8 +6,8 @@ import { art } from "../content";
 export default function Heritage() {
   return (
     <article className="page wrap">
-      <p className="eyebrow">Act I</p>
-      <h1>Heritage</h1>
+      <p className="eyebrow">Act I · House history</p>
+      <h1>The Overture</h1>
       <Ornament />
       <div className="split">
         <div className="prose">
@@ -28,7 +28,7 @@ export default function Heritage() {
             Parade through Ybor in mid-February, and the holiday routes besides.
           </p>
           <Link className="ticket" to="/soiree">
-            The Silver Soirée
+            Opening night
           </Link>
         </div>
         <PhotoPlate
