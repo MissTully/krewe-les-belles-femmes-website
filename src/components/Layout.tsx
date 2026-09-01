@@ -40,7 +40,7 @@ export default function Layout({ children, backstage = false }: Props) {
             </small>
           </span>
         </NavLink>
-        <nav className="nav desktop-nav" aria-label="Primary">
+        <nav className="nav desktop-nav" aria-label="House program">
           {!backstage &&
             nav.map((link) => (
               <NavLink key={link.to} to={link.to}>
@@ -56,14 +56,14 @@ export default function Layout({ children, backstage = false }: Props) {
           className="menu-toggle"
           aria-expanded={open}
           aria-controls="mobile-nav"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? "Close program" : "Open program"}
           onClick={() => setOpen((value) => !value)}
         >
-          {open ? "Close" : "Menu"}
+          {open ? "Close" : "Program"}
         </button>
       </header>
       {open ? (
-        <nav id="mobile-nav" className="mobile-nav" aria-label="Mobile">
+        <nav id="mobile-nav" className="mobile-nav" aria-label="House program">
           {nav.map((link) => (
             <NavLink key={link.to} to={link.to}>
               {link.label}
@@ -88,8 +88,8 @@ export default function Layout({ children, backstage = false }: Props) {
               {krewe.motto.join(" · ")}. {krewe.tagline}
             </p>
             <p>
-              A private social organization. This site is the public Front Stage for the 25th year.
-              Member tools live behind the Stage Door and open in 2027.
+              A private social organization. This site is the public Front Stage for the silver
+              anniversary season. Company tools live behind the Stage Door and open in 2027.
             </p>
           </div>
           <div className="footer-links">
@@ -98,9 +98,9 @@ export default function Layout({ children, backstage = false }: Props) {
               Facebook
             </a>
             <a href={links.shop} target="_blank" rel="noreferrer">
-              Square shop
+              House shop
             </a>
-            <NavLink to="/apply">Membership inquiry</NavLink>
+            <NavLink to="/apply">Casting inquiry</NavLink>
           </div>
         </div>
       </footer>

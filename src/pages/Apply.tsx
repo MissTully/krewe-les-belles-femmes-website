@@ -25,15 +25,15 @@ export default function Apply() {
 
   return (
     <article className="page wrap">
-      <p className="eyebrow">Membership</p>
-      <h1>Apply to Join</h1>
+      <p className="eyebrow">Call board</p>
+      <h1>Casting Call</h1>
       <Ornament />
       <div className="split">
         <div>
           <PhotoPlate
             src={art.tickets}
             alt="A silver ticket and a cabaret-red ticket on cream paper."
-            caption="Applications are reviewed by membership, not by this form."
+            caption="Casting is reviewed by the company, not by this form."
             imgClassName="photo-wide"
           />
           <div className="prose" style={{ marginTop: "1.25rem" }}>
@@ -42,7 +42,7 @@ export default function Apply() {
               reach you. Do not send dues here.
             </p>
             <p>
-              The application season begins in May. New members are asked to attend at least three
+              The casting season begins in May. New members are asked to attend at least three
               recruitment socials in the application year. Prior parade guesting or security can
               stand in. Annual dues, when an officer invites them, are four hundred fifty dollars,
               and they do not travel through this page.
@@ -50,6 +50,7 @@ export default function Apply() {
           </div>
         </div>
         <section className="panel">
+          <h2>Leave your name</h2>
           {sent ? (
             <p className="banner-ok" role="status">
               Received on this device. An officer still has to read it. Do not send dues here.
@@ -65,14 +66,14 @@ export default function Apply() {
                 <input name="email" type="email" required autoComplete="email" />
               </label>
               <label>
-                Who asked you to apply?
+                Who asked you to audition?
                 <input name="sponsor" />
               </label>
               <label>
                 A sentence about why
                 <textarea name="why" rows={4} />
               </label>
-              <button type="submit">Send to membership</button>
+              <button type="submit">Send to casting</button>
             </form>
           )}
         </section>

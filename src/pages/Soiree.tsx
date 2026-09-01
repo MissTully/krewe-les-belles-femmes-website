@@ -24,7 +24,7 @@ export default function Soiree() {
 
   return (
     <article className="page wrap">
-      <p className="eyebrow">25th Year</p>
+      <p className="eyebrow">Opening night</p>
       <h1>The Silver Soirée</h1>
       <Ornament />
       <div className="split">
@@ -41,11 +41,11 @@ export default function Soiree() {
               anniversary year. Tickets and guest lists will run through this page so officers are
               not chasing a headcount in a group text.
             </p>
-            <p>Producer credits live on a separate program page. No banner ads on the home.</p>
+            <p>Producer credits live in the program. No banner ads on the Front Stage.</p>
           </div>
         </div>
         <section className="panel">
-          <h2>Request a ticket notice</h2>
+          <h2>Hold a house seat</h2>
           <p className="fine-copy">
             Phase one collects interest only. Paid ticketing comes after the board picks a
             processor.
@@ -74,7 +74,7 @@ export default function Soiree() {
                   <option>6</option>
                 </select>
               </label>
-              <button type="submit">Hold my place</button>
+              <button type="submit">Hold my seat</button>
             </form>
           )}
         </section>

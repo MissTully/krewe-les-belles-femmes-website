@@ -37,29 +37,29 @@ export default function Calendar() {
 
   return (
     <article className="page wrap">
-      <p className="eyebrow">25th year</p>
-      <h1>The Season</h1>
+      <p className="eyebrow">Silver season</p>
+      <h1>The Playbill</h1>
       <Ornament />
       <div className="prose" style={{ marginTop: "1.25rem" }}>
         <p>
           The public program for the anniversary year. Confirmed city parade days sit next to
-          krewe nights that still need a chair to lock the clock. Member-only rooms do not list
+          company nights that still need a chair to lock the clock. Company-only rooms do not list
           a street address here.
         </p>
       </div>
 
       <div className="cal-toolbar" role="group" aria-label="Who the listing is for">
         <FilterButton current={filter} value="all" onPick={setFilter}>
-          All listings
+          Full bill
         </FilterButton>
         <FilterButton current={filter} value="public" onPick={setFilter}>
-          Public
+          Front of house
         </FilterButton>
         <FilterButton current={filter} value="invite" onPick={setFilter}>
-          Invitation
+          House seats
         </FilterButton>
         <FilterButton current={filter} value="members" onPick={setFilter}>
-          Members
+          Company
         </FilterButton>
       </div>
 
@@ -113,8 +113,8 @@ export default function Calendar() {
             })}
           </div>
           <p className="fine-copy">
-            Only nights with a set calendar day mark a square. Month-only items stay on the
-            list to the side so we do not pretend we know the Saturday.
+            Only nights with a locked calendar day mark a square. Month-only items stay on the
+            bill to the side so we do not pretend we know the Saturday.
           </p>
         </section>
 
@@ -131,7 +131,7 @@ export default function Calendar() {
       </div>
 
       <section className="stack-gap">
-        <p className="eyebrow">Full program</p>
+        <p className="eyebrow">Complete bill</p>
         <h2 className="section-title">Every listing we can stand behind</h2>
         <ol className="season-list cal-full">
           {visible.map((event) => (

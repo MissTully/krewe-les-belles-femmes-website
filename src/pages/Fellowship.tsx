@@ -6,8 +6,8 @@ import { art } from "../content";
 export default function Fellowship() {
   return (
     <article className="page wrap">
-      <p className="eyebrow">Act II</p>
-      <h1>Fellowship</h1>
+      <p className="eyebrow">Act II · Ensemble</p>
+      <h1>The Company</h1>
       <Ornament />
       <div className="split reverse">
         <PhotoPlate
@@ -18,7 +18,7 @@ export default function Fellowship() {
         />
         <div className="prose">
           <p>
-            Membership is a sisterhood of Belles, with Les Beaux as the gentlemen's auxiliary.
+            The company is a sisterhood of Belles, with Les Beaux as the gentlemen's auxiliary.
             The digital home treats both with the same dignity. No generated dancer stands in for a
             real member on the roster. The playbill art on this page is costume, not a portrait of
             anyone in the krewe.
@@ -31,16 +31,16 @@ export default function Fellowship() {
           </p>
           <p className="display italic cabaret">What would Dolly do?</p>
           <p>
-            The member directory, dues status, and photo permissions live behind the Stage Door.
-            That door opens in January 2027, after the public anniversary pages are live.
+            The company directory, dues status, and photo permissions live behind the Stage Door.
+            That door opens in January 2027, after the Front Stage anniversary pages are live.
           </p>
           <p>
-            If you have been asked to join, use Apply. If you already belong, wait for your officer
+            If you have been asked to join, use Casting. If you already belong, wait for your officer
             to send the Stage Door invitation. Do not expect a public roster here.
           </p>
           <div className="hero-actions" style={{ justifyContent: "flex-start" }}>
             <Link className="ticket red" to="/apply">
-              Apply to Join
+              Casting Call
             </Link>
             <Link className="ticket" to="/stage-door">
               Stage Door

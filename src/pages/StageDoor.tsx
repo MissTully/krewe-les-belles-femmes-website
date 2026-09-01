@@ -21,7 +21,7 @@ export default function StageDoor() {
           alt="Stage Door playbill: three women at a brick stage entrance under a hanging lantern."
         />
         <WindmillMark size={36} />
-        <p className="eyebrow">Members only</p>
+        <p className="eyebrow">Backstage</p>
         <h1>Stage Door</h1>
         <p>
           Roster, dues, and photo permissions open here in January 2027. This form does not log
@@ -29,7 +29,7 @@ export default function StageDoor() {
         </p>
         {tried ? (
           <p className="banner-locked" role="status">
-            Not yet. Accounts will be created from the official krewe roster. Wait for your
+            Not yet. Accounts will be created from the official company roster. Wait for your
             officer.
           </p>
         ) : (
@@ -46,7 +46,7 @@ export default function StageDoor() {
           </form>
         )}
         <p className="fine-print">
-          Accounts will be created from the official krewe roster. Do not invent a password for a
+          Accounts will be created from the official company roster. Do not invent a password for a
           sister who has not been invited.
         </p>
       </div>
