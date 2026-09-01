@@ -11,7 +11,7 @@ export default function GivingBack() {
       <div className="split">
         <div className="prose">
           <p>
-            Beauty with purpose. The public photographs the float. The company measures the year by
+            Beauty with purpose. The public photographs the float. The krewe measures the year by
             what reached the partners below. Confirm names and gift language with the board before
             treating this list as final.
           </p>
