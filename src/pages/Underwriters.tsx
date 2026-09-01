@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
-import { underwriterLevels } from "../content";
+import { art, underwriterLevels } from "../content";
 
 export default function Underwriters() {
   return (
@@ -26,8 +26,8 @@ export default function Underwriters() {
           </Link>
         </div>
         <PhotoPlate
-          src="/art/playbill-still.jpg"
-          alt="Windmill house mark, crimson feathers, and silver beads on cream playbill paper."
+          src={art.ornaments}
+          alt="Playbill ornaments: frames, feathers, top hats, and filigree on cream paper."
           caption="A theater program, not a marketplace."
           imgClassName="photo-wide"
         />

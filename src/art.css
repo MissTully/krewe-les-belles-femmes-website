@@ -1,0 +1,39 @@
+/* Extra frames for the uploaded playbill set. */
+
+.poster-stage {
+  width: min(28rem, 100%);
+  margin: 0 auto 1rem;
+}
+
+.photo-poster {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.triptych { margin: 0 0 1.6rem; }
+
+.photo-triptych {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.season-stub {
+  width: min(18rem, 100%);
+  margin-top: 1.4rem;
+  box-shadow:
+    0 0 0 8px var(--paper),
+    0 0 0 9px color-mix(in srgb, var(--gaslight-gold) 55%, var(--cabaret-red));
+}
+
+.door-poster {
+  width: min(16rem, 100%);
+  margin: 0 auto 1rem;
+  outline: 1px solid color-mix(in srgb, var(--gaslight-gold) 50%, transparent);
+}
+
+.door-card { top: 2rem; padding-bottom: 1.6rem; }
+
+@media (max-width: 800px) {
+  .photo-triptych { aspect-ratio: 4 / 3; }
+}
