@@ -5,13 +5,13 @@ import { art, partners } from "../content";
 export default function GivingBack() {
   return (
     <article className="page wrap">
-      <p className="eyebrow">Act III</p>
-      <h1>Giving Back</h1>
+      <p className="eyebrow">Act III · Benefit night</p>
+      <h1>The Benefit</h1>
       <Ornament />
       <div className="split">
         <div className="prose">
           <p>
-            Beauty with purpose. The public photographs the float. The krewe measures the year by
+            Beauty with purpose. The public photographs the float. The company measures the year by
             what reached the partners below. Confirm names and gift language with the board before
             treating this list as final.
           </p>
