@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
+import SampleStory from "../components/SampleStory";
 import { art, houseLines, interKrewe, lesBeaux } from "../content";
+import { sampleStories } from "../sampleCopy";
 
 export default function Fellowship() {
+  const roomStories = sampleStories.filter((story) => story.page === "sisterhood");
+
   return (
     <article className="page wrap">
       <p className="eyebrow">Act II · The room</p>
@@ -37,6 +41,16 @@ export default function Fellowship() {
           </div>
         </div>
       </div>
+
+      <section className="stack-gap">
+        <p className="eyebrow">Voice sample</p>
+        <h2 className="section-title">How the room should sound</h2>
+        <div className="story-stack">
+          {roomStories.map((story) => (
+            <SampleStory key={story.id} story={story} />
+          ))}
+        </div>
+      </section>
 
       <section className="stack-gap">
         <p className="eyebrow">The mirror</p>
