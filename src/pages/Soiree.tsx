@@ -1,6 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
+import { art } from "../content";
 import { getSoireeInterest, saveSoireeInterest } from "../forms";
 
 export default function Soiree() {
@@ -29,8 +30,8 @@ export default function Soiree() {
       <div className="split">
         <div>
           <PhotoPlate
-            src="/art/soiree.jpg"
-            alt="Silver anniversary table with cream roses, champagne coupes, and candlelight."
+            src={art.soireeInvite}
+            alt="Join the Soirée playbill: three women in evening dress, champagne, and the krewe motto."
             caption="Saturday, 14 November 2026 · Carrollwood Country Club."
             imgClassName="photo-wide"
           />

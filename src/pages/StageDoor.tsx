@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import WindmillMark from "../components/WindmillMark";
+import { art } from "../content";
 
 export default function StageDoor() {
   const [tried, setTried] = useState(false);
@@ -11,10 +12,15 @@ export default function StageDoor() {
 
   return (
     <div className="stage-scene">
-      <img src="/art/velvet.jpg" alt="" className="stage-scene-photo" />
+      <img src={art.curtain} alt="" className="stage-scene-photo" />
       <div className="stage-scene-veil" />
       <div className="door-card">
-        <WindmillMark size={40} />
+        <img
+          className="door-poster"
+          src={art.stageDoorPoster}
+          alt="Stage Door playbill: three women at a brick stage entrance under a hanging lantern."
+        />
+        <WindmillMark size={36} />
         <p className="eyebrow">Members only</p>
         <h1>Stage Door</h1>
         <p>

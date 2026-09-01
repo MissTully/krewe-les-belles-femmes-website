@@ -30,7 +30,9 @@ export default function Layout({ children, backstage = false }: Props) {
       </a>
       <header className="site-header">
         <NavLink to="/" className="brand">
-          <WindmillMark size={34} />
+          <span className="brand-crest">
+            <WindmillMark size={28} decorative />
+          </span>
           <span className="brand-name">
             {krewe.name}
             <small>

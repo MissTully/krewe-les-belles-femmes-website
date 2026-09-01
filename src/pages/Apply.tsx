@@ -1,6 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
+import { art } from "../content";
 import { getApplyInquiry, saveApplyInquiry } from "../forms";
 
 export default function Apply() {
@@ -30,8 +31,8 @@ export default function Apply() {
       <div className="split">
         <div>
           <PhotoPlate
-            src="/art/beads.jpg"
-            alt="Silver carnival beads and a crimson ostrich feather on cream playbill paper."
+            src={art.tickets}
+            alt="A silver ticket and a cabaret-red ticket on cream paper."
             caption="Applications are reviewed by membership, not by this form."
             imgClassName="photo-wide"
           />
@@ -42,7 +43,7 @@ export default function Apply() {
             </p>
             <p>
               The application season begins in May. New members are asked to attend at least three
-              recruitment socials in the application year — prior parade guesting or security can
+              recruitment socials in the application year. Prior parade guesting or security can
               stand in. Annual dues, when an officer invites them, are four hundred fifty dollars,
               and they do not travel through this page.
             </p>

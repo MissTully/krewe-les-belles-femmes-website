@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
+import { art } from "../content";
 
 export default function Heritage() {
   return (
@@ -31,18 +32,26 @@ export default function Heritage() {
           </Link>
         </div>
         <PhotoPlate
-          src="/art/windmill.jpg"
-          alt="Original house mark painting of a wooden windmill with a cabaret-red door."
-          caption="The house mark. Ours, not a Paris franchise."
+          src={art.pinwheel}
+          alt="A silver paper windmill with a red ribbon, held in a hand."
+          caption="The house mark, small enough to hold."
           imgClassName="photo-square"
         />
       </div>
       <div className="stack-gap">
         <PhotoPlate
-          src="/art/parade.jpg"
-          alt="Nighttime parade float with a wooden windmill, tower lights, and beads in the air."
-          caption="The beads get photographed. The sisterhood is the point."
+          src={art.dusk}
+          alt="A Tampa parade street at dusk, drawn as a lithograph."
+          caption="Tampa at dusk. The route is older than the krewe."
           imgClassName="photo-wide"
+        />
+      </div>
+      <div className="stack-gap">
+        <PhotoPlate
+          src={art.windmill}
+          alt="Original house mark painting of a wooden windmill with a cabaret-red door."
+          caption="The house mark. Ours, not a Paris franchise."
+          imgClassName="photo-square"
         />
       </div>
     </article>
