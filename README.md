@@ -15,14 +15,14 @@ Open the address Vite prints, usually `http://localhost:5173`.
 
 ## What ships in October
 
-- Home with motto and two ticket buttons
+- Home with motto, parade photograph, three acts, and the season list
 - Heritage, Fellowship, Giving Back
 - Silver Soirée interest form
 - Apply to Join
 - Underwriters program
 - Stage Door placeholder
 
-Forms save nothing to a server yet. That is on purpose. Paid tickets and member login wait for official email, roster, and a processor the treasurer accepts.
+Forms save on the visitor’s device only. Paid tickets and member login wait for official email, roster, and a processor the treasurer accepts.
 
 ## What must not land on the home
 

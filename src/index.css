@@ -14,35 +14,72 @@
   --muted: #5c5348;
   --font-display: "Cormorant Garamond", "Times New Roman", serif;
   --font-body: "Source Sans 3", "Segoe UI", sans-serif;
-  --max: 1120px;
+  --max: 70rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 *,
 *::before,
 *::after { box-sizing: border-box; }
 
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; min-height: 100%; }
 
 body {
   font-family: var(--font-body);
   color: var(--ink);
   background: var(--footlights-cream);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
+img { max-width: 100%; height: auto; display: block; }
+
 a { color: inherit; }
+
+button:not(:disabled),
+[role="button"]:not(:disabled) { cursor: pointer; }
 
 h1, h2, h3, .display {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0.01em;
   line-height: 1.15;
+  text-wrap: balance;
+}
+
+.italic { font-style: italic; }
+.cabaret { color: var(--cabaret-red); }
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0.75rem;
+  z-index: 50;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0.5rem 0.75rem;
+}
+
+.skip:focus { left: 1rem; }
+
+.front-stage {
+  min-height: 100vh;
+  background-color: var(--footlights-cream);
+  background-image:
+    radial-gradient(ellipse at top, color-mix(in srgb, var(--paper) 80%, white), transparent 58%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      color-mix(in srgb, var(--ink) 2.4%, transparent) 3px,
+      color-mix(in srgb, var(--ink) 2.4%, transparent) 4px
+    );
 }
 
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 30;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,6 +95,7 @@ h1, h2, h3, .display {
   align-items: center;
   gap: 0.7rem;
   text-decoration: none;
+  min-height: 2.75rem;
 }
 
 .brand-name {
@@ -70,7 +108,7 @@ h1, h2, h3, .display {
   display: block;
   font-family: var(--font-body);
   font-size: 0.68rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -78,24 +116,44 @@ h1, h2, h3, .display {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 1rem;
+  gap: 0.35rem 1.2rem;
   align-items: center;
 }
 
 .nav a {
   text-decoration: none;
   font-size: 0.92rem;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav a:hover,
 .nav a.active { color: var(--cabaret-red); }
 
-.nav .stage-door {
+.nav .stage-door,
+.mobile-nav .stage-door {
   border: 1px solid var(--velvet-black);
   padding: 0.25rem 0.65rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.menu-toggle {
+  display: none;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  border: 1px solid var(--ink);
+  background: transparent;
+  font: inherit;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 .wrap {
@@ -105,7 +163,7 @@ h1, h2, h3, .display {
 
 .site-footer {
   margin-top: 4rem;
-  padding: 2rem 1.25rem 2.5rem;
+  padding: 2.5rem 1.25rem;
   border-top: 1px solid var(--stark-silver);
   color: var(--muted);
   font-size: 0.9rem;
@@ -113,16 +171,41 @@ h1, h2, h3, .display {
 
 .site-footer strong { color: var(--ink); }
 
-.hero { padding: 2.5rem 1rem 3rem; }
+.footer-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.footer-motto {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.footer-links {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+}
+
+.footer-links a:hover { color: var(--cabaret-red); }
+
+.hero { padding: 2.5rem 1rem 2rem; }
 
 .playbill {
-  width: min(960px, 100%);
+  width: min(52rem, 100%);
   margin: 0 auto;
   background: var(--paper);
-  border: 1px solid var(--stark-silver);
-  box-shadow: 0 0 0 10px var(--cabaret-red), 0 18px 40px rgba(13, 11, 12, 0.18);
-  padding: 2.4rem 1.6rem 2rem;
   text-align: center;
+  padding: clamp(1.6rem, 4vw, 2.8rem) clamp(1.1rem, 4vw, 2.4rem) 2rem;
+  box-shadow:
+    0 0 0 10px var(--footlights-cream),
+    0 0 0 22px var(--cabaret-red),
+    0 22px 48px color-mix(in srgb, var(--velvet-black) 20%, transparent);
 }
 
 .kicker {
@@ -133,8 +216,8 @@ h1, h2, h3, .display {
 }
 
 .hero h1 {
-  margin: 0.4rem 0 0.6rem;
-  font-size: clamp(2.4rem, 7vw, 4.4rem);
+  margin: 0.4rem 0 0.2rem;
+  font-size: clamp(2.6rem, 8vw, 4.6rem);
 }
 
 .motto {
@@ -142,10 +225,10 @@ h1, h2, h3, .display {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.35rem 0.9rem;
-  margin: 0.8rem 0 1.4rem;
+  margin: 0.85rem 0 0;
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
 }
 
 .motto span + span::before {
@@ -154,11 +237,27 @@ h1, h2, h3, .display {
   color: var(--cabaret-red);
 }
 
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--cabaret-red);
+  max-width: 20rem;
+  margin: 1.15rem auto 0;
+}
+
+.ornament span {
+  height: 1px;
+  flex: 1;
+  background: var(--stark-silver);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.8rem;
+  margin-top: 1.5rem;
 }
 
 .note {
@@ -173,6 +272,7 @@ h1, h2, h3, .display {
   align-items: center;
   justify-content: center;
   min-width: 11.5rem;
+  min-height: 2.75rem;
   padding: 0.7rem 1.2rem;
   text-decoration: none;
   border: 2px dashed var(--velvet-black);
@@ -195,20 +295,41 @@ h1, h2, h3, .display {
 
 .ticket:hover { transform: translateY(-1px); }
 
+.section-title {
+  margin: 0.35rem 0 1.25rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
 .acts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin: 2.5rem 0;
+  gap: 1.15rem;
+  margin: 0.5rem 0 2.5rem;
 }
 
 .act-card {
   background: var(--paper);
   border: 1px solid color-mix(in srgb, var(--stark-silver) 80%, var(--ink));
-  padding: 1.25rem 1.15rem 1.4rem;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
   min-height: 13rem;
+  overflow: hidden;
+  transition: transform 150ms var(--ease), box-shadow 150ms var(--ease);
 }
+
+.act-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px var(--cabaret-red);
+}
+
+.act-card img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+}
+
+.act-copy { padding: 1.15rem 1.15rem 1.4rem; }
 
 .act-card h2 {
   margin: 0.2rem 0 0.5rem;
@@ -231,28 +352,104 @@ h1, h2, h3, .display {
 
 .page h1 {
   font-size: clamp(2rem, 5vw, 3.2rem);
-  margin: 0.2rem 0 0.8rem;
+  margin: 0.2rem 0 0;
+}
+
+.page .ornament {
+  margin: 1.15rem 0 0;
 }
 
 .prose { max-width: 42rem; }
 .prose p { margin: 0 0 1rem; }
+
+.split {
+  display: grid;
+  gap: 2.2rem;
+  align-items: start;
+  margin-top: 2.2rem;
+}
+
+.stack-gap { margin-top: 2.5rem; }
+
+.photo-plate figcaption {
+  margin-top: 0.7rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.photo-plate img {
+  outline: 1px solid color-mix(in srgb, var(--ink) 15%, transparent);
+  outline-offset: -1px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.photo-wide { aspect-ratio: 16 / 9; }
+.photo-square { aspect-ratio: 1; }
+.photo-portrait { aspect-ratio: 3 / 4; }
+.photo-landscape { aspect-ratio: 4 / 3; }
+
+.season-panel {
+  display: grid;
+  gap: 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--stark-silver);
+  padding: 1.5rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.season-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.season-list li {
+  border-top: 1px solid var(--stark-silver);
+  padding-top: 0.75rem;
+}
+
+.season-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.season-list a {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.season-list a:hover { color: var(--cabaret-red); }
+
+.season-list p { margin: 0.15rem 0 0; color: var(--muted); font-size: 0.9rem; }
 
 .charity-grid,
 .underwriter-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 2.2rem;
 }
 
 .panel {
   background: var(--paper);
   border: 1px solid var(--stark-silver);
-  padding: 1.2rem;
+  padding: 1.4rem;
 }
 
 .panel h2,
 .panel h3 { margin-top: 0; }
+
+.fine-copy {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0;
+}
 
 .backstage {
   min-height: 100vh;
@@ -267,14 +464,42 @@ h1, h2, h3, .display {
 }
 
 .backstage .brand-name small,
-.backstage .nav a { color: var(--stark-silver); }
+.backstage .nav a,
+.backstage .menu-toggle,
+.backstage .site-footer,
+.backstage .site-footer strong { color: var(--stark-silver); }
+
+.backstage .menu-toggle { border-color: var(--stark-silver); }
+
+.backstage .site-footer { border-top-color: #2a2624; }
+
+.stage-scene {
+  position: relative;
+  min-height: calc(100vh - 12rem);
+}
+
+.stage-scene-photo,
+.stage-scene-veil {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stage-scene-photo { object-fit: cover; }
+
+.stage-scene-veil { background: color-mix(in srgb, var(--velvet-black) 55%, transparent); }
 
 .door-card {
+  position: relative;
   width: min(420px, calc(100% - 2rem));
-  margin: 3rem auto;
+  margin: 0 auto;
   padding: 2rem 1.5rem;
-  border: 1px solid var(--stark-silver);
+  border: 1px solid color-mix(in srgb, var(--stark-silver) 50%, transparent);
+  background: color-mix(in srgb, var(--velvet-black) 80%, transparent);
+  backdrop-filter: blur(6px);
   text-align: center;
+  top: 4rem;
 }
 
 .door-card input {
@@ -284,6 +509,7 @@ h1, h2, h3, .display {
   background: #161314;
   color: var(--footlights-cream);
   border: 1px solid #3a3532;
+  font: inherit;
 }
 
 .door-card button {
@@ -295,6 +521,12 @@ h1, h2, h3, .display {
   font-weight: 600;
 }
 
+.banner-locked {
+  border: 1px solid color-mix(in srgb, var(--stark-silver) 40%, transparent);
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+}
+
 .fine-print {
   font-size: 0.85rem;
   color: var(--stark-silver);
@@ -303,21 +535,24 @@ h1, h2, h3, .display {
 .form-row {
   display: grid;
   gap: 0.75rem;
-  max-width: 28rem;
 }
 
 .form-row input,
 .form-row select,
 .form-row textarea {
   width: 100%;
+  min-height: 2.75rem;
   padding: 0.65rem 0.7rem;
   border: 1px solid var(--stark-silver);
   background: #fffdf8;
   font: inherit;
 }
 
+.form-row textarea { min-height: 7rem; }
+
 .form-row button {
   justify-self: start;
+  min-height: 2.75rem;
   padding: 0.7rem 1.1rem;
   background: var(--cabaret-red);
   color: var(--footlights-cream);
@@ -329,12 +564,65 @@ h1, h2, h3, .display {
   background: #e8f0e4;
   border: 1px solid #9bb392;
   padding: 0.7rem 0.9rem;
-  margin-bottom: 1rem;
+  margin: 0.8rem 0 0;
+}
+
+.rise { animation: rise 520ms var(--ease) both; }
+.rise-2 { animation-delay: 80ms; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise, .rise-2 { animation: none; }
+}
+
+@media (min-width: 640px) {
+  .footer-grid { grid-template-columns: 1.4fr 1fr; }
+  .season-panel { grid-template-columns: 1.1fr 0.9fr; padding: 2rem; }
+}
+
+@media (min-width: 900px) {
+  .split { grid-template-columns: 1.1fr 0.9fr; }
+}
+
+@media (max-width: 900px) {
+  .desktop-nav { display: none; }
+  .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .mobile-nav {
+    display: grid;
+    gap: 0.2rem;
+    position: absolute;
+    inset: 4.1rem 0 auto;
+    z-index: 40;
+    padding: 1rem 1.25rem 1.4rem;
+    background: var(--footlights-cream);
+    border-bottom: 1px solid var(--stark-silver);
+  }
+  .backstage .mobile-nav {
+    background: var(--velvet-black);
+    border-bottom-color: #2a2624;
+  }
+  .mobile-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 3rem;
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 800px) {
   .acts,
   .charity-grid,
   .underwriter-grid { grid-template-columns: 1fr; }
-  .nav { justify-content: flex-end; }
+  .playbill {
+    box-shadow:
+      0 0 0 6px var(--footlights-cream),
+      0 0 0 13px var(--cabaret-red),
+      0 16px 32px color-mix(in srgb, var(--velvet-black) 18%, transparent);
+  }
 }
