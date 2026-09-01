@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
-import { art } from "../content";
+import { art, memoryCall, paradeWeekend } from "../content";
 
 export default function Heritage() {
   return (
@@ -17,15 +17,12 @@ export default function Heritage() {
             nightclub franchise.
           </p>
           <p>
-            This page will hold the official written history once the board delivers it. Until then,
-            the record is simple: twenty-five years of women leading a krewe, raising money for
-            partners who need it, and teaching the next class what the motto means.
+            Twenty-five years of women leading a krewe, raising money for partners who need it, and
+            teaching the next class what the motto means.
           </p>
           <p className="display italic">Motto: Truth, Beauty, Freedom, Love.</p>
           <p>
-            Year-round there are socials, a book club, galas, the Silver Soirée, and themed balls.
-            The parades Tampa already knows: Gasparilla in late January, the Sant' Yago Knight
-            Parade through Ybor in mid-February, and the holiday routes besides.
+            {memoryCall.copy}
           </p>
           <Link className="ticket" to="/soiree">
             Opening night
@@ -38,6 +35,20 @@ export default function Heritage() {
           imgClassName="photo-square"
         />
       </div>
+
+      <section className="stack-gap">
+        <p className="eyebrow">Parade weekend</p>
+        <h2 className="section-title">What a first ride is, without a fake clock</h2>
+        <div className="topic-grid">
+          {paradeWeekend.map((item) => (
+            <section className="panel" key={item.title}>
+              <h2>{item.title}</h2>
+              <p>{item.note}</p>
+            </section>
+          ))}
+        </div>
+      </section>
+
       <div className="stack-gap">
         <PhotoPlate
           src={art.dusk}

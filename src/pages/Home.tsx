@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Crest from "../components/Crest";
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
-import { acts, art, krewe, season } from "../content";
+import { acts, art, krewe, season, yearRhythm } from "../content";
 
 export default function Home() {
   return (
@@ -84,14 +84,36 @@ export default function Home() {
       </section>
 
       <section className="wrap">
+        <p className="eyebrow">A year in the house</p>
+        <h2 className="section-title">Sparkle has a calendar</h2>
+        <p className="note" style={{ margin: "0 0 1.2rem", textAlign: "left" }}>
+          Dues are four hundred fifty dollars when an officer invites them. Costume, ball ticket,
+          and parade days off work sit on Casting so a guest can count before she promises.
+        </p>
+        <ol className="season-list">
+          {yearRhythm.map((beat) => (
+            <li key={beat.title}>
+              <p className="eyebrow">{beat.when}</p>
+              <span>{beat.title}</span>
+              <p>{beat.note}</p>
+            </li>
+          ))}
+        </ol>
+        <p style={{ margin: "1.1rem 0 2.5rem" }}>
+          <Link className="ticket" to="/apply">
+            How a guest becomes a Belle
+          </Link>
+        </p>
+      </section>
+
+      <section className="wrap">
         <div className="season-panel">
           <div>
             <p className="eyebrow">Silver season</p>
             <h2 className="section-title">Dates on the bill</h2>
             <p className="note" style={{ margin: "0.8rem 0 0", textAlign: "left" }}>
-              Tickets and guest lists will run through this house so officers are not chasing a
-              headcount in a group text. The full playbill, including what is still only a month,
-              lives on Playbill. The Stage Door stays locked until January 2027.
+              The ball is opening night, not the whole pitch. The full playbill lives on Playbill.
+              The Stage Door stays locked until January 2027.
             </p>
             <p style={{ margin: "0.9rem 0 0" }}>
               <Link className="ticket" to="/calendar">
