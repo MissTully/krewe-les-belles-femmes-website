@@ -25,7 +25,7 @@ export default function Home() {
         <div className="hero-stage-copy rise">
           <Crest size={108} decorative />
           <p className="welcome">Twenty-five seasons on Bayshore</p>
-          <p className="kicker kicker-light">The company of</p>
+          <p className="kicker kicker-light">Krewe of</p>
           <h1>{krewe.name}</h1>
           <p className="motto motto-light">
             {krewe.motto.map((word) => (
@@ -61,7 +61,7 @@ export default function Home() {
 
       <section className="wrap">
         <p className="eyebrow">Front of house</p>
-        <h2 className="section-title">Three acts. One company.</h2>
+        <h2 className="section-title">Three acts. One house.</h2>
         <PhotoPlate
           src={art.threeActs}
           alt="A three-panel playbill: dressing for the soirée, a stage performance, and a philanthropic toast."
