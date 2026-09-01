@@ -15,6 +15,7 @@ import {
   uniqueMonths,
 } from "../calendar";
 import { events, type EventAudience, type KreweEvent } from "../content";
+import "../calendar.css";
 
 type Filter = "all" | EventAudience;
 

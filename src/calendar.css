@@ -1,0 +1,112 @@
+/* Calendar chrome for The Season. Tokens come from index.css. */
+
+.cal-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.4rem 0 1.2rem;
+}
+
+.cal-filter,
+.cal-nav-btn {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid color-mix(in srgb, var(--gaslight-gold) 40%, var(--stark-silver));
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+}
+
+.cal-filter.is-on {
+  background: var(--wine);
+  color: var(--footlights-cream);
+  border-color: var(--gaslight-gold);
+}
+
+.cal-layout {
+  display: grid;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.cal-month-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.cal-month-head h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.45rem;
+}
+
+.cal-weekdays,
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.25rem;
+}
+
+.cal-weekdays span {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
+.cal-cell {
+  min-height: 4.4rem;
+  background: color-mix(in srgb, var(--paper) 70%, white);
+  border: 1px solid color-mix(in srgb, var(--stark-silver) 70%, transparent);
+  padding: 0.3rem;
+}
+
+.cal-cell.empty {
+  background: transparent;
+  border-color: transparent;
+}
+
+.cal-cell.has-event {
+  background: color-mix(in srgb, var(--gaslight-gold) 16%, var(--paper));
+  border-color: color-mix(in srgb, var(--gaslight-gold) 55%, var(--cabaret-red));
+}
+
+.cal-day {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.cal-pip {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  color: var(--wine);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cal-meta {
+  font-size: 0.8rem !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cal-full {
+  margin-top: 1rem;
+}
+
+@media (min-width: 900px) {
+  .cal-layout {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
