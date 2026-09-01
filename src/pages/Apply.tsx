@@ -33,7 +33,7 @@ export default function Apply() {
           <PhotoPlate
             src={art.tickets}
             alt="A silver ticket and a cabaret-red ticket on cream paper."
-            caption="Casting is reviewed by the company, not by this form."
+            caption="Casting is reviewed by membership, not by this form."
             imgClassName="photo-wide"
           />
           <div className="prose" style={{ marginTop: "1.25rem" }}>
