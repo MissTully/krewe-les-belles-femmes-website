@@ -41,6 +41,38 @@
   font-size: 1.25rem;
 }
 
+.story-stack {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.sample-story {
+  background: var(--paper);
+  border: 1px solid color-mix(in srgb, var(--gaslight-gold) 40%, var(--stark-silver));
+  padding: 1.35rem 1.4rem 1.5rem;
+}
+
+.sample-story h2 {
+  margin: 0.15rem 0 0.7rem;
+  font-size: 1.7rem;
+}
+
+.sample-story p {
+  margin: 0 0 0.75rem;
+  max-width: 40rem;
+}
+
+.sample-flag {
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.2rem 0.45rem;
+  background: color-mix(in srgb, var(--gaslight-gold) 28%, var(--paper));
+  color: var(--wine);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 800px) {
   .topic-grid,
   .house-lines {
