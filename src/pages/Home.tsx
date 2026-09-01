@@ -7,14 +7,21 @@ import { acts, art, krewe, season } from "../content";
 export default function Home() {
   return (
     <>
-      {/* Cinematic hero. Shamrock puts a photograph under the name. We use the dusk lithograph. */}
       <section className="hero-stage">
         <img
           className="hero-stage-photo"
-          src={art.dusk}
-          alt="A Tampa parade street at dusk, drawn as a lithograph, with lantern light and a tower in the mist."
+          src={art.ladies}
+          alt="Three women in Belle Époque cabaret dress, the house painting of Les Belles Femmes."
+          style={{ objectPosition: "center 18%" }}
         />
-        <div className="hero-stage-veil" aria-hidden="true" />
+        <div
+          className="hero-stage-veil"
+          aria-hidden="true"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(58,18,24,0.18) 0%, rgba(13,11,12,0.28) 40%, rgba(36,16,20,0.84) 100%)",
+          }}
+        />
         <div className="hero-stage-copy rise">
           <Crest size={108} decorative />
           <p className="welcome">A quarter century on Bayshore</p>

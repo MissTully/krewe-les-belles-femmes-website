@@ -9,6 +9,7 @@ export const krewe = {
 
 /** Paths under public/art/. Long generated filenames stay as uploaded. */
 export const art = {
+  ladies: "/art/Ladies.png",
   poster: "/art/Krewe of Les Belles Femmes.jpg",
   banner: "/art/grok-f219f352-e5c8-47dc-a0a7-6fe8d299c230.jpg",
   stageDoorPoster: "/art/grok-212a8b39-9dad-4e2b-85de-2eabefac73b1.jpg",
