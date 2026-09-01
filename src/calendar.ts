@@ -90,14 +90,14 @@ export function uniqueMonths(list: KreweEvent[]): string[] {
 export function kindLabel(kind: KreweEvent["kind"]): string {
   if (kind === "ball") return "Gala";
   if (kind === "parade") return "Street show";
-  if (kind === "social") return "Company night";
+  if (kind === "social") return "House night";
   if (kind === "service") return "Benefit";
   return "Casting";
 }
 
 export function audienceLabel(audience: KreweEvent["audience"]): string {
   if (audience === "public") return "Front of house";
-  if (audience === "members") return "Company";
+  if (audience === "members") return "Members";
   return "House seats";
 }
 
