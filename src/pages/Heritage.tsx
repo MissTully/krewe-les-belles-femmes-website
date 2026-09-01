@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
+import SampleStory from "../components/SampleStory";
 import { art, memoryCall, paradeWeekend } from "../content";
+import { sampleStories } from "../sampleCopy";
 
 export default function Heritage() {
+  const memories = sampleStories.filter((story) => story.page === "overture");
+
   return (
     <article className="page wrap">
       <p className="eyebrow">Act I · House history</p>
@@ -21,9 +25,7 @@ export default function Heritage() {
             teaching the next class what the motto means.
           </p>
           <p className="display italic">Motto: Truth, Beauty, Freedom, Love.</p>
-          <p>
-            {memoryCall.copy}
-          </p>
+          <p>{memoryCall.copy}</p>
           <Link className="ticket" to="/soiree">
             Opening night
           </Link>
@@ -35,6 +37,16 @@ export default function Heritage() {
           imgClassName="photo-square"
         />
       </div>
+
+      <section className="stack-gap">
+        <p className="eyebrow">Voice sample</p>
+        <h2 className="section-title">How a memory should read</h2>
+        <div className="story-stack">
+          {memories.map((story) => (
+            <SampleStory key={story.id} story={story} />
+          ))}
+        </div>
+      </section>
 
       <section className="stack-gap">
         <p className="eyebrow">Parade weekend</p>
