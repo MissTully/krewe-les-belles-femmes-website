@@ -88,21 +88,21 @@ export function uniqueMonths(list: KreweEvent[]): string[] {
 }
 
 export function kindLabel(kind: KreweEvent["kind"]): string {
-  if (kind === "ball") return "Ball";
-  if (kind === "parade") return "Parade";
-  if (kind === "social") return "Social";
-  if (kind === "service") return "Giving";
-  return "Membership";
+  if (kind === "ball") return "Gala";
+  if (kind === "parade") return "Street show";
+  if (kind === "social") return "Company night";
+  if (kind === "service") return "Benefit";
+  return "Casting";
 }
 
 export function audienceLabel(audience: KreweEvent["audience"]): string {
-  if (audience === "public") return "Public";
-  if (audience === "members") return "Members";
-  return "Invitation";
+  if (audience === "public") return "Front of house";
+  if (audience === "members") return "Company";
+  return "House seats";
 }
 
 export function certaintyLabel(certainty: KreweEvent["certainty"]): string {
-  if (certainty === "confirmed") return "Date set";
+  if (certainty === "confirmed") return "Date locked";
   if (certainty === "month") return "Month only";
-  return "Window";
+  return "Run of show";
 }
