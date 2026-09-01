@@ -34,20 +34,20 @@ export const art = {
 } as const;
 
 export const nav = [
-  { to: "/heritage", label: "Heritage" },
-  { to: "/fellowship", label: "Fellowship" },
-  { to: "/giving-back", label: "Giving Back" },
-  { to: "/calendar", label: "The Season" },
-  { to: "/soiree", label: "Silver Soirée" },
-  { to: "/executive-producers", label: "Executive Producers" },
-  { to: "/apply", label: "Apply" },
+  { to: "/heritage", label: "Overture" },
+  { to: "/fellowship", label: "Company" },
+  { to: "/giving-back", label: "Benefit" },
+  { to: "/calendar", label: "Playbill" },
+  { to: "/soiree", label: "Soirée" },
+  { to: "/executive-producers", label: "Producers" },
+  { to: "/apply", label: "Casting" },
 ] as const;
 
 export const acts = [
   {
     to: "/heritage",
     act: "Act I",
-    title: "Heritage",
+    title: "The Overture",
     copy: "Founded in 2002. A quarter century of parade nights, founders, and Tampa memory.",
     image: art.pinwheel,
     alt: "A silver paper windmill with a red ribbon, held in a hand.",
@@ -55,7 +55,7 @@ export const acts = [
   {
     to: "/fellowship",
     act: "Act II",
-    title: "Fellowship",
+    title: "The Company",
     copy: "Belles and Les Beaux. Ages mixed. The room is a sisterhood, not a chorus line.",
     image: art.dressing,
     alt: "Top hat, crimson feathers, silver beads, and cream gloves on a dressing table.",
@@ -63,7 +63,7 @@ export const acts = [
   {
     to: "/giving-back",
     act: "Act III",
-    title: "Giving Back",
+    title: "The Benefit",
     copy: "Beauty with purpose. The Spring, Best Buddies, Pediatric Cancer Foundation, and more.",
     image: art.gift,
     alt: "Gloved hands offering a wrapped gift and a bouquet of red flowers.",
@@ -95,7 +95,7 @@ export const partners = [
 
 export const producerLevels = [
   {
-    name: "Friend of the Anniversary",
+    name: "Friend of the House",
     amount: "$25",
     note: "Named in the digital program.",
   },
@@ -149,7 +149,7 @@ export type KreweEvent = {
 };
 
 /**
- * Source of truth for The Season page and the home list.
+ * Source of truth for The Playbill page and the home list.
  * Update this file. Do not type dates into page components.
  * Board meetings stay off this list until Stage Door opens.
  */
@@ -167,20 +167,20 @@ export const events: KreweEvent[] = [
     to: "/soiree",
     onHome: true,
     notes:
-      "25th-year ball. Interest form is live. Paid tickets wait for the treasurer's processor.",
+      "Silver-season opening night. Interest form is live. Paid tickets wait for the treasurer's processor.",
   },
   {
     id: "fall-book-club-2026",
     title: "Fall Book Club",
     whenLabel: "November 2026",
     start: "2026-11-01",
-    where: "A seasonal gathering of the krewe. House and host still unset.",
+    where: "A seasonal gathering of the company. House and host still unset.",
     audience: "members",
     kind: "social",
     certainty: "month",
     to: "/fellowship",
     onHome: true,
-    notes: "Ask the fellowship chair for the title, host, and whether guests may come.",
+    notes: "Ask the company chair for the title, host, and whether guests may come.",
   },
   {
     id: "childrens-gasparilla-2027",
@@ -225,7 +225,7 @@ export const events: KreweEvent[] = [
   },
   {
     id: "membership-window-2027",
-    title: "Membership applications open",
+    title: "Casting season opens",
     whenLabel: "May 2027",
     start: "2027-05-01",
     end: "2027-09-30",
