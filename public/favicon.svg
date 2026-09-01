@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="8" fill="#F3E6D0"/>
-  <g fill="none" stroke="#0D0B0C" stroke-width="2" stroke-linejoin="round">
-    <path d="M32 18 L32 42"/>
-    <rect x="24" y="40" width="16" height="10" rx="1"/>
-    <path d="M32 22 L48 16 M32 22 L16 16 M32 22 L48 28 M32 22 L16 28"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Les Belles Femmes">
+  <rect width="32" height="32" rx="7" fill="#F7EFE0"/>
+  <g fill="#1A1614">
+    <rect x="14.2" y="2.4" width="3.6" height="6.8" rx="0.9"/>
+    <rect x="14.2" y="10.8" width="3.6" height="5.4" rx="0.9"/>
+    <rect x="6" y="8.2" width="6.8" height="3.6" rx="0.9"/>
+    <rect x="19.2" y="8.2" width="6.8" height="3.6" rx="0.9"/>
+    <circle cx="16" cy="10" r="2.15"/>
   </g>
-  <rect x="30" y="42" width="4" height="6" fill="#8B1E2D"/>
+  <path fill="#1A1614" d="M12 16.8h8l1.2 10.8H10.8z"/>
+  <path fill="#8B1E2D" d="M14.15 22h3.7v5.4h-3.7z"/>
 </svg>

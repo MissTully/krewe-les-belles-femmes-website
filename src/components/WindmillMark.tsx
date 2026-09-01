@@ -1,19 +1,25 @@
 type Props = {
   size?: number;
   title?: string;
+  decorative?: boolean;
 };
 
-// Original house mark. Not a Paris nightclub logo.
-export default function WindmillMark({ size = 36, title = "Les Belles Femmes windmill mark" }: Props) {
+/** Original house mark. Not a Paris nightclub logo. */
+export default function WindmillMark({
+  size = 36,
+  title = "Les Belles Femmes windmill mark",
+  decorative = false,
+}: Props) {
   return (
     <svg
       width={size}
       height={size}
       viewBox="0 0 64 64"
-      role="img"
-      aria-label={title}
+      role={decorative ? "presentation" : "img"}
+      aria-hidden={decorative || undefined}
+      aria-label={decorative ? undefined : title}
     >
-      <title>{title}</title>
+      {decorative ? null : <title>{title}</title>}
       <g fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round">
         <path d="M32 16 L32 42" />
         <rect x="23" y="41" width="18" height="11" rx="1" />
