@@ -89,7 +89,7 @@ export default function Layout({ children, backstage = false }: Props) {
             </p>
             <p>
               A private social organization. This site is the public Front Stage for the silver
-              anniversary season. Company tools live behind the Stage Door and open in 2027.
+              anniversary season. Member tools live behind the Stage Door and open in 2027.
             </p>
           </div>
           <div className="footer-links">
