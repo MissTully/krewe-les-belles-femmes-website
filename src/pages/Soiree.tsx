@@ -41,7 +41,7 @@ export default function Soiree() {
               anniversary year. Tickets and guest lists will run through this page so officers are
               not chasing a headcount in a group text.
             </p>
-            <p>Underwriting lives on a separate program page. No banner ads on the home.</p>
+            <p>Producer credits live on a separate program page. No banner ads on the home.</p>
           </div>
         </div>
         <section className="panel">

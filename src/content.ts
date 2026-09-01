@@ -37,7 +37,7 @@ export const nav = [
   { to: "/fellowship", label: "Fellowship" },
   { to: "/giving-back", label: "Giving Back" },
   { to: "/soiree", label: "Silver Soirée" },
-  { to: "/underwriters", label: "Underwriters" },
+  { to: "/executive-producers", label: "Executive Producers" },
   { to: "/apply", label: "Apply" },
 ] as const;
 
@@ -91,14 +91,14 @@ export const partners = [
   },
 ] as const;
 
-export const underwriterLevels = [
+export const producerLevels = [
   {
     name: "Friend of the Anniversary",
     amount: "$25",
     note: "Named in the digital program.",
   },
   {
-    name: "Family or Business Underwriter",
+    name: "Family or Business Producer",
     amount: "$350",
     note: "Named with a short line in the program. No homepage banner.",
   },

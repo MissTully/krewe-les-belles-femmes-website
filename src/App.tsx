@@ -6,6 +6,7 @@ import Fellowship from "./pages/Fellowship";
 import GivingBack from "./pages/GivingBack";
 import Soiree from "./pages/Soiree";
 import Apply from "./pages/Apply";
+import ExecutiveProducers from "./pages/ExecutiveProducers";
 import Underwriters from "./pages/Underwriters";
 import StageDoor from "./pages/StageDoor";
 
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/giving-back" element={<GivingBack />} />
           <Route path="/soiree" element={<Soiree />} />
           <Route path="/apply" element={<Apply />} />
+          <Route path="/executive-producers" element={<ExecutiveProducers />} />
           <Route path="/underwriters" element={<Underwriters />} />
           <Route path="/stage-door" element={<StageDoor />} />
           <Route path="*" element={<Navigate to="/" replace />} />
