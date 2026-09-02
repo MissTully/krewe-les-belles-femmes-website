@@ -1,6 +1,5 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import WindmillMark from "./WindmillMark";
 import { krewe, links, nav } from "../content";
 
 type Props = {
@@ -31,7 +30,7 @@ export default function Layout({ children, backstage = false }: Props) {
       <header className="site-header">
         <NavLink to="/" className="brand">
           <span className="brand-crest">
-            <WindmillMark size={28} decorative />
+            <img src="/favicon.png" alt="" />
           </span>
           <span className="brand-name">
             {krewe.name}
