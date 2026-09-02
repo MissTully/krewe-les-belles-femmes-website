@@ -13,7 +13,7 @@ function ShopPage() {
     <article className="pb-24">
       <PageHero
         kicker="The boutique"
-        title="Wear the damn tote."
+        title="Carry a little sparkle."
         lede="Silver-anniversary merch for the sisterhood — a canvas tote and a wine crest tee. Proceeds support gatherings and giving in Tampa Bay."
       />
 

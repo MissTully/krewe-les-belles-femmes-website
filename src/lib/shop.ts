@@ -47,7 +47,7 @@ export const products: Product[] = [
     kicker: "Wine cotton",
     price: 3800,
     blurb:
-      "Soft wine cotton with the krewe crest at the heart. Wear the damn outfit — even on ordinary Tuesdays.",
+      "Soft wine cotton with the krewe crest at the heart — for ordinary Tuesdays and silver nights alike.",
     note: "Women’s relaxed fit. Machine wash cold, hang dry. Pre-shrunk cotton.",
     image: art.tee,
     alt: "Wine t-shirt hanging on a gold hanger, printed with the Les Belles Femmes 25th-anniversary crest.",
