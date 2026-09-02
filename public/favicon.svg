@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Les Belles Femmes">
+  <rect width="32" height="32" rx="8" fill="#4B111D"/>
+  <!-- Four thick sails; no inner ring so the mill stays a clear silhouette at 16px -->
+  <g fill="#CAA24B" transform="translate(16 13.5) rotate(-22)">
+    <rect x="-3.5" y="-12.4" width="7" height="24.8" rx="3.4"/>
+    <rect x="-12.4" y="-3.5" width="24.8" height="7" rx="3.4"/>
+  </g>
+  <circle cx="16" cy="13.5" r="3.3" fill="#F6EDDF"/>
+  <path fill="#CAA24B" d="M12.6 21.2h6.8l1.7 7.2H10.9z"/>
+</svg>
