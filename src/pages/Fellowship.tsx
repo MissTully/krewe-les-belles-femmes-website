@@ -22,13 +22,13 @@ export default function Fellowship() {
         />
         <div className="prose">
           <p>
-            About fifty to seventy-five of us. Ages mixed. Belles first. Les Beaux beside them.
-            No generated dancer stands in for a real member on the roster. The playbill art on this
-            page is costume, not a portrait of anyone in the krewe.
+            Ada Fontaine brings the best paperback recommendations, Maris Cole can turn a tablecloth
+            into a costume, and June Waverly is usually first on the dance floor. Their standing rule:
+            arrive as you are and leave with three new friends.
           </p>
           <p>
-            The product is the room: book club, a shared Saturday with another Tampa krewe, and a
-            dressing-room rule that still fits on a mirror.
+            The product is the room: book-club debates, costume-table chaos, porch parties, and a
+            dressing-room rule that still fits on a mirror. Every person and story here is fictional.
           </p>
           <p className="display italic cabaret">What would Dolly do?</p>
           <div className="hero-actions" style={{ justifyContent: "flex-start" }}>

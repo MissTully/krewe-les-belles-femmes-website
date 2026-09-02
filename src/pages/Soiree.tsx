@@ -32,14 +32,13 @@ export default function Soiree() {
           <PhotoPlate
             src={art.soireeInvite}
             alt="Join the Soirée playbill: three women in evening dress, champagne, and the krewe motto."
-            caption="Saturday, 14 November 2026 · Carrollwood Country Club."
+            caption="A fictional evening at Moonrise Pavilion."
             imgClassName="photo-wide"
           />
           <div className="prose" style={{ marginTop: "1.5rem" }}>
             <p>
-              Saturday, November 14, 2026 · Carrollwood Country Club, Tampa. An evening for the
-              anniversary year. Tickets and guest lists will run through this page so officers are
-              not chasing a headcount in a group text.
+              One imaginary Saturday each autumn, the Belles gather at Moonrise Pavilion for sparkling
+              mocktails, costume prizes, and a dance floor that never seems quite large enough.
             </p>
             <p>Producer credits live in the program. No banner ads on the Front Stage.</p>
           </div>
@@ -47,13 +46,11 @@ export default function Soiree() {
         <section className="panel">
           <h2>Hold a house seat</h2>
           <p className="fine-copy">
-            Phase one collects interest only. Paid ticketing comes after the board picks a
-            processor.
+            This decorative form belongs to the fictional story and does not reserve a real ticket.
           </p>
           {sent ? (
             <p className="banner-ok" role="status">
-              Saved on this device. Live checkout is not connected yet. An officer still has to
-              read it.
+              Your imaginary place at the table is saved.
             </p>
           ) : (
             <form className="form-row" onSubmit={onSubmit}>
@@ -74,7 +71,7 @@ export default function Soiree() {
                   <option>6</option>
                 </select>
               </label>
-              <button type="submit">Hold my seat</button>
+              <button type="submit">Save my imaginary seat</button>
             </form>
           )}
         </section>

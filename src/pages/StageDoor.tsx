@@ -24,13 +24,12 @@ export default function StageDoor() {
         <p className="eyebrow">Backstage</p>
         <h1>Stage Door</h1>
         <p>
-          Roster, dues, and photo permissions open here in January 2027. This form does not log
-          anyone in yet.
+          Behind this imaginary curtain, the Belles keep book-club picks, costume sketches, and
+          parade-day snack maps. There are no real accounts here.
         </p>
         {tried ? (
           <p className="banner-locked" role="status">
-            Not yet. Accounts will be created from the official krewe roster. Wait for your
-            officer.
+            The Stage Door is make-believe; no account was created.
           </p>
         ) : (
           <form onSubmit={onSubmit}>
@@ -42,12 +41,11 @@ export default function StageDoor() {
               Password
               <input type="password" name="password" autoComplete="current-password" required />
             </label>
-            <button type="submit">Not yet</button>
+            <button type="submit">Enter the make-believe</button>
           </form>
         )}
         <p className="fine-print">
-          Accounts will be created from the official krewe roster. Do not invent a password for a
-          sister who has not been invited.
+          This is a decorative form for a hypothetical group. Please do not enter a real password.
         </p>
       </div>
     </div>

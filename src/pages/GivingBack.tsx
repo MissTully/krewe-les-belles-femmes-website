@@ -14,7 +14,7 @@ export default function GivingBack() {
       <Ornament />
       <div className="split">
         <div className="prose">
-          <p>Beauty with purpose. The public photographs the float.</p>
+          <p>In this make-believe world, a good party always leaves a little brightness behind.</p>
           <p>{benefitStance}</p>
         </div>
         <PhotoPlate

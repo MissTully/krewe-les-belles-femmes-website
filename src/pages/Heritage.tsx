@@ -16,15 +16,15 @@ export default function Heritage() {
       <div className="split">
         <div className="prose">
           <p>
-            Les Belles Femmes was founded in 2002. The krewe takes its public face from Belle Époque
-            cabaret and its work from Tampa. The windmill on the float is a house mark. It is not a
-            nightclub franchise.
+            This is a fictional story. Celeste Marlowe, Inez Bell, and Poppy Raines met at a
+            rain-soaked neighborhood parade in the imaginary town of Bellwether. They shared a
+            paper umbrella, an audacious idea for a float, and the belief that friendship deserves sequins.
           </p>
           <p>
-            Twenty-five years of women leading a krewe, raising money for partners who need it, and
-            teaching the next class what the motto means.
+            Their first float was a hand-painted moon named Mabel. It moved at the pace of a sleepy
+            turtle, but the women danced beside it anyway. Every person and memory here is invented.
           </p>
-          <p className="display italic">Motto: Truth, Beauty, Freedom, Love.</p>
+          <p className="display italic">Motto: Truth, Beauty, Freedom, Love—and always save room for dessert.</p>
           <p>{memoryCall.copy}</p>
           <Link className="ticket" to="/soiree">
             Opening night
@@ -64,8 +64,8 @@ export default function Heritage() {
       <div className="stack-gap">
         <PhotoPlate
           src={art.dusk}
-          alt="A Tampa parade street at dusk, drawn as a lithograph."
-          caption="Tampa at dusk. The route is older than the krewe."
+          alt="A fictional parade street at dusk, drawn as a lithograph."
+          caption="Bellwether at dusk. The route exists only in the story."
           imgClassName="photo-wide"
         />
       </div>

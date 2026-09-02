@@ -1,10 +1,10 @@
 export const krewe = {
   name: "Les Belles Femmes",
   fullName: "Krewe of Les Belles Femmes",
-  city: "Tampa",
+  city: "Bellwether",
   founded: 2002,
   motto: ["Truth", "Beauty", "Freedom", "Love"] as const,
-  tagline: "Beauty with purpose.",
+  tagline: "Good stories, bright nights, and a little confetti.",
 };
 
 /** Paths under public/art/. Long generated filenames stay as uploaded. */
@@ -48,7 +48,7 @@ export const acts = [
     to: "/heritage",
     act: "Act I",
     title: "The Overture",
-    copy: "Founded in 2002. A quarter century of parade nights, founders, and Tampa memory.",
+    copy: "A make-believe history of moon floats, parade nights, and women who make every chapter brighter.",
     image: art.pinwheel,
     alt: "A silver paper windmill with a red ribbon, held in a hand.",
   },
@@ -56,7 +56,7 @@ export const acts = [
     to: "/fellowship",
     act: "Act II",
     title: "Sisterhood",
-    copy: "Belles and Les Beaux. Ages mixed. The room is a sisterhood, not a chorus line.",
+    copy: "Book-club debates, costume-table chaos, porch parties, and room for every kind of fun.",
     image: art.dressing,
     alt: "Top hat, crimson feathers, silver beads, and cream gloves on a dressing table.",
   },
@@ -64,7 +64,7 @@ export const acts = [
     to: "/giving-back",
     act: "Act III",
     title: "The Benefit",
-    copy: "Beauty with purpose. The Spring, Best Buddies, Pediatric Cancer Foundation, and more.",
+    copy: "Imaginary good turns: little libraries, garden parties, and neighbors cheering each other on.",
     image: art.gift,
     alt: "Gloved hands offering a wrapped gift and a bouquet of red flowers.",
   },
@@ -72,37 +72,37 @@ export const acts = [
 
 export const partners = [
   {
-    name: "The Spring of Tampa Bay",
-    note: "Shelter and advocacy for people leaving domestic violence.",
+    name: "The Bellwether Little Library",
+    note: "An imaginary porch-sized library where every borrowed novel comes with a handwritten recommendation.",
   },
   {
-    name: "Best Buddies",
-    note: "Friendship and inclusion for people with intellectual and developmental disabilities.",
+    name: "The Second-Line Seedlings",
+    note: "A fictional neighborhood garden that grows sunflowers, herbs, and excellent excuses for a picnic.",
   },
   {
-    name: "Pediatric Cancer Foundation",
-    note: "Support for children and families facing pediatric cancer.",
+    name: "Mabel's Moon Cart",
+    note: "A make-believe parade cart delivering craft supplies and tiny moments of celebration.",
   },
   {
-    name: "Humane Society of Tampa Bay",
-    note: "Care for animals across the bay. A quiet partner in a loud season.",
+    name: "The Lantern Hour",
+    note: "An invented annual evening of music, stories, and neighborly cheer under paper lanterns.",
   },
   {
-    name: "Koncert 4 Kids",
-    note: "Music and community events that raise money for children in care.",
+    name: "The Confetti Pantry",
+    note: "A fictional community cupboard stocked with cocoa, cake mix, and celebration-worthy sprinkles.",
   },
 ] as const;
 
 export const producerLevels = [
   {
-    name: "Friend of the House",
-    amount: "$25",
-    note: "Named in the digital program.",
+    name: "Friend of the Moon Float",
+    amount: "Imaginary",
+    note: "Receives a fictional toast from the captain of Mabel the Moon.",
   },
   {
-    name: "Family or Business Producer",
-    amount: "$350",
-    note: "Named with a short line in the program. No homepage banner.",
+    name: "Keeper of the Confetti",
+    amount: "Make-believe",
+    note: "Gets an honorary mention in the entirely invented parade program.",
   },
 ] as const;
 
@@ -243,7 +243,7 @@ export const memoryCall = {
 };
 
 export const benefitStance =
-  "Partners below are the public list. A dollar figure or a named drive waits for the board. Guests should judge us by what reached those partners, not by a logo row.";
+  "In this hypothetical world, a good party always leaves a little brightness behind. These fictional projects make Bellwether more bookish, bloom-filled, and welcoming.";
 
 /**
  * Who may see the event on the public Front Stage.
@@ -389,7 +389,7 @@ export const season = events
   }));
 
 export const links = {
-  facebook: "https://www.facebook.com/KreweLBF",
-  shop: "https://krewe-of-les-belles-femmes.square.site",
-  mailing: "c/o Arena Law Firm, 1005 N Marion St., Tampa, FL 33602",
+  facebook: "#",
+  shop: "#",
+  mailing: "Bellwether, in the imaginary harbor",
 };

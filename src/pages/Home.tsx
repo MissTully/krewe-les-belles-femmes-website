@@ -24,7 +24,7 @@ export default function Home() {
         />
         <div className="hero-stage-copy rise">
           <Crest size={108} decorative />
-          <p className="welcome">Twenty-five seasons on Bayshore</p>
+          <p className="welcome">A fictional season in Bellwether</p>
           <p className="kicker kicker-light">Krewe of</p>
           <h1>{krewe.name}</h1>
           <p className="motto motto-light">
@@ -34,8 +34,8 @@ export default function Home() {
           </p>
           <Ornament className="ornament-gold" />
           <p className="note note-light">
-            A Tampa women's krewe in its silver anniversary season. The beads get photographed.
-            The sisterhood and the giving are the point.
+            A hypothetical women's circle that loves a parade route, a brilliant book, a late-night
+            dance floor, and one another. Every person and story on this site is fictional.
           </p>
           <div className="hero-actions">
             <Link className="ticket gold" to="/soiree">
@@ -87,8 +87,8 @@ export default function Home() {
         <p className="eyebrow">A year in the house</p>
         <h2 className="section-title">Sparkle has a calendar</h2>
         <p className="note" style={{ margin: "0 0 1.2rem", textAlign: "left" }}>
-          Dues are four hundred fifty dollars when an officer invites them. Costume, ball ticket,
-          and parade days off work sit on Casting so a guest can count before she promises.
+          From book-club chapters to porchlight dances, every invented gathering has room for a
+          great outfit, a generous laugh, and one more friend at the table.
         </p>
         <ol className="season-list">
           {yearRhythm.map((beat) => (
@@ -112,8 +112,8 @@ export default function Home() {
             <p className="eyebrow">Silver season</p>
             <h2 className="section-title">Dates on the bill</h2>
             <p className="note" style={{ margin: "0.8rem 0 0", textAlign: "left" }}>
-              The ball is opening night, not the whole pitch. The full playbill lives on Playbill.
-              The Stage Door stays locked until January 2027.
+              The Ball is opening night, not the whole pitch. The full fictional playbill lives here,
+              and the Stage Door is simply part of the story.
             </p>
             <p style={{ margin: "0.9rem 0 0" }}>
               <Link className="ticket" to="/calendar">

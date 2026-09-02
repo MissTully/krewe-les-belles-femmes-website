@@ -30,8 +30,8 @@ export default function Apply() {
       <Ornament />
       <div className="prose" style={{ marginTop: "1.25rem" }}>
         <p>
-          Someone in the krewe should already know your name. This form is a reach-back for an
-          officer. It is not admission and it does not take dues.
+          This demonstration form belongs to a fictional story. It does not apply anyone to a real
+          group, collect dues, or contact a real officer.
         </p>
       </div>
 
@@ -50,7 +50,7 @@ export default function Apply() {
           <PhotoPlate
             src={art.tickets}
             alt="A silver ticket and a cabaret-red ticket on cream paper."
-            caption="Casting is reviewed by membership, not by this form."
+            caption="A fictional invitation into the story."
             imgClassName="photo-wide"
           />
           <section className="stack-gap panel">
@@ -60,11 +60,11 @@ export default function Apply() {
           </section>
         </div>
         <section className="panel">
-          <h2>Leave your name</h2>
-          <p className="fine-copy">Name the sister or Beau who asked you. Blank sponsor fields wait.</p>
+          <h2>Join the story</h2>
+          <p className="fine-copy">This decorative form stays on your device and has no real membership role.</p>
           {sent ? (
             <p className="banner-ok" role="status">
-              Received on this device. An officer still has to read it. Do not send dues here.
+              A fictional Belle has added your name to the imaginary guest list.
             </p>
           ) : (
             <form className="form-row" onSubmit={onSubmit}>
@@ -77,14 +77,14 @@ export default function Apply() {
                 <input name="email" type="email" required autoComplete="email" />
               </label>
               <label>
-                Who in the krewe asked you?
+                Your parade nickname
                 <input name="sponsor" required />
               </label>
               <label>
                 A sentence about why
                 <textarea name="why" rows={4} />
               </label>
-              <button type="submit">Send to casting</button>
+              <button type="submit">Send into the story</button>
             </form>
           )}
         </section>

@@ -82,14 +82,15 @@ export default function Layout({ children, backstage = false }: Props) {
               <strong>{krewe.fullName}</strong>
             </p>
             <p>
-              {krewe.city}, Florida · Founded {krewe.founded}
+              {krewe.city} · A fictional krewe
             </p>
             <p className="footer-motto">
               {krewe.motto.join(" · ")}. {krewe.tagline}
             </p>
             <p>
-              A private social organization. This site is the public Front Stage for the silver
-              anniversary season. Member tools live behind the Stage Door and open in 2027.
+              Every person, event, place, and organization represented here is fictional. This site
+              celebrates a hypothetical women's group that loves parades, book clubs, parties, and
+              being together.
             </p>
           </div>
           <div className="footer-links">
