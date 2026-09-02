@@ -112,9 +112,9 @@ export const producerLevels = [
  */
 export const yearRhythm = [
   {
-    when: "May through September",
-    title: "Casting season",
-    note: "Recruitment socials. A guest who wants to join should be in the room at least three times.",
+    when: "Early spring",
+    title: "The costume-table social",
+    note: "Ada Fontaine brings ribbon, Maris Cole brings a novel, and everyone brings a good story.",
   },
   {
     when: "November",
@@ -122,19 +122,19 @@ export const yearRhythm = [
     note: "A quiet member night, then opening night of the silver season. The ball is not the whole year.",
   },
   {
-    when: "Late January",
-    title: "Gasparilla",
-    note: "Children's route and the Parade of Pirates. City days are on the Playbill. House call time is not.",
+    when: "Parade season",
+    title: "The Bellwether Bright Parade",
+    note: "Paper lanterns, moon-float sketches, and a route that exists only in this story.",
   },
   {
-    when: "February",
-    title: "Sant' Yago in Ybor",
-    note: "Night parade on Seventh Avenue when the Knights post the date.",
+    when: "Late summer",
+    title: "The Porchlight Dance",
+    note: "A made-up night of bright outfits, porch lights, and the happiest kind of noisy music.",
   },
   {
-    when: "Holiday routes",
-    title: "Local holiday parades",
-    note: "Smaller crowds. Good first rides if the float captain has a spot.",
+    when: "Any good weekend",
+    title: "The impromptu picnic",
+    note: "A story swap, a snack table, and a surprise reason to celebrate together.",
   },
 ] as const;
 
@@ -299,7 +299,7 @@ export const events: KreweEvent[] = [
     whenLabel: "Saturday, 14 November 2026",
     start: "2026-11-14",
     timeLabel: "Evening. Doors and dinner time still with the ball chair.",
-    where: "Carrollwood Country Club, Tampa",
+    where: "Moonrise Pavilion, Bellwether",
     audience: "invite",
     kind: "ball",
     certainty: "confirmed",
@@ -313,7 +313,7 @@ export const events: KreweEvent[] = [
     title: "Fall Book Club",
     whenLabel: "November 2026",
     start: "2026-11-01",
-    where: "A seasonal gathering of the krewe. House and host still unset.",
+    where: "The fictional Bellwether Reading Room.",
     audience: "members",
     kind: "social",
     certainty: "month",
@@ -336,10 +336,10 @@ export const events: KreweEvent[] = [
   },
   {
     id: "gasparilla-pirate-fest-2027",
-    title: "Gasparilla Pirate Fest",
+    title: "The Bellwether Bright Parade",
     whenLabel: "Saturday, 30 January 2027",
     start: "2027-01-30",
-    where: "Bayshore Boulevard, Tampa",
+    where: "Bellwether's make-believe waterfront",
     audience: "public",
     kind: "parade",
     certainty: "confirmed",
@@ -350,10 +350,10 @@ export const events: KreweEvent[] = [
   },
   {
     id: "sant-yago-2027",
-    title: "Sant' Yago Illuminated Knight Parade",
+    title: "The Porchlight Dance",
     whenLabel: "February 2027",
     start: "2027-02-01",
-    where: "Seventh Avenue, Ybor City",
+    where: "Moonrise Pavilion, Bellwether",
     audience: "public",
     kind: "parade",
     certainty: "month",
