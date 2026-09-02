@@ -8,6 +8,12 @@ type Props = {
   backstage?: boolean;
 };
 
+const program = [
+  ...nav.slice(0, 2),
+  { to: "/company", label: "Company" },
+  ...nav.slice(2),
+];
+
 export default function Layout({ children, backstage = false }: Props) {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
@@ -42,7 +48,7 @@ export default function Layout({ children, backstage = false }: Props) {
         </NavLink>
         <nav className="nav desktop-nav" aria-label="House program">
           {!backstage &&
-            nav.map((link) => (
+            program.map((link) => (
               <NavLink key={link.to} to={link.to}>
                 {link.label}
               </NavLink>
@@ -64,7 +70,7 @@ export default function Layout({ children, backstage = false }: Props) {
       </header>
       {open ? (
         <nav id="mobile-nav" className="mobile-nav" aria-label="House program">
-          {nav.map((link) => (
+          {program.map((link) => (
             <NavLink key={link.to} to={link.to}>
               {link.label}
             </NavLink>
