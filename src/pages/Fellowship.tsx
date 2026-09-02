@@ -35,6 +35,9 @@ export default function Fellowship() {
             <Link className="ticket red" to="/apply">
               Casting Call
             </Link>
+            <Link className="ticket" to="/company">
+              Calling cards
+            </Link>
             <Link className="ticket" to="/stage-door">
               Stage Door
             </Link>

@@ -22,6 +22,7 @@ Open the address Vite prints, usually `http://localhost:5173`.
 - Apply to Join
 - Underwriters program
 - Stage Door placeholder
+- The Company: sample calling cards, a card you write on this device, and share-by-link socials
 
 Forms save on the visitor’s device only. Paid tickets and member login wait for official email, roster, and a processor the treasurer accepts.
 
