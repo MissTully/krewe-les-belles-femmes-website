@@ -1,0 +1,76 @@
+/* Refined visual layer: editorial Parisian cabaret, warmer paper, cleaner spacing, stronger hierarchy. */
+:root {
+  --wine: #4b111d;
+  --wine-deep: #240a12;
+  --cabaret-red: #8f2032;
+  --gaslight-gold: #caa24b;
+  --gold-soft: #ead49a;
+  --footlights-cream: #f6eddf;
+  --paper: #fffaf1;
+  --ink: #201719;
+  --muted: #66575a;
+  --max: 76rem;
+}
+body { background: var(--footlights-cream); }
+.front-stage { background: radial-gradient(circle at 50% 0%, #fffaf2 0, var(--footlights-cream) 48%, #eee0cd 100%); }
+.site-header { padding: .8rem clamp(1rem, 3vw, 2.5rem); background: rgba(36,10,18,.97); border-bottom: 1px solid rgba(234,212,154,.7); }
+.brand-name { font-size: 1.35rem; }
+.nav { gap: .25rem .9rem; }
+.nav a { font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
+.hero-stage { min-height: min(88vh, 55rem); }
+.hero-stage-photo { filter: saturate(.9) contrast(1.04); transform: scale(1.01); }
+.hero-stage-veil { background: linear-gradient(180deg, rgba(28,6,12,.18), rgba(28,6,12,.2) 34%, rgba(28,6,12,.88) 100%); }
+.hero-stage-copy { max-width: 62rem; padding-top: clamp(4rem, 9vw, 7rem); }
+.hero-stage-copy h1 { font-size: clamp(3.3rem, 8.5vw, 6.8rem); letter-spacing: -.02em; }
+.hero-tagline { margin: .15rem 0 .25rem; font: italic 500 clamp(1.55rem, 3vw, 2.25rem)/1.2 var(--font-display); color: #fff6e9; }
+.intro-ribbon { background: var(--wine); color: var(--gold-soft); border-block: 1px solid rgba(202,162,75,.55); }
+.intro-ribbon-inner { display:flex; justify-content:center; gap:1.2rem; padding:.9rem 1rem; font: 600 .78rem/1 var(--font-body); letter-spacing:.25em; text-transform:uppercase; }
+.intro-ribbon-inner i { opacity:.5; }
+.home-intro { display:grid; grid-template-columns:1.05fr .75fr; gap:clamp(2rem,6vw,6rem); align-items:center; padding:clamp(4rem,8vw,7rem) 0; }
+.home-intro-copy { max-width: 42rem; }
+.home-intro-copy h2 { font-size:clamp(2.4rem,5vw,4rem); }
+.home-intro-copy p { font-size:1.08rem; }
+.lead-copy { font: 500 clamp(1.3rem,2.5vw,1.7rem)/1.45 var(--font-display); color:var(--ink); }
+.text-link { display:inline-block; margin-top:1rem; color:var(--cabaret-red); font-weight:700; text-decoration:none; border-bottom:1px solid var(--gaslight-gold); }
+.program-block { padding-top:4rem; }
+.section-title { font-size:clamp(2.1rem,4.5vw,3.25rem); }
+.acts { gap:1.5rem; margin-top:1.5rem; }
+.act-card { border:0; border-radius:2px; box-shadow:0 18px 50px rgba(36,10,18,.1); position:relative; }
+.act-card img { aspect-ratio: 5/4; transition:transform .5s var(--ease); }
+.act-card:hover img { transform:scale(1.035); }
+.act-copy { padding:1.4rem 1.4rem 1.7rem; }
+.act-card h2 { font-size:2rem; }
+.card-arrow { display:inline-block; margin-top:1rem; color:var(--cabaret-red); font-weight:700; }
+.home-calendar { padding:clamp(4rem,8vw,7rem) 0; }
+.season-feature-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #d8cbbb; margin:2rem 0; }
+.feature-line { padding:1.5rem; border-right:1px solid #d8cbbb; }
+.feature-line:last-child { border-right:0; }
+.feature-line h3 { font-size:1.5rem; margin:.25rem 0 .5rem; }
+.feature-line p:last-child { color:var(--muted); margin:0; }
+.home-featured { background:var(--wine); color:var(--footlights-cream); padding:clamp(4rem,8vw,7rem) 0; }
+.featured-inner { display:grid; grid-template-columns:1fr 16rem; gap:3rem; align-items:center; }
+.featured-inner h2 { font-size:clamp(3rem,6vw,5rem); margin:.2rem 0; }
+.featured-inner p { max-width:38rem; font-size:1.08rem; }
+.featured-inner img { width:100%; box-shadow:0 20px 50px rgba(0,0,0,.28); transform:rotate(2deg); }
+.home-season-list { padding:4rem 0 6rem; }
+.season-list { border-top:1px solid #d8cbbb; }
+.season-item { display:grid; grid-template-columns:1fr 2fr 1fr; gap:1rem; align-items:center; padding:1.15rem 0; border-bottom:1px solid #d8cbbb; }
+.season-item > * { margin:0; }
+.season-item a { font:600 1.45rem var(--font-display); color:var(--wine); text-decoration:none; }
+.page { padding-top:clamp(3rem,6vw,5rem); padding-bottom:clamp(4rem,8vw,7rem); }
+.page > h1 { max-width:58rem; font-size:clamp(3rem,7vw,5.8rem); letter-spacing:-.02em; }
+.refined-page .split { gap:clamp(2rem,6vw,5rem); align-items:center; }
+.panel { border:1px solid #dbcdbd; box-shadow:0 14px 40px rgba(36,10,18,.06); background:rgba(255,250,241,.72); }
+.story-highlight { margin:clamp(3rem,7vw,6rem) 0; padding:clamp(2rem,5vw,4rem); background:var(--wine); color:var(--footlights-cream); }
+.story-highlight .section-title { color:#fff7e9; }
+.story-highlight p:last-child { max-width:55rem; font-size:1.12rem; }
+.charity-grid { grid-template-columns:repeat(2,1fr); }
+.charity-card { min-height:14rem; }
+.partner-mark { font:700 1rem var(--font-display); letter-spacing:.15em; color:var(--cabaret-red); }
+.house-lines { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; padding:0; list-style:none; }
+.house-lines li { padding:1.25rem; background:var(--paper); border-left:3px solid var(--gaslight-gold); font:italic 1.4rem var(--font-display); }
+.site-footer { padding-top:4rem; padding-bottom:4rem; }
+.footer-grid { grid-template-columns:2fr 1fr; gap:4rem; }
+.footer-links { align-content:start; }
+@media (max-width: 900px) { .home-intro,.featured-inner { grid-template-columns:1fr; } .season-feature-grid { grid-template-columns:repeat(2,1fr); } .feature-line:nth-child(2) { border-right:0; } .feature-line:nth-child(-n+2) { border-bottom:1px solid #d8cbbb; } .season-item { grid-template-columns:1fr 2fr; } .season-item p:last-child { grid-column:2; } .house-lines { grid-template-columns:1fr 1fr; } }
+@media (max-width: 700px) { .desktop-nav { display:none; } .menu-toggle { display:inline-flex; align-items:center; justify-content:center; } .mobile-nav { position:fixed; top:4.25rem; left:0; right:0; z-index:29; display:grid; padding:1rem; gap:.35rem; background:var(--wine-deep); border-bottom:1px solid var(--gaslight-gold); box-shadow:0 18px 35px rgba(0,0,0,.2); } .mobile-nav a { color:var(--footlights-cream); padding:.7rem; text-decoration:none; } .acts,.charity-grid,.house-lines { grid-template-columns:1fr; } .season-feature-grid { grid-template-columns:1fr; } .feature-line { border-right:0; border-bottom:1px solid #d8cbbb; } .season-item { grid-template-columns:1fr; } .season-item p:last-child { grid-column:auto; } .featured-inner img { max-width:14rem; } .footer-grid { grid-template-columns:1fr; gap:2rem; } }
