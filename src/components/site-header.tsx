@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { art, krewe, nav } from "@/lib/content";
+import { ShopBagButton } from "@/components/shop-cart";
 
 export function SiteHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -44,7 +45,7 @@ export function SiteHeader() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-x-5 gap-y-1 lg:flex" aria-label="Main navigation">
+          <nav className="hidden items-center gap-x-4 gap-y-1 xl:flex" aria-label="Main navigation">
             {nav.map((item) => (
               <Link
                 key={item.to}
@@ -63,23 +64,26 @@ export function SiteHeader() {
             </Link>
           </nav>
 
-          <button
-            type="button"
-            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-gold text-[0.72rem] tracking-[0.14em] text-gold-soft uppercase lg:hidden"
-            aria-expanded={open}
-            aria-controls="mobile-nav"
-            aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex items-center gap-1">
+            <ShopBagButton />
+            <button
+              type="button"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center border border-gold text-[0.72rem] tracking-[0.14em] text-gold-soft uppercase xl:hidden"
+              aria-expanded={open}
+              aria-controls="mobile-nav"
+              aria-label={open ? "Close menu" : "Open menu"}
+              onClick={() => setOpen((v) => !v)}
+            >
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
       </header>
 
       {open ? (
         <nav
           id="mobile-nav"
-          className="fixed inset-x-0 top-[4.35rem] z-30 grid gap-1 border-b border-gold bg-wine-deep px-5 py-4 shadow-[0_18px_40px_rgba(0,0,0,0.28)] lg:hidden"
+          className="fixed inset-x-0 top-[4.35rem] z-30 grid gap-1 border-b border-gold bg-wine-deep px-5 py-4 shadow-[0_18px_40px_rgba(0,0,0,0.28)] xl:hidden"
           aria-label="Main navigation"
         >
           {nav.map((item) => (

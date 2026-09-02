@@ -4,6 +4,7 @@ import { Ornament } from "@/components/ornament";
 import { PhotoFrame } from "@/components/photo-frame";
 import { Ticket } from "@/components/ticket-link";
 import { art, events, houseLines, krewe, pillars, stories, yearRhythm } from "@/lib/content";
+import { money, products } from "@/lib/shop";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -158,6 +159,36 @@ function Home() {
             alt="Silver twenty-five anniversary ticket."
             className="mx-auto w-full max-w-[16rem] rotate-2 shadow-[0_20px_50px_rgba(0,0,0,0.28)]"
           />
+        </div>
+      </section>
+
+      <section className="wrap py-20 md:py-24">
+        <p className="kicker">The boutique</p>
+        <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
+          <h2 className="max-w-xl font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">Tote, tee, a little sparkle.</h2>
+          <Ticket to="/shop" variant="ink">
+            Shop LBF
+          </Ticket>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {products.map((product) => (
+            <Link
+              key={product.id}
+              to="/shop"
+              className="group grid grid-cols-[7.5rem_1fr] overflow-hidden bg-paper no-underline shadow-[0_18px_50px_rgba(36,10,18,0.1)] sm:grid-cols-[11rem_1fr]"
+            >
+              <img
+                src={product.image}
+                alt=""
+                className="h-full min-h-[9.5rem] w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
+              />
+              <div className="flex flex-col justify-center p-5 sm:p-7">
+                <p className="kicker">{product.kicker}</p>
+                <h3 className="mt-1 font-display text-[1.7rem] leading-tight">{product.name}</h3>
+                <p className="mt-2 font-display text-xl text-cabaret">{money(product.price)}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 

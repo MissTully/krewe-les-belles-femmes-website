@@ -12,10 +12,10 @@ function SoireePage() {
       <section className="relative isolate overflow-hidden bg-wine text-cream">
         <img
           src={art.soiree}
-          alt="Silver anniversary invitation with a windmill, champagne, and a Parisian skyline."
-          className="absolute inset-0 h-full w-full object-cover opacity-35"
+          alt="Women in silver, wine, and black gowns toast champagne in a candlelit ballroom, a pink-sailed windmill and Eiffel Tower glowing against a Tampa night."
+          className="absolute inset-0 h-full w-full object-cover object-[center_42%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-wine-deep/55 via-wine/70 to-wine-deep" aria-hidden="true" />
+        <div className="soiree-veil absolute inset-0" aria-hidden="true" />
         <div className="relative z-10 mx-auto flex min-h-[min(72vh,38rem)] w-min(62rem,calc(100%-2rem)) flex-col items-center justify-center px-4 py-24 text-center">
           <p className="kicker kicker-gold">Save the date</p>
           <h1 className="mt-3 font-display text-[clamp(3.2rem,9vw,6.4rem)] leading-[0.92] text-[#fff7e9]">

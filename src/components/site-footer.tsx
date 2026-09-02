@@ -41,8 +41,11 @@ export function SiteFooter() {
           <a href={links.facebook} className="min-h-10 text-cream no-underline hover:text-gold-soft" target="_blank" rel="noreferrer">
             Facebook
           </a>
+          <Link to="/shop" className="min-h-10 text-cream no-underline hover:text-gold-soft">
+            Boutique
+          </Link>
           <a href={links.shop} className="min-h-10 text-cream no-underline hover:text-gold-soft" target="_blank" rel="noreferrer">
-            LBF shop
+            Square shop
           </a>
           <a href={`mailto:${links.email}`} className="min-h-10 text-cream no-underline hover:text-gold-soft">
             Membership inquiry

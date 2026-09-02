@@ -17,6 +17,7 @@ type Props = {
   to?: string;
   href?: string;
   type?: "button" | "submit";
+  onClick?: () => void;
 };
 
 export function Ticket({
@@ -26,12 +27,13 @@ export function Ticket({
   to,
   href,
   type = "button",
+  onClick,
 }: Props) {
   const classes = cn("ticket", variants[variant], className);
 
   if (to) {
     return (
-      <Link to={to as "/"} className={classes}>
+      <Link to={to as "/"} className={classes} onClick={onClick}>
         {children}
       </Link>
     );
@@ -43,6 +45,7 @@ export function Ticket({
       <a
         href={href}
         className={classes}
+        onClick={onClick}
         {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
       >
         {children}
@@ -51,7 +54,7 @@ export function Ticket({
   }
 
   return (
-    <button type={type} className={classes}>
+    <button type={type} className={classes} onClick={onClick}>
       {children}
     </button>
   );

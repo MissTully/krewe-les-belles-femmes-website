@@ -225,6 +225,21 @@
     );
 }
 
+.soiree-veil {
+  background:
+    radial-gradient(
+      ellipse 70% 55% at 50% 42%,
+      transparent 12%,
+      color-mix(in srgb, var(--color-wine-deep) 38%, transparent) 100%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-wine-deep) 36%, transparent) 0%,
+      color-mix(in srgb, var(--color-wine-deep) 18%, transparent) 36%,
+      color-mix(in srgb, var(--color-wine-deep) 72%, transparent) 100%
+    );
+}
+
 .motto-row {
   display: flex;
   flex-wrap: wrap;
@@ -389,4 +404,44 @@
 
 .skip-link:focus {
   left: 1rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.15rem;
+  min-width: 1.05rem;
+  height: 1.05rem;
+  padding: 0 0.2rem;
+  border-radius: 999px;
+  background: var(--color-gold);
+  color: var(--color-wine-deep);
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.05rem;
+  text-align: center;
+}
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--color-velvet) 45%, transparent);
+}
+
+.cart-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: min(26rem, 100%);
+  height: 100%;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  box-shadow: -18px 0 40px color-mix(in srgb, var(--color-velvet) 28%, transparent);
+}
+
+.cart-drawer .ticket {
+  width: 100%;
 }

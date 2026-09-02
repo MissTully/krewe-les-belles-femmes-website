@@ -44,6 +44,8 @@ export const art = {
   velvet: "/art/velvet.jpg",
   ornaments: "/art/ornaments.jpg",
   ladiesPainting: "/art/ladies-painting.png",
+  tote: "/art/tote.jpg",
+  tee: "/art/tee.jpg",
 } as const;
 
 export const nav = [
@@ -51,6 +53,7 @@ export const nav = [
   { to: "/sisterhood", label: "Sisterhood" },
   { to: "/giving", label: "Giving Back" },
   { to: "/events", label: "Events" },
+  { to: "/shop", label: "Shop" },
   { to: "/soiree", label: "Silver Soirée" },
   { to: "/membership", label: "Membership" },
 ] as const;

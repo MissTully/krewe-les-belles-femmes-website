@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as GivingRouteImport } from './routes/giving'
 import { Route as MembershipRouteImport } from './routes/membership'
+import { Route as ShopRouteImport } from './routes/shop'
 import { Route as SisterhoodRouteImport } from './routes/sisterhood'
 import { Route as SoireeRouteImport } from './routes/soiree'
 import { Route as StageDoorRouteImport } from './routes/stage-door'
@@ -36,6 +37,11 @@ const GivingRoute = GivingRouteImport.update({
 const MembershipRoute = MembershipRouteImport.update({
   id: '/membership',
   path: '/membership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SisterhoodRoute = SisterhoodRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/events': typeof EventsRoute
   '/giving': typeof GivingRoute
   '/membership': typeof MembershipRoute
+  '/shop': typeof ShopRoute
   '/sisterhood': typeof SisterhoodRoute
   '/soiree': typeof SoireeRoute
   '/stage-door': typeof StageDoorRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/events': typeof EventsRoute
   '/giving': typeof GivingRoute
   '/membership': typeof MembershipRoute
+  '/shop': typeof ShopRoute
   '/sisterhood': typeof SisterhoodRoute
   '/soiree': typeof SoireeRoute
   '/stage-door': typeof StageDoorRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/events': typeof EventsRoute
   '/giving': typeof GivingRoute
   '/membership': typeof MembershipRoute
+  '/shop': typeof ShopRoute
   '/sisterhood': typeof SisterhoodRoute
   '/soiree': typeof SoireeRoute
   '/stage-door': typeof StageDoorRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/giving'
     | '/membership'
+    | '/shop'
     | '/sisterhood'
     | '/soiree'
     | '/stage-door'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/giving'
     | '/membership'
+    | '/shop'
     | '/sisterhood'
     | '/soiree'
     | '/stage-door'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/giving'
     | '/membership'
+    | '/shop'
     | '/sisterhood'
     | '/soiree'
     | '/stage-door'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   EventsRoute: typeof EventsRoute
   GivingRoute: typeof GivingRoute
   MembershipRoute: typeof MembershipRoute
+  ShopRoute: typeof ShopRoute
   SisterhoodRoute: typeof SisterhoodRoute
   SoireeRoute: typeof SoireeRoute
   StageDoorRoute: typeof StageDoorRoute
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/membership'
       fullPath: '/membership'
       preLoaderRoute: typeof MembershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sisterhood': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   EventsRoute: EventsRoute,
   GivingRoute: GivingRoute,
   MembershipRoute: MembershipRoute,
+  ShopRoute: ShopRoute,
   SisterhoodRoute: SisterhoodRoute,
   SoireeRoute: SoireeRoute,
   StageDoorRoute: StageDoorRoute,

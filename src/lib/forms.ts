@@ -1,5 +1,6 @@
 const APPLY_KEY = "lbf-apply-inquiry";
 const SOIREE_KEY = "lbf-soiree-interest";
+const SHOP_KEY = "lbf-shop-order";
 
 export type ApplyInquiry = {
   name: string;
@@ -13,6 +14,20 @@ export type SoireeInterest = {
   name: string;
   email: string;
   party: string;
+  savedAt: string;
+};
+
+export type ShopOrder = {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
+  note: string;
+  summary: string;
+  total: string;
   savedAt: string;
 };
 
@@ -44,4 +59,12 @@ export function getSoireeInterest() {
 
 export function saveSoireeInterest(data: Omit<SoireeInterest, "savedAt">) {
   write(SOIREE_KEY, { ...data, savedAt: new Date().toISOString() });
+}
+
+export function getShopOrder() {
+  return read<ShopOrder>(SHOP_KEY);
+}
+
+export function saveShopOrder(data: Omit<ShopOrder, "savedAt">) {
+  write(SHOP_KEY, { ...data, savedAt: new Date().toISOString() });
 }
