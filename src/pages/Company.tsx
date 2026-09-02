@@ -4,13 +4,12 @@ import CallingCardView from "../components/CallingCard";
 import Ornament from "../components/Ornament";
 import { houseLines } from "../content";
 import { getCallingCard, getCardCase, keepCard, saveCallingCard } from "../forms";
-import { cardSharePath, company, emptyCard, readSharedCard, socialLabels, type CallingCard, type MemberRole, type SocialKind } from "../members";
+import { cardSharePath, emptyCard, readSharedCard, socialLabels, type CallingCard, type MemberRole, type SocialKind } from "../members";
 const socialKinds = Object.keys(socialLabels) as SocialKind[];
 export default function Company() {
   const location = useLocation(); const navigate = useNavigate(); const shared = useMemo(() => readSharedCard(location.search), [location.search]);
-  const [filter, setFilter] = useState<"all" | MemberRole>("all"); const [draft, setDraft] = useState<CallingCard>(emptyCard); const [caseCards, setCaseCards] = useState<CallingCard[]>([]); const [savedNote, setSavedNote] = useState(""); const [copyNote, setCopyNote] = useState(""); const [keepNote, setKeepNote] = useState("");
+  const [draft, setDraft] = useState<CallingCard>(emptyCard); const [caseCards, setCaseCards] = useState<CallingCard[]>([]); const [savedNote, setSavedNote] = useState(""); const [copyNote, setCopyNote] = useState(""); const [keepNote, setKeepNote] = useState("");
   useEffect(() => { setDraft(getCallingCard() ?? emptyCard()); setCaseCards(getCardCase()); }, []);
-  const shown = company.filter((card) => filter === "all" ? true : card.role === filter);
   function onSaveMine(event: FormEvent<HTMLFormElement>) { event.preventDefault(); if (!draft.name.trim() || !draft.line.trim()) { setSavedNote("A card needs a name and one sentence."); return; } const saved = saveCallingCard({ ...draft, id: draft.id && draft.id !== "mine" ? draft.id : `card-${Date.now()}`, socials: draft.socials.filter((item) => item.handle.trim()) }); setDraft(saved); setSavedNote("Saved on this device only. Copy the link if you want to share it."); }
   async function copyLink(card: CallingCard) { const url = `${window.location.origin}${cardSharePath(card)}`; try { await navigator.clipboard.writeText(url); setCopyNote("Link copied."); } catch { window.prompt("Copy this card link", url); setCopyNote("Link ready."); } }
   function onKeep(card: CallingCard) { setCaseCards(keepCard(card)); setKeepNote(`Kept ${card.name} in your case on this device.`); }
