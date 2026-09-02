@@ -109,13 +109,20 @@ h1, h2, h3, .display {
 .brand-crest {
   display: grid;
   place-items: center;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  overflow: hidden;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--wine-deep) 70%, black);
   border: 2px solid var(--gaslight-gold);
-  color: var(--gold-soft);
+  background: var(--velvet-black);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--wine) 80%, black);
+}
+
+.brand-crest img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .brand-name {
