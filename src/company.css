@@ -1,0 +1,165 @@
+/* Calling cards. Cream playbill, gold hairline, initials instead of faces. */
+
+.company-toolbar {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+}
+
+.company-grid-tight {
+  grid-template-columns: 1fr;
+}
+
+.calling-card {
+  background: var(--paper);
+  border: 1px solid color-mix(in srgb, var(--gaslight-gold) 45%, var(--stark-silver));
+  padding: 1.25rem 1.2rem 1.3rem;
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--velvet-black) 8%, transparent);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.calling-card-top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.calling-card h3 {
+  margin: 0.1rem 0 0;
+  font-size: 1.55rem;
+}
+
+.calling-office {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.calling-mono {
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  color: var(--gold-soft);
+  background:
+    radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--wine) 55%, transparent), var(--wine-deep) 72%);
+  border: 2px solid var(--gaslight-gold);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--paper) 80%, var(--cabaret-red));
+}
+
+.calling-line {
+  margin: 1rem 0 0;
+  font-size: 1rem;
+}
+
+.calling-house {
+  margin: 0.55rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--cabaret-red);
+}
+
+.calling-socials {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.calling-socials a,
+.calling-socials span {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  text-decoration: none;
+  border-top: 1px solid var(--stark-silver);
+  padding-top: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.calling-socials em {
+  font-style: normal;
+  color: var(--muted);
+}
+
+.calling-socials a:hover {
+  color: var(--cabaret-red);
+}
+
+.calling-flag {
+  margin: 0.9rem 0 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+
+.calling-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.calling-actions .ticket {
+  min-width: 0;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.82rem;
+}
+
+.shared-card {
+  background: color-mix(in srgb, var(--paper) 70%, var(--gold-soft));
+  border: 1px solid var(--gaslight-gold);
+  padding: 1.2rem 1.2rem 1.4rem;
+}
+
+.card-form .ticket {
+  min-width: 0;
+}
+
+.social-row {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.55rem 0;
+}
+
+.company-desk h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 640px) {
+  .company-toolbar {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+
+  .social-row {
+    grid-template-columns: 10rem 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+}
