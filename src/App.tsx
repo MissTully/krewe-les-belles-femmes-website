@@ -10,6 +10,7 @@ import ExecutiveProducers from "./pages/ExecutiveProducers";
 import Underwriters from "./pages/Underwriters";
 import StageDoor from "./pages/StageDoor";
 import Calendar from "./pages/Calendar";
+import Company from "./pages/Company";
 
 export default function App() {
   const location = useLocation();
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/heritage" element={<Heritage />} />
           <Route path="/fellowship" element={<Fellowship />} />
+          <Route path="/company" element={<Company />} />
           <Route path="/giving-back" element={<GivingBack />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/soiree" element={<Soiree />} />
