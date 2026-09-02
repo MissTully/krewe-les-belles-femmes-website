@@ -1,13 +1,12 @@
 export const krewe = {
   name: "Les Belles Femmes",
   fullName: "Krewe of Les Belles Femmes",
-  city: "Bellwether",
+  city: "Tampa Bay",
   founded: 2002,
   motto: ["Truth", "Beauty", "Freedom", "Love"] as const,
-  tagline: "Good stories, bright nights, and a little confetti.",
+  tagline: "A sisterhood of women who celebrate life, friendship, pageantry, and service.",
 };
 
-/** Paths under public/art/. Long generated filenames stay as uploaded. */
 export const art = {
   ladies: "/art/Ladies.png",
   poster: "/art/Krewe of Les Belles Femmes.jpg",
@@ -34,362 +33,89 @@ export const art = {
 } as const;
 
 export const nav = [
-  { to: "/heritage", label: "Overture" },
+  { to: "/heritage", label: "Our Story" },
   { to: "/fellowship", label: "Sisterhood" },
-  { to: "/giving-back", label: "Benefit" },
-  { to: "/calendar", label: "Playbill" },
-  { to: "/soiree", label: "Soir\u00e9e" },
-  { to: "/executive-producers", label: "Producers" },
-  { to: "/apply", label: "Casting" },
+  { to: "/giving-back", label: "Giving Back" },
+  { to: "/calendar", label: "Events" },
+  { to: "/soiree", label: "Silver Soirée" },
+  { to: "/executive-producers", label: "Support LBF" },
+  { to: "/apply", label: "Membership" },
 ] as const;
 
 export const acts = [
-  {
-    to: "/heritage",
-    act: "Act I",
-    title: "The Overture",
-    copy: "A make-believe history of moon floats, parade nights, and women who make every chapter brighter.",
-    image: art.pinwheel,
-    alt: "A silver paper windmill with a red ribbon, held in a hand.",
-  },
-  {
-    to: "/fellowship",
-    act: "Act II",
-    title: "Sisterhood",
-    copy: "Book-club debates, costume-table chaos, porch parties, and room for every kind of fun.",
-    image: art.dressing,
-    alt: "Top hat, crimson feathers, silver beads, and cream gloves on a dressing table.",
-  },
-  {
-    to: "/giving-back",
-    act: "Act III",
-    title: "The Benefit",
-    copy: "Imaginary good turns: little libraries, garden parties, and neighbors cheering each other on.",
-    image: art.gift,
-    alt: "Gloved hands offering a wrapped gift and a bouquet of red flowers.",
-  },
+  { to: "/heritage", act: "Our Story", title: "25 Years of LBF", copy: "Founded in 2002, Les Belles Femmes has grown into a Tampa Bay sisterhood rooted in Truth, Beauty, Freedom, and Love.", image: art.parade, alt: "Les Belles Femmes parade imagery." },
+  { to: "/fellowship", act: "Sisterhood", title: "Come Find Your People", copy: "Book clubs, socials, galas, themed balls, and the friendships that make every gathering feel like coming home.", image: art.dressing, alt: "Parisian-inspired costume pieces including a top hat, feathers, beads, gloves, and boots." },
+  { to: "/giving-back", act: "Giving Back", title: "Beauty With Purpose", copy: "The krewe carries its spirit of celebration into service, fundraising, and support for organizations across Tampa Bay.", image: art.givingStill, alt: "A celebratory gift representing the krewe's spirit of giving." },
 ] as const;
 
 export const partners = [
-  {
-    name: "The Bellwether Little Library",
-    note: "An imaginary porch-sized library where every borrowed novel comes with a handwritten recommendation.",
-  },
-  {
-    name: "The Second-Line Seedlings",
-    note: "A fictional neighborhood garden that grows sunflowers, herbs, and excellent excuses for a picnic.",
-  },
-  {
-    name: "Mabel's Moon Cart",
-    note: "A make-believe parade cart delivering craft supplies and tiny moments of celebration.",
-  },
-  {
-    name: "The Lantern Hour",
-    note: "An invented annual evening of music, stories, and neighborly cheer under paper lanterns.",
-  },
-  {
-    name: "The Confetti Pantry",
-    note: "A fictional community cupboard stocked with cocoa, cake mix, and celebration-worthy sprinkles.",
-  },
+  { name: "The Spring of Tampa Bay", note: "A local organization supported by the krewe through fundraising and community involvement." },
+  { name: "Pediatric Cancer Foundation", note: "A Tampa Bay cause supported through the krewe's charitable efforts." },
+  { name: "Best Buddies International", note: "A community organization included among the causes supported by LBF." },
+  { name: "Humane Society of Tampa Bay", note: "A local organization supported through the krewe's giving and volunteer spirit." },
 ] as const;
 
-export const producerLevels = [
-  {
-    name: "Friend of the Moon Float",
-    amount: "Imaginary",
-    note: "Receives a fictional toast from the captain of Mabel the Moon.",
-  },
-  {
-    name: "Keeper of the Confetti",
-    amount: "Make-believe",
-    note: "Gets an honorary mention in the entirely invented parade program.",
-  },
-] as const;
+export const producerLevels = [] as const;
 
-/**
- * Rhythm of a public year. Months only. Do not invent parade call times here.
- * Keep this short enough for the home page.
- */
 export const yearRhythm = [
-  {
-    when: "Early spring",
-    title: "The costume-table social",
-    note: "Ada Fontaine brings ribbon, Maris Cole brings a novel, and everyone brings a good story.",
-  },
-  {
-    when: "November",
-    title: "Book club and the Silver Soir\u00e9e",
-    note: "A quiet member night, then opening night of the silver season. The ball is not the whole year.",
-  },
-  {
-    when: "Parade season",
-    title: "The Bellwether Bright Parade",
-    note: "Paper lanterns, moon-float sketches, and a route that exists only in this story.",
-  },
-  {
-    when: "Late summer",
-    title: "The Porchlight Dance",
-    note: "A made-up night of bright outfits, porch lights, and the happiest kind of noisy music.",
-  },
-  {
-    when: "Any good weekend",
-    title: "The impromptu picnic",
-    note: "A story swap, a snack table, and a surprise reason to celebrate together.",
-  },
+  { when: "Year-round", title: "Socials, book clubs & gatherings", note: "The calendar includes seasonal socials, book club, galas, and themed events throughout the year." },
+  { when: "November 2026", title: "Silver Soirée", note: "A 25th-anniversary celebration at Carrollwood Country Club on Saturday, November 14, 2026." },
+  { when: "Parade season", title: "Tampa Bay parades", note: "LBF participates in Gasparilla, Sant' Yago, and holiday parades, with the krewe's signature Eiffel Tower and Moulin Rouge windmill float." },
+  { when: "May–September", title: "Recruitment season", note: "Prospective members may be welcomed as guests at seasonal mixers and social events with current members." },
 ] as const;
 
-/**
- * First-year money. Only dues are a published number.
- * Everything else is a category the treasurer or membership chair still prices.
- */
 export const firstYearCosts = [
-  {
-    item: "Annual dues",
-    amount: "$450",
-    note: "Invited by an officer. Do not send dues through this site.",
-  },
-  {
-    item: "Costume and boots",
-    amount: "Plan for it",
-    note: "Corset, ruffles, boa, hat, feathers, boots. Borrow before you buy if a sister offers.",
-  },
-  {
-    item: "Ball ticket",
-    amount: "Separate from dues",
-    note: "Silver Soir\u00e9e is its own seat. A woman who skips the gala can still belong.",
-  },
-  {
-    item: "Parade weekend time",
-    amount: "Days, not dollars",
-    note: "Gasparilla weekend is a work problem for nurses and teachers. Ask before you promise the float.",
-  },
+  { item: "Membership details", amount: "Ask membership", note: "The supplied organization information does not publish a current dues amount. Membership details should come directly from LBF." },
+  { item: "Costume", amount: "Parisian cabaret", note: "Corsets, ruffles, boas, top hats, feathers, and boots are part of the krewe's signature parade style." },
+  { item: "Events", amount: "Year-round", note: "Members participate in socials, book club, galas, themed balls, and parade activities." },
 ] as const;
 
-/** Steps a guest follows before dues. */
 export const joiningSteps = [
-  {
-    step: "1",
-    title: "Be asked",
-    note: "Someone already in the krewe should know your name. Cold forms get a polite wait.",
-  },
-  {
-    step: "2",
-    title: "Come to three socials",
-    note: "May through September. Prior parade guesting or security work can stand in. Ask membership.",
-  },
-  {
-    step: "3",
-    title: "Leave your name here",
-    note: "Casting collects a reach-back. It does not admit you and it does not take money.",
-  },
-  {
-    step: "4",
-    title: "Wait for an officer",
-    note: "Dues and the roster come from membership, not from a button.",
-  },
+  { step: "1", title: "Come as a guest", note: "Prospective members are warmly invited to seasonal mixers and social events as guests of current members." },
+  { step: "2", title: "Meet the sisterhood", note: "Share a drink, conversation, laughter, and the experience of an LBF gathering." },
+  { step: "3", title: "Reach out", note: "Use the site's membership inquiry or speak with a current member at a community event to learn about joining." },
 ] as const;
 
-/** Les Beaux is the gentlemen's auxiliary. Keep this visible, not a footnote. */
 export const lesBeaux = {
   name: "Les Beaux",
-  title: "How a man becomes a Beau",
-  copy: "Les Beaux is the gentlemen's auxiliary of a women's krewe. A husband, brother, or friend belongs in the room with the same dignity as a Belle. He does not become a Belle. Ask a member to walk him to membership the same way a woman is asked.",
+  title: "The Les Beaux Auxiliary",
+  copy: "Les Belles Femmes is a women's krewe with Les Beaux, its male auxiliary. The men who love and support the krewe can share in the pageantry, fellowship, and community spirit.",
 };
 
-/** Lines that already live on the dressing-room mirror. Do not invent new slogans. */
 export const houseLines = [
-  "Wear the outfit.",
-  "Add the sparkle.",
-  "Buy the boots.",
-  "Dream big.",
-  "Laugh loudly.",
-  "Never dull your sparkle.",
-  "Be generous.",
-  "Choose kindness.",
-  "Be unapologetically you.",
+  "Wear the damn outfit.", "Add the sparkle.", "Buy the boots.", "Dream big.", "Laugh loudly.", "Never dull your sparkle.", "Be generous.", "Choose kindness.", "Be unapologetically you.",
 ] as const;
 
-/** Other Tampa krewes we already stand next to. Confirm each night before printing a flyer. */
 export const interKrewe = [
-  {
-    name: "Notorious Krewe of the Peg Leg Pirates",
-    note: "Bingo and other shared nights. Fellowship across the bay, not only inside this house.",
-  },
+  { name: "Notorious Krewe of the Peg Leg Pirates", note: "LBF participates in inter-krewe fellowship and shared community events, including Bingo Night." },
 ] as const;
 
-/**
- * What a first ride feels like when call time is still missing.
- * Do not put a clock or a street corner staging lot here.
- */
 export const paradeWeekend = [
-  {
-    title: "Costume",
-    note: "Parisian cabaret: corset, ruffles, boa, top hat, feathers, boots. The float carries the windmill and a small Eiffel Tower.",
-  },
-  {
-    title: "The day",
-    note: "Standing, weather, beads, and a long wait before the first turn. Ask who watches whose bag.",
-  },
-  {
-    title: "Call time",
-    note: "The float captain still holds invasion brunch and float call. This page will not guess a Saturday morning hour.",
-  },
+  { title: "The Look", note: "The krewe's signature style is turn-of-the-century Parisian cabaret: corsets, fluffy ruffled skirts, boas, top hats, feathers, and boots." },
+  { title: "The Float", note: "The signature float features a miniature Eiffel Tower and Moulin Rouge windmill motif." },
+  { title: "The Parades", note: "LBF participates in major Tampa Bay events including the Gasparilla Pirate Fest, the Sant' Yago Knight Parade in Ybor City, and local holiday parades." },
 ] as const;
 
-/** Placeholder until founders send approved memories. */
 export const memoryCall = {
-  title: "The house is collecting its own story",
-  copy: "Founders and longtime members are being asked for short memories, not a polished history. When a sister approves a paragraph and a photograph, it will live on The Overture. Until then this page will not invent a name.",
+  title: "The story belongs to the women who lived it",
+  copy: "LBF honors its heritage through member spotlights, founder memories, and stories from longtime members. The site can continue to grow as approved memories and photographs are shared.",
 };
 
-export const benefitStance =
-  "In this hypothetical world, a good party always leaves a little brightness behind. These fictional projects make Bellwether more bookish, bloom-filled, and welcoming.";
+export const benefitStance = "Beyond the parties and parades, Les Belles Femmes gives back through fundraising, volunteering, and support for local organizations including The Spring of Tampa Bay, the Pediatric Cancer Foundation, Best Buddies International, and the Humane Society of Tampa Bay.";
 
-/**
- * Who may see the event on the public Front Stage.
- * members = krewe only; still listed here so the page can filter,
- * but the copy must not leak addresses or call times.
- */
 export type EventAudience = "public" | "members" | "invite";
-
-/** Kind of night. Used for the small playbill label, not for color coding. */
 export type EventKind = "ball" | "parade" | "social" | "service" | "recruiting";
-
-/**
- * How sure we are of the day.
- * confirmed = a real calendar day the board or the city has published.
- * month = we know the month, not the day.
- * window = a range such as "May through September."
- */
 export type DateCertainty = "confirmed" | "month" | "window";
+export type KreweEvent = { id: string; title: string; whenLabel: string; start: string; end?: string; timeLabel?: string; where: string; audience: EventAudience; kind: EventKind; certainty: DateCertainty; to?: string; onHome?: boolean; notes?: string };
 
-export type KreweEvent = {
-  id: string;
-  title: string;
-  /** Sentence a guest can read. Do not invent a clock time here. */
-  whenLabel: string;
-  /**
-   * First calendar day this event occupies, as YYYY-MM-DD in Tampa time.
-   * Use the first of the month when the day is still unknown.
-   */
-  start: string;
-  /** Last calendar day if this is a window. Leave blank for a single night. */
-  end?: string;
-  timeLabel?: string;
-  where: string;
-  audience: EventAudience;
-  kind: EventKind;
-  certainty: DateCertainty;
-  /** Internal page to open. Leave blank for city parades with no house page. */
-  to?: string;
-  /** Shown on the home season list. Keep this list short. */
-  onHome?: boolean;
-  notes?: string;
-};
-
-/**
- * Source of truth for The Playbill page and the home list.
- * Update this file. Do not type dates into page components.
- * Board meetings stay off this list until Stage Door opens.
- */
 export const events: KreweEvent[] = [
-  {
-    id: "silver-soiree-2026",
-    title: "The Silver Soir\u00e9e",
-    whenLabel: "Saturday, 14 November 2026",
-    start: "2026-11-14",
-    timeLabel: "Evening. Doors and dinner time still with the ball chair.",
-    where: "Moonrise Pavilion, Bellwether",
-    audience: "invite",
-    kind: "ball",
-    certainty: "confirmed",
-    to: "/soiree",
-    onHome: true,
-    notes:
-      "Silver-season opening night. Interest form is live. Paid tickets wait for the treasurer's processor.",
-  },
-  {
-    id: "fall-book-club-2026",
-    title: "Fall Book Club",
-    whenLabel: "November 2026",
-    start: "2026-11-01",
-    where: "The fictional Bellwether Reading Room.",
-    audience: "members",
-    kind: "social",
-    certainty: "month",
-    to: "/fellowship",
-    onHome: true,
-    notes: "Ask the fellowship chair for the title, host, and whether guests may come.",
-  },
-  {
-    id: "childrens-gasparilla-2027",
-    title: "Ashley Children's Gasparilla",
-    whenLabel: "Saturday, 23 January 2027",
-    start: "2027-01-23",
-    where: "Tampa. City children's parade route.",
-    audience: "public",
-    kind: "parade",
-    certainty: "confirmed",
-    to: "/heritage",
-    notes:
-      "City date from Ye Mystic Krewe of Gasparilla and the City of Tampa. Confirm whether Les Belles Femmes rolls this year before treating it as a house call time.",
-  },
-  {
-    id: "gasparilla-pirate-fest-2027",
-    title: "The Bellwether Bright Parade",
-    whenLabel: "Saturday, 30 January 2027",
-    start: "2027-01-30",
-    where: "Bellwether's make-believe waterfront",
-    audience: "public",
-    kind: "parade",
-    certainty: "confirmed",
-    to: "/heritage",
-    onHome: true,
-    notes:
-      "City Parade of Pirates date. Invasion brunch and float call time are separate and still need the float captain.",
-  },
-  {
-    id: "sant-yago-2027",
-    title: "The Porchlight Dance",
-    whenLabel: "February 2027",
-    start: "2027-02-01",
-    where: "Moonrise Pavilion, Bellwether",
-    audience: "public",
-    kind: "parade",
-    certainty: "month",
-    to: "/heritage",
-    onHome: true,
-    notes:
-      "Usually the Saturday about two weeks after Gasparilla. The 2027 night is not posted on the Knights of Sant' Yago site yet. Do not invent a day.",
-  },
-  {
-    id: "membership-window-2027",
-    title: "Casting season opens",
-    whenLabel: "May 2027",
-    start: "2027-05-01",
-    end: "2027-09-30",
-    where: "Inquiry through this site. Recruitment socials May through September.",
-    audience: "public",
-    kind: "recruiting",
-    certainty: "window",
-    to: "/apply",
-    notes:
-      "Month taken from the Inter Krewe Council public profile. Confirm with the membership chair before printing it on paper invitations.",
-  },
-];
+  { id: "silver-soiree-2026", title: "Silver Soirée", whenLabel: "Saturday, November 14, 2026", start: "2026-11-14", where: "Carrollwood Country Club", audience: "invite", kind: "ball", certainty: "confirmed", to: "/soiree", onHome: true, notes: "Celebrating over 25 years of Truth, Beauty, Freedom, and Love." },
+  { id: "fall-book-club-2026", title: "Fall Book Club", whenLabel: "November 2026", start: "2026-11-01", where: "Tampa Bay", audience: "members", kind: "social", certainty: "month", to: "/fellowship", onHome: true, notes: "An informal seasonal member social following the summer book club gathering." },
+  { id: "gasparilla-2027", title: "Gasparilla Pirate Fest", whenLabel: "Late January 2027", start: "2027-01-01", where: "Tampa Bay", audience: "public", kind: "parade", certainty: "month", to: "/heritage", onHome: true, notes: "The supplied information gives a late-January window rather than a specific day." },
+  { id: "sant-yago-2027", title: "Sant' Yago Knight Parade", whenLabel: "Mid-February 2027", start: "2027-02-01", where: "Ybor City, Tampa", audience: "public", kind: "parade", certainty: "month", to: "/heritage", onHome: true, notes: "The supplied information gives mid-February rather than a specific 2027 date." },
+  { id: "recruitment-2027", title: "Recruitment season", whenLabel: "May–September 2027", start: "2027-05-01", end: "2027-09-30", where: "Tampa Bay · seasonal mixers and social events", audience: "public", kind: "recruiting", certainty: "window", to: "/apply", onHome: true, notes: "Prospective members are invited to attend as guests of current members." },
+] as const;
 
-/** Home page still wants a short list. Built from events marked onHome. */
-export const season = events
-  .filter((event) => event.onHome)
-  .map((event) => ({
-    when: event.whenLabel,
-    title: event.title,
-    where: event.where,
-    to: event.to ?? "/calendar",
-  }));
+export const season = events.filter((event) => event.onHome).map((event) => ({ when: event.whenLabel, title: event.title, where: event.where, to: event.to ?? "/calendar" }));
 
-export const links = {
-  facebook: "#",
-  shop: "#",
-  mailing: "Bellwether, in the imaginary harbor",
-};
+export const links = { facebook: "", shop: "https://krewe-of-les-belles-femmes.square.site/", mailing: "Tampa Bay, Florida" };
