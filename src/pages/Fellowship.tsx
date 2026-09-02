@@ -1,95 +1,29 @@
 import { Link } from "react-router-dom";
 import Ornament from "../components/Ornament";
 import PhotoPlate from "../components/PhotoPlate";
-import SampleStory from "../components/SampleStory";
 import { art, houseLines, interKrewe, lesBeaux } from "../content";
-import { sampleStories } from "../sampleCopy";
 
 export default function Fellowship() {
-  const roomStories = sampleStories.filter((story) => story.page === "sisterhood");
-
   return (
-    <article className="page wrap">
-      <p className="eyebrow">Act II · The room</p>
-      <h1>Sisterhood</h1>
-      <Ornament />
-      <div className="split reverse">
-        <PhotoPlate
-          src={art.banner}
-          alt="Two women in cabaret dress flanking the krewe name, motto, and a Tampa skyline with a tower."
-          caption="The costume is cabaret. The room is a sisterhood."
-          imgClassName="photo-wide"
-        />
+    <article className="page wrap refined-page">
+      <p className="eyebrow">Sisterhood</p><h1>Come Find Your People</h1><Ornament />
+      <div className="split reverse heritage-lead">
+        <PhotoPlate src={art.banner} alt="Les Belles Femmes Parisian-inspired imagery." caption="The costume is cabaret. The connection is real." imgClassName="photo-wide" />
         <div className="prose">
-          <p>
-            Ada Fontaine brings the best paperback recommendations, Maris Cole can turn a tablecloth
-            into a costume, and June Waverly is usually first on the dance floor. Their standing rule:
-            arrive as you are and leave with three new friends.
-          </p>
-          <p>
-            The product is the room: book-club debates, costume-table chaos, porch parties, and a
-            dressing-room rule that still fits on a mirror. Every person and story here is fictional.
-          </p>
-          <p className="display italic cabaret">What would Dolly do?</p>
-          <div className="hero-actions" style={{ justifyContent: "flex-start" }}>
-            <Link className="ticket red" to="/apply">
-              Casting Call
-            </Link>
-            <Link className="ticket" to="/company">
-              Calling cards
-            </Link>
-            <Link className="ticket" to="/stage-door">
-              Stage Door
-            </Link>
-          </div>
+          <p className="lead-copy">We believe growing older does not mean outgrowing your sense of wonder—or your love of a great party.</p>
+          <p>LBF brings women together for genuine connection, lively conversation, seasonal socials, book clubs, galas, themed balls, and the shared joy of parade season.</p>
+          <p>Our philosophy is simple: <strong>Wear the damn outfit. Add the sparkle. Choose kindness.</strong> Be yourself, cheer on the women around you, and make room for another friend at the table.</p>
+          <div className="hero-actions" style={{ justifyContent: "flex-start" }}><Link className="ticket red" to="/apply">Learn about membership</Link><Link className="ticket" to="/company">Meet the company</Link></div>
         </div>
       </div>
 
-      <section className="stack-gap">
-        <p className="eyebrow">Voice sample</p>
-        <h2 className="section-title">How the room should sound</h2>
-        <div className="story-stack">
-          {roomStories.map((story) => (
-            <SampleStory key={story.id} story={story} />
-          ))}
-        </div>
-      </section>
-
-      <section className="stack-gap">
-        <p className="eyebrow">The mirror</p>
-        <h2 className="section-title">Lines the house already keeps</h2>
-        <ul className="house-lines">
-          {houseLines.map((line) => (
-            <li key={line}>{line}</li>
-          ))}
-        </ul>
-      </section>
+      <section className="stack-gap"><p className="eyebrow">The house philosophy</p><h2 className="section-title">Live boldly. Laugh loudly. Love generously.</h2><ul className="house-lines">{houseLines.map((line) => <li key={line}>{line}</li>)}</ul></section>
 
       <section className="stack-gap split">
-        <div className="panel">
-          <p className="eyebrow">Gentlemen</p>
-          <h2>{lesBeaux.title}</h2>
-          <p>{lesBeaux.copy}</p>
-        </div>
-        <div className="panel">
-          <p className="eyebrow">Across the bay</p>
-          <h2>Other houses</h2>
-          {interKrewe.map((night) => (
-            <p key={night.name}>
-              <strong>{night.name}.</strong> {night.note}
-            </p>
-          ))}
-        </div>
+        <div className="panel"><p className="eyebrow">Les Beaux</p><h2>{lesBeaux.title}</h2><p>{lesBeaux.copy}</p></div>
+        <div className="panel"><p className="eyebrow">Inter-krewe fellowship</p><h2>Community beyond our krewe</h2>{interKrewe.map((night) => <p key={night.name}><strong>{night.name}.</strong> {night.note}</p>)}</div>
       </section>
-
-      <div className="stack-gap">
-        <PhotoPlate
-          src={art.dressing}
-          alt="Top hat, crimson feathers, silver beads, cream gloves, and black boots on a dressing table."
-          caption="Boots, beads, and the hat. Then the sisterhood."
-          imgClassName="photo-landscape"
-        />
-      </div>
+      <div className="stack-gap"><PhotoPlate src={art.dressing} alt="Parisian-inspired costume pieces." caption="Bring your sparkle." imgClassName="photo-landscape" /></div>
     </article>
   );
 }
