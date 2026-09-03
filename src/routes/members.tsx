@@ -40,8 +40,8 @@ function MembersPage() {
     <article className="pb-24">
       <PageHero
         kicker="Comp cards"
-        title="Leave your headshot in the house"
-        lede="The sheet an actress carries to an audition: a photograph, a name, and a few lines. So the company can put a face to the float."
+        title="Put a face to the circle"
+        lede="A photograph, a name, and a few lines — so sisters can recognize one another on the boulevard and around the table."
       />
 
       <div className="wrap mt-8 flex flex-wrap items-center gap-3">
