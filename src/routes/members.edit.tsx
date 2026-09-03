@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/page-hero";
 import { ProfileForm } from "@/components/profile-form";
+import "@/styles/profiles.css";
 
 export const Route = createFileRoute("/members/edit")({ component: MemberEditPage });
 

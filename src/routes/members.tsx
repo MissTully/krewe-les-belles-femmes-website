@@ -5,6 +5,7 @@ import { ProfileCard } from "@/components/profile-card";
 import { Ticket } from "@/components/ticket-link";
 import { listMemberProfiles } from "@/lib/profile-actions";
 import { mergeProfiles, readLocalProfiles, type PublicProfile } from "@/lib/profiles";
+import "@/styles/profiles.css";
 
 export const Route = createFileRoute("/members")({ component: MembersPage });
 
