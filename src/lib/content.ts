@@ -6,7 +6,7 @@ export const krewe = {
   founded: 2002,
   motto: ["Truth", "Beauty", "Freedom", "Love"] as const,
   tagline: "Come find your people.",
-  philosophy: "Wear the damn outfit, add the sparkle, and choose kindness.",
+  philosophy: "Wear the hat, add the sparkle, and choose kindness.",
   boardNote: "Dream big, laugh loudly, and never dull your sparkle.",
 };
 
@@ -109,7 +109,7 @@ export const yearRhythm = [
 ] as const;
 
 export const houseLines = [
-  "Wear the damn outfit.",
+  "Wear the hat.",
   "Add the sparkle.",
   "Buy the boots.",
   "Dream big.",
@@ -134,7 +134,7 @@ export const reasons = [
   {
     kicker: "03",
     title: "A safe space to shine",
-    copy: "Wear the damn outfit, add the sparkle, and choose kindness. LBF is a judgement-free zone where you can drop your armor, be entirely yourself, and be cheered on for it.",
+    copy: "Wear the hat, add the sparkle, and choose kindness. LBF is a judgement-free zone where you can drop your armor, be entirely yourself, and be cheered on for it.",
   },
   {
     kicker: "04",

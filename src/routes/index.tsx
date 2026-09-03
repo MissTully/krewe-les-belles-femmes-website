@@ -83,7 +83,7 @@ function Home() {
         <PhotoFrame
           src={art.sunny}
           alt="Krewe members in cabaret costumes gathered on the float."
-          caption="Wear the damn outfit. Add the sparkle. Choose kindness."
+          caption="Wear the hat. Add the sparkle. Choose kindness."
           imgClassName="aspect-[4/5] md:aspect-[4/5]"
         />
       </section>
