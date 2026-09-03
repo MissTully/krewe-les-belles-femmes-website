@@ -27,7 +27,7 @@ function SisterhoodPage() {
             putting on boots and feather-adorned top hats to rule the parade route — we do it together.
           </p>
           <Ticket to="/membership" variant="wine" className="mt-8">
-            Sit with us
+            Join
           </Ticket>
         </div>
         <PhotoFrame
@@ -86,7 +86,7 @@ function SisterhoodPage() {
           </p>
           <p className="mt-4 font-display text-2xl italic text-cabaret">Never dull your sparkle.</p>
           <Ticket to="/membership" variant="wine" className="mt-8">
-            Meet LBF
+            Join
           </Ticket>
         </div>
       </section>

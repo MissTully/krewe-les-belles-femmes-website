@@ -12,7 +12,7 @@ function MembershipPage() {
     <article className="pb-24">
       <PageHero
         kicker="Membership"
-        title="Come sit with us"
+        title="Join"
         lede="We know that putting yourself out there can feel intimidating. We want to make it warm and easy — no stuffy interviews, just genuine connection."
       />
 
