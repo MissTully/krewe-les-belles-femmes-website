@@ -1,0 +1,35 @@
+.profile-avatar,
+.profile-card-photo,
+.profile-card-fallback {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profile-card {
+  display: grid;
+  gap: 1.1rem;
+  padding: 1.4rem 1.35rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .profile-card {
+    grid-template-columns: auto 1fr;
+    align-items: start;
+  }
+}
+
+.profile-card-fallback {
+  display: grid;
+  place-items: center;
+  background: var(--color-wine);
+  color: var(--color-gold-soft);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+}
+
+.profile-card-body {
+  min-width: 0;
+}
