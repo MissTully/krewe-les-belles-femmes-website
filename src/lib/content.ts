@@ -55,7 +55,6 @@ export const nav = [
   { to: "/events", label: "Events" },
   { to: "/shop", label: "Shop" },
   { to: "/soiree", label: "Silver Soirée" },
-  { to: "/membership", label: "Membership" },
 ] as const;
 
 export const pillars = [
@@ -376,7 +375,7 @@ export const events: KreweEvent[] = [
     audience: "public",
     kind: "recruiting",
     certainty: "window",
-    to: "/membership",
+    to: "/sisterhood",
     notes: "Come as a guest of a current member. Three socials, then a conversation about joining.",
   },
 ];
