@@ -9,9 +9,9 @@ function MemberEditPage() {
   return (
     <article className="pb-24">
       <PageHero
-        kicker="The Circle"
+        kicker="Comp cards"
         title="Your card"
-        lede="A name, a photograph, and a little about yourself. Sisters use this to put a face to the float."
+        lede="Photograph, name, and a few lines. The same thing you would hand across a table before the reading starts."
       />
       <div className="wrap-narrow mt-10">
         <div className="panel p-6 md:p-8">

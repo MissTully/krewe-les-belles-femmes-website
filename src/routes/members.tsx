@@ -11,7 +11,7 @@ export const Route = createFileRoute("/members")({ component: MembersPage });
 
 function MembersPage() {
   const [profiles, setProfiles] = useState<PublicProfile[]>([]);
-  const [status, setStatus] = useState("Loading the circle…");
+  const [status, setStatus] = useState("Loading the cards\u2026");
 
   useEffect(() => {
     let cancelled = false;
@@ -39,17 +39,17 @@ function MembersPage() {
   return (
     <article className="pb-24">
       <PageHero
-        kicker="The Circle"
-        title="Meet the house"
-        lede="A quiet directory for Belles and Les Beaux to share a face and a few sentences. Not a public yearbook. Not the Stage Door login yet."
+        kicker="Comp cards"
+        title="Leave your headshot in the house"
+        lede="The sheet an actress carries to an audition: a photograph, a name, and a few lines. So the company can put a face to the float."
       />
 
       <div className="wrap mt-8 flex flex-wrap items-center gap-3">
         <Ticket to="/members/edit" variant="wine">
-          Create my card
+          Make my card
         </Ticket>
         <p className="m-0 max-w-xl text-sm text-muted">
-          Email stays off the card. You keep an edit code so you can change the photo or the note later.
+          Email stays off the card. Keep an edit code so you can change the photograph or the lines later.
         </p>
       </div>
 
