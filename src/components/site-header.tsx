@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { art, krewe, nav } from "@/lib/content";
+import { circleNav } from "@/lib/nav-circle";
 import { ShopBagButton } from "@/components/shop-cart";
+
+const items = [...nav, circleNav];
 
 export function SiteHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -46,7 +49,7 @@ export function SiteHeader() {
           </Link>
 
           <nav className="hidden items-center gap-x-4 gap-y-1 xl:flex" aria-label="Main navigation">
-            {nav.map((item) => (
+            {items.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
@@ -86,7 +89,7 @@ export function SiteHeader() {
           className="fixed inset-x-0 top-[4.35rem] z-30 grid gap-1 border-b border-gold bg-wine-deep px-5 py-4 shadow-[0_18px_40px_rgba(0,0,0,0.28)] xl:hidden"
           aria-label="Main navigation"
         >
-          {nav.map((item) => (
+          {items.map((item) => (
             <Link
               key={item.to}
               to={item.to}
