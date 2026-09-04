@@ -78,7 +78,7 @@ export const pillars = [
     to: "/giving",
     kicker: "Giving Back",
     title: "Beauty with purpose",
-    copy: "Beyond the parties and parades, we stand shoulder-to-shoulder for Tampa organizations that matter — including The Spring, the Humane Society, Best Buddies, and the Pediatric Cancer Foundation.",
+    copy: "Beyond the parties and parades, we stand shoulder-to-shoulder for Tampa organizations that matter — from The Spring and the Pediatric Cancer Foundation to children’s hospital visits with the ReliaQuest Bowl.",
     image: art.gift,
     alt: "Gloved hands offering a small wrapped gift, drawn as a lithograph.",
   },
@@ -165,33 +165,33 @@ export const timeline = [
   {
     years: "2002–2010",
     title: "The first roll",
-    copy: "A small group of women looked at Tampa’s parade scene and wanted a sanctuary of sisterhood — a place where brilliant women could leave the boardroom, strap on a velvet corset, and laugh until their ribs ached. Founder Eleanor Vance still jokes about the first makeshift float: a modest trailer, paper roses, and sheer grit. Membership grew from a dozen dreamers to a tight-knit collective. Les Beaux, the male auxiliary, was established so the men who love and support the krewe could share the pageantry.",
+    copy: "Susan King wanted to start a new krewe and was advised to do something other than pirates. So she worked with her daughter Erin Martin West and a circle of friends to design costumes inspired by the Moulin Rouge — the real Parisian cabaret behind the movie — and, ooh la la, Les Belles Femmes was born in Tampa in 2002. Founding members Pat Smith and Nora Lee Smith stood beside them; Raymond King served as the krewe’s first and only King, the seed of the Les Beaux male auxiliary; and Ellen Arena became the very first recruit. In 2004 the krewe held its first charity event at the Tampa Museum — sponsored by Mumm Cordon Rouge Champagne — beside touring lithographs by Toulouse-Lautrec, the artist who lived above the Moulin Rouge and first put its dancers on a poster.",
   },
   {
-    years: "2010–2018",
-    title: "Book clubs, champagne, midnight epiphanies",
-    copy: "LBF became a lifeline for women navigating the messy, beautiful middle chapters of life. Monthly gatherings grew legendary — including the “Great Austen Debate of 2014,” when a casual book club over French pastries became a wine-fueled backyard Pride and Prejudice. In the same era the krewe poured fierce compassion into Tampa: The Spring of Tampa Bay, the Humane Society, and the Pediatric Cancer Foundation.",
+    years: "The middle chapters",
+    title: "Showing up, in costume",
+    copy: "The krewe became a fixture of Tampa Bay giving. For years with the Pediatric Cancer Foundation’s “Fashion Funds a Cure,” members chauffeured moms and children to the Day of Pampering, helped them pick outfits for the show, and assisted with “Cuts for a Cure” and the gala dinner. They entertained crews and viewers at ABC’s Extreme Home Makeover build on Davis Island, cheered kids at the Steve Yerrid Foundation Kid’s Fishing Derby hosted by Hall of Famer Wade Boggs at the Vinoy Basin, and rode in the Children’s Parade after the Bonefish Grill–sponsored luncheon that dressed the moms in LBF outfits and beads. Concert 4 Kidz cancer research benefits rounded out the era.",
   },
   {
     years: "2018–2024",
     title: "The tower rises",
-    copy: "Artistic ambitions scaled. The signature masterpiece arrived: a towering float with a miniature Eiffel Tower and a spinning Moulin Rouge windmill. Ybor at night, historic brick, the scent of roasting Cuban bread, boas catching the wind. Doctors, entrepreneurs, scientists, and creatives screaming old pop songs, arm-in-arm, as the windmill turned against the Florida stars. The clubhouse creed: Forget glass slippers. This princess wears boots.",
+    copy: "Artistic ambitions scaled. The signature masterpiece arrived: “The Tampa Bay Moulin Rouge,” a towering float with a miniature Eiffel Tower and a spinning windmill. Ybor at night, historic brick, boas catching the wind — and the giving kept pace: NFL Alumni tournaments, the ReliaQuest Bowl’s Ybor New Year’s Eve parade and children’s hospital visits, Chow Down for Ryan’s Animal Rescue Foundation, and Handbags & Happy Hour for The Spring. The clubhouse creed: Forget glass slippers. This princess wears boots.",
   },
   {
     years: "2026",
     title: "Silver Soirée and the next horizon",
-    copy: "In November 2026, Les Belles Femmes marks a quarter century at Carrollwood Country Club. LBF is not defined by the corsets, the beads, or even the Eiffel Tower float. It is defined by 2 a.m. phone calls, fierce professional support, roaring laughter across crowded tables, and the belief that life should be celebrated with style, empathy, and an unshakeable squad of friends.",
+    copy: "In November 2026, Les Belles Femmes marks a quarter century at Carrollwood Country Club, with Her Royal Highness Jennifer Silence Rankin reigning as Queen. LBF is not defined by the corsets, the beads, or even the Eiffel Tower float. It is defined by 2 a.m. phone calls, fierce professional support, roaring laughter across crowded tables, and the belief that life should be celebrated with style, empathy, and an unshakeable squad of friends.",
   },
 ] as const;
 
 export const paradeNotes = [
   {
     title: "The look",
-    note: "Turn-of-the-century Parisian cabaret: corsets, fluffy ruffled skirts, boas, top hats, feathers, and boots. Theatrical, never costume-store kitsch — and always worn with joy.",
+    note: "Individual creativity is encouraged, but the standards hold: a black top hat or fancy fascinator, boned corset, dance skirt above the knee, feather boas, black boots — and lots and lots of bling.",
   },
   {
     title: "The float",
-    note: "A miniature Eiffel Tower and a Moulin Rouge windmill, dressed in curtains, lights, and enough beads to make a boulevard glitter.",
+    note: "“The Tampa Bay Moulin Rouge” — a miniature Eiffel Tower and a turning windmill, dressed in curtains, lights, and enough beads to make a boulevard glitter.",
   },
   {
     title: "The parades",
@@ -202,23 +202,54 @@ export const paradeNotes = [
 export const partners = [
   {
     name: "The Spring of Tampa Bay",
-    note: "Standing with survivors of domestic violence through fundraising and hands-on support.",
+    note: "Standing with survivors of domestic violence — participating and donating at the annual Handbags & Happy Hour at the Bryan Glazer Family JCC, plus clothing drives.",
     href: "https://thespring.org/",
   },
   {
-    name: "Humane Society of Tampa Bay",
-    note: "A long friendship with the animals and people who need a little extra care.",
-    href: "https://humanesocietytampabay.org/",
-  },
-  {
     name: "Pediatric Cancer Foundation",
-    note: "Raising funds and spirits for families walking through the hardest seasons.",
+    note: "Years alongside “Fashion Funds a Cure” — chauffeuring moms and children to the Day of Pampering, assisting “Cuts for a Cure,” and supporting the gala dinner.",
     href: "https://www.gopf.org/",
   },
   {
-    name: "Best Buddies International",
-    note: "Friendship and inclusion for people with intellectual and developmental disabilities.",
-    href: "https://www.bestbuddies.org/",
+    name: "ReliaQuest Bowl",
+    note: "A 501(c)(3) that gives millions back to Tampa Bay. LBF was among the first krewes in its Ybor New Year’s Eve parade and joins hospital visits to bring beads to children.",
+    href: "https://www.reliaquestbowl.com/",
+  },
+  {
+    name: "Ryan’s Animal Rescue Foundation",
+    note: "Founded by Buccaneers alumnus Logan Ryan and his wife Ashley — LBF raised funds and joined Tampa’s first Chow Down event.",
+    href: "https://www.rarf.org/",
+  },
+] as const;
+
+export const givingMoments = [
+  {
+    title: "ABC’s Extreme Home Makeover",
+    note: "Invited to entertain viewers and construction crews during the Davis Island remodel — and recorded a “Welcome Home!” video for the owners.",
+  },
+  {
+    title: "Steve Yerrid Foundation Kid’s Fishing Derby",
+    note: "Hosted by Hall of Fame baseball player Wade Boggs at the Vinoy Basin, where children with cancer and their families learn to fish and lunch with tournament celebrities.",
+  },
+  {
+    title: "Children’s Parade luncheon",
+    note: "Sponsored by Bonefish Grill for many years — moms dressed in LBF outfits, beads in hand, before rolling in the Children’s Parade together.",
+  },
+  {
+    title: "NFL Alumni Association, Tampa Bay Chapter",
+    note: "Lee Roy Selmon’s bowling tournament, the annual Super Bowl of Golf supporting Caring for Children and Women of Color Golf, and NFL Vets & Corvettes honoring military veterans.",
+  },
+  {
+    title: "Concert 4 Kidz",
+    note: "Years of participation in this cancer research charity’s events.",
+  },
+  {
+    title: "Broken for Better",
+    note: "Kurt and Denette Schaer’s marriage-coaching nonprofit — the silent auction recipient at the 2023 annual ball.",
+  },
+  {
+    title: "Clothing & school drives",
+    note: "Recruiting parties and the annual Krewe Ball collect for Dream a Dress, Dress for Success, homecoming and prom dresses for local high schools, and school supplies for A Kids Place.",
   },
 ] as const;
 
@@ -244,7 +275,7 @@ export const membershipFacts = [
   {
     label: "Sisterhood",
     value: "50–75 women",
-    note: "Intentionally intimate so everyone is known, missed, and celebrated.",
+    note: "Lively ladies from their 20s through their 70s — professional working and retired women, intentionally intimate so everyone is known.",
   },
   {
     label: "Auxiliary",
@@ -352,7 +383,8 @@ export const events: KreweEvent[] = [
     audience: "public",
     kind: "parade",
     certainty: "month",
-    notes: "Exact 2027 roll date to be confirmed with the official festival calendar.",
+    notes:
+      "Exact 2027 roll date to be confirmed with the official festival calendar.",
   },
   {
     id: "sant-yago-2027",
@@ -363,7 +395,8 @@ export const events: KreweEvent[] = [
     audience: "public",
     kind: "parade",
     certainty: "month",
-    notes: "Ybor at night — historic brick, neon, and the windmill against the Florida sky.",
+    notes:
+      "Ybor at night — historic brick, neon, and the windmill against the Florida sky.",
   },
   {
     id: "recruitment-2027",
@@ -376,14 +409,15 @@ export const events: KreweEvent[] = [
     kind: "recruiting",
     certainty: "window",
     to: "/sisterhood",
-    notes: "Come as a guest of a current member. Three socials, then a conversation about joining.",
+    notes:
+      "Come as a guest of a current member. Three socials, then a conversation about joining.",
   },
 ];
 
 export const lesBeaux = {
   name: "Les Beaux",
   title: "The Les Beaux auxiliary",
-  copy: "Les Belles Femmes is a women’s krewe with Les Beaux, its male auxiliary. The men who love and support the sisterhood share in the pageantry, the fellowship, and the work of showing up for Tampa.",
+  copy: "Les Belles Femmes is a women’s krewe with Les Beaux, its male auxiliary. The men who love and support the sisterhood share in the pageantry, the fellowship, and the work of showing up for Tampa. Founding member Raymond King served as the krewe’s first — and only — King.",
 };
 
 export const audienceLabel: Record<EventAudience, string> = {
