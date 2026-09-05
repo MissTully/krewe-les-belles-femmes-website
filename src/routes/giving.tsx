@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/page-hero";
 import { PhotoFrame } from "@/components/photo-frame";
 import { Ticket } from "@/components/ticket-link";
-import { art, partners } from "@/lib/content";
+import { art, givingMoments, partners } from "@/lib/content";
 
 export const Route = createFileRoute("/giving")({ component: GivingPage });
 
@@ -18,12 +18,18 @@ function GivingPage() {
       <div className="wrap mt-12 grid items-start gap-12 md:grid-cols-[1.05fr_0.95fr]">
         <div>
           <p className="text-[1.05rem] leading-relaxed">
-            From the earliest years, Les Belles Femmes poured fierce compassion into the city we love. The pageantry is
-            the sparkle. The giving is the heart.
+            From the earliest years, Les Belles Femmes poured fierce compassion
+            into the city we love. Our first charity event came in 2004 at the
+            Tampa Museum — sponsored by Mumm Cordon Rouge Champagne, beside
+            touring Toulouse-Lautrec lithographs. The pageantry is the sparkle.
+            The giving is the heart.
           </p>
           <p className="mt-4 text-muted">
-            Members raise funds and volunteer together — because the same women who laugh until their ribs ache also
-            know how to show up for families, animals, and neighbors walking through harder seasons.
+            Members raise funds and volunteer together — often in costume,
+            giving out beads, working registration, and entertaining the crowd —
+            because the same women who laugh until their ribs ache also know how
+            to show up for families, animals, and neighbors walking through
+            harder seasons.
           </p>
         </div>
         <PhotoFrame
@@ -36,7 +42,9 @@ function GivingPage() {
 
       <section className="wrap mt-20">
         <p className="kicker">Partners in Tampa Bay</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">Organizations we stand with.</h2>
+        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+          Organizations we stand with.
+        </h2>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {partners.map((partner) => (
             <a
@@ -46,10 +54,35 @@ function GivingPage() {
               rel="noreferrer"
               className="panel group flex flex-col p-7 no-underline transition-transform duration-200 hover:-translate-y-1"
             >
-              <h3 className="font-display text-2xl text-wine">{partner.name}</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{partner.note}</p>
-              <span className="mt-5 font-semibold text-cabaret">Visit their site</span>
+              <h3 className="font-display text-2xl text-wine">
+                {partner.name}
+              </h3>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                {partner.note}
+              </p>
+              <span className="mt-5 font-semibold text-cabaret">
+                Visit their site
+              </span>
             </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="wrap mt-20">
+        <p className="kicker">Two decades of showing up</p>
+        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+          In costume, beads in hand.
+        </h2>
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          {givingMoments.map((moment) => (
+            <section key={moment.title} className="panel p-7">
+              <h3 className="font-display text-2xl text-wine">
+                {moment.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted">
+                {moment.note}
+              </p>
+            </section>
           ))}
         </div>
       </section>
@@ -59,7 +92,8 @@ function GivingPage() {
           <div>
             <p className="kicker kicker-gold">Heartfelt giving</p>
             <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3.2rem)] text-[#fff7e9]">
-              The same sisterhood on the boulevard is the one writing checks, packing bags, and holding the line.
+              The same sisterhood on the boulevard is the one writing checks,
+              packing bags, and holding the line.
             </h2>
             <Ticket to="/membership" variant="gold" className="mt-8">
               Join the work
