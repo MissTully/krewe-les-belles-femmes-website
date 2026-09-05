@@ -12,7 +12,7 @@ function GivingPage() {
       <PageHero
         kicker="Giving back"
         title="Beauty with purpose"
-        lede="We aren’t here only to party. We are here to stand shoulder-to-shoulder for Tampa — fundraising, volunteering, and showing up when it counts."
+        lede="We aren’t here only to party. We are here to stand shoulder-to-shoulder for Tampa: fundraising, volunteering, and showing up when it counts."
       />
 
       <div className="wrap mt-12 grid items-start gap-12 md:grid-cols-[1.05fr_0.95fr]">
@@ -20,16 +20,16 @@ function GivingPage() {
           <p className="text-[1.05rem] leading-relaxed">
             From the earliest years, Les Belles Femmes poured fierce compassion
             into the city we love. Our first charity event came in 2004 at the
-            Tampa Museum — sponsored by Mumm Cordon Rouge Champagne, beside
+            Tampa Museum, sponsored by Mumm Cordon Rouge Champagne, beside
             touring Toulouse-Lautrec lithographs. The pageantry is the sparkle.
             The giving is the heart.
           </p>
           <p className="mt-4 text-muted">
-            Members raise funds and volunteer together — often in costume,
-            giving out beads, working registration, and entertaining the crowd —
-            because the same women who laugh until their ribs ache also know how
-            to show up for families, animals, and neighbors walking through
-            harder seasons.
+            Members raise funds and volunteer together, often in costume, giving
+            out beads, working registration, and entertaining the crowd, because
+            the same women who laugh until their ribs ache also know how to show
+            up for families, animals, and neighbors walking through harder
+            seasons.
           </p>
         </div>
         <PhotoFrame

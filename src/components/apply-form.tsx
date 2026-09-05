@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { hearAbout, mailtoInquiry } from "@/lib/content";
-import { getApplyInquiry, saveApplyInquiry, type ApplyInquiry } from "@/lib/forms";
+import {
+  getApplyInquiry,
+  saveApplyInquiry,
+  type ApplyInquiry,
+} from "@/lib/forms";
 import { Ticket } from "@/components/ticket-link";
 
 type Props = {
@@ -45,7 +49,12 @@ export function ApplyForm({
       setError("Please share a valid email.");
       return;
     }
-    const payload = { name: name.trim(), email: email.trim(), how, note: note.trim() };
+    const payload = {
+      name: name.trim(),
+      email: email.trim(),
+      how,
+      note: note.trim(),
+    };
     saveApplyInquiry(payload);
     setSaved({ ...payload, savedAt: new Date().toISOString() });
   }
@@ -53,21 +62,32 @@ export function ApplyForm({
   const mailto = saved
     ? mailtoInquiry(
         subject,
-        [`Name: ${saved.name}`, `Email: ${saved.email}`, `How I found LBF: ${saved.how}`, "", saved.note || "(no extra note)"].join(
-          "\n",
-        ),
+        [
+          `Name: ${saved.name}`,
+          `Email: ${saved.email}`,
+          `How I found LBF: ${saved.how}`,
+          "",
+          saved.note || "(no extra note)",
+        ].join("\n"),
       )
     : "";
 
   return (
     <div className={dark ? "text-cream" : ""}>
-      <h2 className={`font-display text-3xl ${dark ? "text-cream" : ""}`}>{heading}</h2>
-      <p className={`mt-3 max-w-xl text-sm leading-relaxed ${dark ? "text-cream/75" : "text-muted"}`}>{lede}</p>
+      <h2 className={`font-display text-3xl ${dark ? "text-cream" : ""}`}>
+        {heading}
+      </h2>
+      <p
+        className={`mt-3 max-w-xl text-sm leading-relaxed ${dark ? "text-cream/75" : "text-muted"}`}
+      >
+        {lede}
+      </p>
 
       {saved ? (
         <div className="banner-ok mt-6" role="status">
-          We have your note, {saved.name.split(" ")[0]}. Send it to the membership chair so it reaches the krewe —
-          local save alone is only on this device.
+          We have your note, {saved.name.split(" ")[0]}. Send it to the
+          membership chair so it reaches the krewe; a local save alone stays on
+          this device.
         </div>
       ) : null}
 
@@ -95,7 +115,11 @@ export function ApplyForm({
         </label>
         <label className="form-field">
           <span className="kicker">How did you find us?</span>
-          <select name="how" value={how} onChange={(e) => setHow(e.target.value)}>
+          <select
+            name="how"
+            value={how}
+            onChange={(e) => setHow(e.target.value)}
+          >
             {hearAbout.map((option) => (
               <option key={option} value={option}>
                 {option}

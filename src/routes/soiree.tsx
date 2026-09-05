@@ -21,8 +21,12 @@ function SoireePage() {
           <h1 className="mt-3 font-display text-[clamp(3.2rem,9vw,6.4rem)] leading-[0.92] text-[#fff7e9]">
             {soiree.title}
           </h1>
-          <p className="mt-4 font-display text-[clamp(1.4rem,3vw,2.1rem)] italic text-gold-soft">{soiree.dateLabel}</p>
-          <p className="mt-1 text-sm tracking-[0.18em] text-cream/80 uppercase">{soiree.venue}</p>
+          <p className="mt-4 font-display text-[clamp(1.4rem,3vw,2.1rem)] italic text-gold-soft">
+            {soiree.dateLabel}
+          </p>
+          <p className="mt-1 text-sm tracking-[0.18em] text-cream/80 uppercase">
+            {soiree.venue}
+          </p>
           <Ornament gold className="mx-auto mt-6" />
           <p className="motto-row mt-5 text-gold-soft">
             {krewe.motto.map((word) => (
@@ -30,7 +34,11 @@ function SoireePage() {
             ))}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a href={soireeIcsHref()} download="lbf-silver-soiree-2026.ics" className="ticket ticket-gold">
+            <a
+              href={soireeIcsHref()}
+              download="lbf-silver-soiree-2026.ics"
+              className="ticket ticket-gold"
+            >
               Add to calendar
             </a>
             <Ticket href="#invitation" variant="ghost">
@@ -43,12 +51,17 @@ function SoireePage() {
       <section className="wrap grid items-center gap-12 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-20">
         <div>
           <p className="kicker">A quarter century</p>
-          <h2 className="mt-3 font-display text-[clamp(2.2rem,4.5vw,3.5rem)]">Silver, feathers, and the women who made the legend.</h2>
-          <p className="mt-5 max-w-xl text-[1.05rem] leading-relaxed">{soiree.lede}</p>
+          <h2 className="mt-3 font-display text-[clamp(2.2rem,4.5vw,3.5rem)]">
+            Silver, feathers, and the women who made the legend.
+          </h2>
+          <p className="mt-5 max-w-xl text-[1.05rem] leading-relaxed">
+            {soiree.lede}
+          </p>
           <p className="mt-4 max-w-xl text-muted">
-            Looking across the ballroom — past the shimmering silver, the feathered headpieces, and the warm embraces of
-            women who have walked side-by-side through decades — one truth is clear. LBF is defined by the quiet courage
-            they inspire in one another.
+            Looking across the ballroom, past the shimmering silver, the
+            feathered headpieces, and the warm embraces of women who have walked
+            side-by-side through decades, one truth is clear. LBF is defined by
+            the quiet courage they inspire in one another.
           </p>
           <dl className="mt-8 grid gap-5 sm:grid-cols-2">
             <div className="border-l-[3px] border-gold pl-4">
@@ -68,7 +81,10 @@ function SoireePage() {
         />
       </section>
 
-      <section id="invitation" className="wrap grid scroll-mt-24 items-start gap-12 pb-8 md:grid-cols-[0.9fr_1.1fr]">
+      <section
+        id="invitation"
+        className="wrap grid scroll-mt-24 items-start gap-12 pb-8 md:grid-cols-[0.9fr_1.1fr]"
+      >
         <img
           src={art.silverStub}
           alt="Silver twenty-five anniversary ticket."

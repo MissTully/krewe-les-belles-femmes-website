@@ -3,7 +3,15 @@ import { Crest } from "@/components/crest";
 import { Ornament } from "@/components/ornament";
 import { PhotoFrame } from "@/components/photo-frame";
 import { Ticket } from "@/components/ticket-link";
-import { art, events, houseLines, krewe, pillars, stories, yearRhythm } from "@/lib/content";
+import {
+  art,
+  events,
+  houseLines,
+  krewe,
+  pillars,
+  stories,
+  yearRhythm,
+} from "@/lib/content";
 import { money, products } from "@/lib/shop";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -20,8 +28,12 @@ function Home() {
         <div className="hero-veil absolute inset-0" aria-hidden="true" />
         <div className="rise relative z-10 mx-auto flex min-h-[min(92vh,54rem)] w-min(62rem,calc(100%-2rem)) flex-col items-center justify-end px-4 pb-16 pt-28 text-center">
           <Crest size={108} decorative />
-          <p className="kicker kicker-gold mt-6">Tampa Bay · Est. {krewe.founded}</p>
-          <p className="mt-2 font-display text-[0.95rem] tracking-[0.28em] text-gold-soft uppercase">Krewe of</p>
+          <p className="kicker kicker-gold mt-6">
+            Tampa Bay · Est. {krewe.founded}
+          </p>
+          <p className="mt-2 font-display text-[0.95rem] tracking-[0.28em] text-gold-soft uppercase">
+            Krewe of
+          </p>
           <h1 className="mt-1 font-display text-[clamp(3.1rem,9vw,6.6rem)] leading-[0.95] text-[#fff8ee]">
             {krewe.name}
           </h1>
@@ -35,7 +47,8 @@ function Home() {
           </p>
           <Ornament gold className="mx-auto mt-5" />
           <p className="mt-5 max-w-xl text-[1.02rem] text-cream/88">
-            A vibrant women’s krewe celebrating friendship, pageantry, community, and the joy of living boldly.
+            A vibrant women’s krewe celebrating friendship, pageantry,
+            community, and the joy of living boldly.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Ticket to="/membership" variant="gold">
@@ -66,12 +79,15 @@ function Home() {
             A sisterhood with a little sparkle.
           </h2>
           <p className="mt-5 max-w-xl text-[1.05rem] leading-relaxed text-ink">
-            Life is busy, demanding, and often far too serious. LBF is a place to put down the armor, gather with
-            remarkable women, laugh loudly, and make memories together.
+            Life is busy, demanding, and often far too serious. LBF is a place
+            to put down the armor, gather with remarkable women, laugh loudly,
+            and make memories together.
           </p>
           <p className="mt-4 max-w-xl text-muted">
-            Founded in Tampa Bay in 2002, Les Belles Femmes blends year-round friendship with the pageantry of parade
-            season — and a commitment to giving back. Growing older does not mean outgrowing your sense of wonder.
+            Founded in Tampa Bay in 2002, Les Belles Femmes blends year-round
+            friendship with the pageantry of parade season, and a commitment to
+            giving back. Growing older does not mean outgrowing your sense of
+            wonder.
           </p>
           <Link
             to="/story"
@@ -109,8 +125,12 @@ function Home() {
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <p className="kicker">{pillar.kicker}</p>
-                <h3 className="mt-2 font-display text-[1.85rem] leading-tight">{pillar.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{pillar.copy}</p>
+                <h3 className="mt-2 font-display text-[1.85rem] leading-tight">
+                  {pillar.title}
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                  {pillar.copy}
+                </p>
                 <span className="mt-4 font-semibold text-cabaret">Explore</span>
               </div>
             </Link>
@@ -120,7 +140,9 @@ function Home() {
 
       <section className="wrap py-20 md:py-24">
         <p className="kicker">The year at a glance</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">There’s always a reason to gather.</h2>
+        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+          There’s always a reason to gather.
+        </h2>
         <div className="mt-10 grid border-t border-gold/30 md:grid-cols-4">
           {yearRhythm.map((beat, i) => (
             <article
@@ -142,13 +164,16 @@ function Home() {
         <div className="wrap grid items-center gap-12 md:grid-cols-[1fr_16rem]">
           <div>
             <p className="kicker kicker-gold">Save the date</p>
-            <h2 className="mt-2 font-display text-[clamp(3rem,6vw,5rem)] text-[#fff7e9]">Silver Soirée</h2>
+            <h2 className="mt-2 font-display text-[clamp(3rem,6vw,5rem)] text-[#fff7e9]">
+              Silver Soirée
+            </h2>
             <p className="mt-2 font-display text-2xl italic text-gold-soft">
               Saturday, November 14, 2026 · Carrollwood Country Club
             </p>
             <p className="mt-5 max-w-xl text-[1.05rem] text-cream/85">
-              Join us as we celebrate over twenty-five years of Truth, Beauty, Freedom, and Love — a night of silver,
-              feathers, and the women who made the legend.
+              Join us as we celebrate over twenty-five years of Truth, Beauty,
+              Freedom, and Love: a night of silver, feathers, and the women who
+              made the legend.
             </p>
             <Ticket to="/soiree" variant="gold" className="mt-8">
               Silver Soirée
@@ -165,7 +190,9 @@ function Home() {
       <section className="wrap py-20 md:py-24">
         <p className="kicker">The boutique</p>
         <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
-          <h2 className="max-w-xl font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">Tote, tee, a little sparkle.</h2>
+          <h2 className="max-w-xl font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+            Tote, tee, a little sparkle.
+          </h2>
           <Ticket to="/shop" variant="ink">
             Shop LBF
           </Ticket>
@@ -184,8 +211,12 @@ function Home() {
               />
               <div className="flex flex-col justify-center p-5 sm:p-7">
                 <p className="kicker">{product.kicker}</p>
-                <h3 className="mt-1 font-display text-[1.7rem] leading-tight">{product.name}</h3>
-                <p className="mt-2 font-display text-xl text-cabaret">{money(product.price)}</p>
+                <h3 className="mt-1 font-display text-[1.7rem] leading-tight">
+                  {product.name}
+                </h3>
+                <p className="mt-2 font-display text-xl text-cabaret">
+                  {money(product.price)}
+                </p>
               </div>
             </Link>
           ))}
@@ -202,8 +233,12 @@ function Home() {
             <blockquote key={story.title} className="panel p-8">
               <p className="kicker">{story.chapter}</p>
               <h3 className="mt-2 font-display text-3xl">{story.title}</h3>
-              <p className="mt-5 font-display text-xl italic leading-snug text-ink">“{story.quote}”</p>
-              <footer className="mt-5 text-sm text-muted">{story.byline}</footer>
+              <p className="mt-5 font-display text-xl italic leading-snug text-ink">
+                “{story.quote}”
+              </p>
+              <footer className="mt-5 text-sm text-muted">
+                {story.byline}
+              </footer>
             </blockquote>
           ))}
         </div>
@@ -217,7 +252,9 @@ function Home() {
 
       <section className="wrap pb-20">
         <p className="kicker">The house philosophy</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">Live boldly. Laugh loudly.</h2>
+        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+          Live boldly. Laugh loudly.
+        </h2>
         <ul className="mt-8 grid list-none gap-3 p-0 sm:grid-cols-2 md:grid-cols-3">
           {houseLines.map((line) => (
             <li
@@ -240,11 +277,16 @@ function Home() {
             >
               <p className="kicker m-0">{event.whenLabel}</p>
               {event.to ? (
-                <Link to={event.to} className="font-display text-2xl text-wine no-underline">
+                <Link
+                  to={event.to}
+                  className="font-display text-2xl text-wine no-underline"
+                >
                   {event.title}
                 </Link>
               ) : (
-                <p className="m-0 font-display text-2xl text-wine">{event.title}</p>
+                <p className="m-0 font-display text-2xl text-wine">
+                  {event.title}
+                </p>
               )}
               <p className="m-0 text-sm text-muted">{event.where}</p>
             </div>

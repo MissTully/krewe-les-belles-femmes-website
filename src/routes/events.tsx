@@ -23,7 +23,10 @@ const filters: { id: "all" | EventAudience; label: string }[] = [
 function EventsPage() {
   const [audience, setAudience] = useState<"all" | EventAudience>("all");
   const visible = useMemo(
-    () => (audience === "all" ? events : events.filter((event) => event.audience === audience)),
+    () =>
+      audience === "all"
+        ? events
+        : events.filter((event) => event.audience === audience),
     [audience],
   );
 
@@ -32,11 +35,15 @@ function EventsPage() {
       <PageHero
         kicker="The playbill"
         title="There’s always a reason to gather"
-        lede="Galas, book clubs, parade season, and the recruitment mixers that turn guests into sisters. Confirmed dates sit beside honest windows — we never pretend a month is a Tuesday."
+        lede="Galas, book clubs, parade season, and the recruitment mixers that turn guests into sisters. Confirmed dates sit beside honest windows; we never pretend a month is a Tuesday."
       />
 
       <section className="wrap mt-10">
-        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter events by audience">
+        <div
+          className="flex flex-wrap gap-2"
+          role="tablist"
+          aria-label="Filter events by audience"
+        >
           {filters.map((filter) => {
             const active = audience === filter.id;
             return (
@@ -56,7 +63,9 @@ function EventsPage() {
 
         <div className="mt-8 border-t border-gold/30">
           {visible.length === 0 ? (
-            <p className="py-10 text-muted">Nothing on this part of the playbill just now.</p>
+            <p className="py-10 text-muted">
+              Nothing on this part of the playbill just now.
+            </p>
           ) : (
             visible.map((event) => (
               <article
@@ -65,18 +74,29 @@ function EventsPage() {
               >
                 <div>
                   <p className="kicker m-0">{event.whenLabel}</p>
-                  <p className="mt-2 text-xs tracking-wide text-muted uppercase">{certaintyLabel[event.certainty]}</p>
+                  <p className="mt-2 text-xs tracking-wide text-muted uppercase">
+                    {certaintyLabel[event.certainty]}
+                  </p>
                 </div>
                 <div>
                   {event.to ? (
-                    <Link to={event.to as "/"} className="font-display text-3xl text-wine no-underline">
+                    <Link
+                      to={event.to as "/"}
+                      className="font-display text-3xl text-wine no-underline"
+                    >
                       {event.title}
                     </Link>
                   ) : (
-                    <h2 className="m-0 font-display text-3xl text-wine">{event.title}</h2>
+                    <h2 className="m-0 font-display text-3xl text-wine">
+                      {event.title}
+                    </h2>
                   )}
                   <p className="mt-2 text-sm text-muted">{event.where}</p>
-                  {event.notes ? <p className="mt-3 max-w-xl text-sm leading-relaxed">{event.notes}</p> : null}
+                  {event.notes ? (
+                    <p className="mt-3 max-w-xl text-sm leading-relaxed">
+                      {event.notes}
+                    </p>
+                  ) : null}
                 </div>
                 <div className="flex flex-wrap gap-2 md:justify-end">
                   <span className="chip">{kindLabel[event.kind]}</span>
@@ -90,7 +110,9 @@ function EventsPage() {
 
       <section className="wrap mt-20">
         <p className="kicker">The year at a glance</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">A rhythm, not a rigid calendar.</h2>
+        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+          A rhythm, not a rigid calendar.
+        </h2>
         <div className="mt-10 grid border-t border-gold/30 md:grid-cols-2">
           {yearRhythm.map((beat, i) => (
             <article
