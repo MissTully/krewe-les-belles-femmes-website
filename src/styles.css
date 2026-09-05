@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Cormorant Garamond", "Palatino Linotype", "Times New Roman", serif;
+  --font-display:
+    "Cormorant Garamond", "Palatino Linotype", "Times New Roman", serif;
   --font-sans: "Outfit", "Segoe UI", system-ui, sans-serif;
   --color-wine: #4b111d;
   --color-wine-deep: #240a12;
@@ -35,6 +36,8 @@
     background: var(--color-cream);
     color: var(--color-ink);
     line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
   }
 
   h1,
@@ -43,7 +46,8 @@
   h4 {
     font-family: var(--font-display);
     font-weight: 600;
-    letter-spacing: -0.02em;
+    font-variant-ligatures: common-ligatures contextual;
+    letter-spacing: -0.01em;
     line-height: 1.12;
     text-wrap: balance;
     color: var(--color-ink);
@@ -86,8 +90,11 @@
 
 .velvet-stage {
   min-height: 100%;
-  background:
-    radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--color-wine) 40%, #0d0b0c), var(--color-velvet));
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    color-mix(in srgb, var(--color-wine) 40%, #0d0b0c),
+    var(--color-velvet)
+  );
   color: var(--color-cream);
 }
 
@@ -112,6 +119,31 @@
 
 .kicker-gold {
   color: var(--color-gold-soft);
+}
+
+/* Display type scale — one set of sizes for the whole site. */
+.title-hero {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+}
+
+.title-section {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+}
+
+.title-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.2;
+}
+
+.lede-display {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
 }
 
 .ornament {
@@ -189,7 +221,8 @@
 .ticket-gold {
   background: var(--color-gold);
   color: var(--color-wine-deep);
-  box-shadow: 0 10px 22px color-mix(in srgb, var(--color-velvet) 22%, transparent);
+  box-shadow: 0 10px 22px
+    color-mix(in srgb, var(--color-velvet) 22%, transparent);
 }
 
 .ticket-wine {
@@ -206,7 +239,8 @@
 .ticket-ink {
   background: transparent;
   color: var(--color-wine);
-  border: 1px solid color-mix(in srgb, var(--color-gold) 70%, var(--color-cabaret));
+  border: 1px solid
+    color-mix(in srgb, var(--color-gold) 70%, var(--color-cabaret));
 }
 
 .hero-veil {
@@ -286,8 +320,10 @@
   z-index: 40;
   background: color-mix(in srgb, var(--color-wine-deep) 94%, black);
   color: var(--color-cream);
-  border-bottom: 1px solid color-mix(in srgb, var(--color-gold-soft) 70%, transparent);
-  box-shadow: 0 10px 28px color-mix(in srgb, var(--color-velvet) 28%, transparent);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--color-gold-soft) 70%, transparent);
+  box-shadow: 0 10px 28px
+    color-mix(in srgb, var(--color-velvet) 28%, transparent);
 }
 
 .brand-crest {
@@ -297,7 +333,8 @@
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-gold-soft) 35%, transparent);
+  box-shadow: 0 0 0 1px
+    color-mix(in srgb, var(--color-gold-soft) 35%, transparent);
 }
 
 .lbf-crest {
@@ -320,7 +357,8 @@
   width: 100%;
   min-height: 2.85rem;
   padding: 0.7rem 0.85rem;
-  border: 1px solid color-mix(in srgb, var(--color-gold) 40%, var(--color-silver));
+  border: 1px solid
+    color-mix(in srgb, var(--color-gold) 40%, var(--color-silver));
   background: #fffdf8;
   color: var(--color-ink);
   font: inherit;
@@ -348,8 +386,10 @@
 
 .panel {
   background: color-mix(in srgb, var(--color-paper) 86%, white);
-  border: 1px solid color-mix(in srgb, var(--color-gold) 35%, var(--color-silver));
-  box-shadow: 0 16px 40px color-mix(in srgb, var(--color-wine-deep) 6%, transparent);
+  border: 1px solid
+    color-mix(in srgb, var(--color-gold) 35%, var(--color-silver));
+  box-shadow: 0 16px 40px
+    color-mix(in srgb, var(--color-wine-deep) 6%, transparent);
 }
 
 .chip,
@@ -359,7 +399,8 @@
   justify-content: center;
   min-height: 2.4rem;
   padding: 0.35rem 0.85rem;
-  border: 1px solid color-mix(in srgb, var(--color-gold) 45%, var(--color-silver));
+  border: 1px solid
+    color-mix(in srgb, var(--color-gold) 45%, var(--color-silver));
   background: var(--color-paper);
   color: var(--color-wine);
   font-size: 0.68rem;
@@ -439,7 +480,8 @@
   height: 100%;
   background: var(--color-paper);
   color: var(--color-ink);
-  box-shadow: -18px 0 40px color-mix(in srgb, var(--color-velvet) 28%, transparent);
+  box-shadow: -18px 0 40px
+    color-mix(in srgb, var(--color-velvet) 28%, transparent);
 }
 
 .cart-drawer .ticket {

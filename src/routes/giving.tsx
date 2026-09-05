@@ -42,9 +42,7 @@ function GivingPage() {
 
       <section className="wrap mt-20">
         <p className="kicker">Partners in Tampa Bay</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
-          Organizations we stand with.
-        </h2>
+        <h2 className="mt-3 title-section">Organizations we stand with.</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {partners.map((partner) => (
             <a
@@ -70,9 +68,7 @@ function GivingPage() {
 
       <section className="wrap mt-20">
         <p className="kicker">Two decades of showing up</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
-          In costume, beads in hand.
-        </h2>
+        <h2 className="mt-3 title-section">In costume, beads in hand.</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {givingMoments.map((moment) => (
             <section key={moment.title} className="panel p-7">
@@ -91,7 +87,7 @@ function GivingPage() {
         <div className="wrap grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="kicker kicker-gold">Heartfelt giving</p>
-            <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3.2rem)] text-[#fff7e9]">
+            <h2 className="mt-3 title-quote text-[#fff7e9]">
               The same sisterhood on the boulevard is the one writing checks,
               packing bags, and holding the line.
             </h2>

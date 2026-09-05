@@ -47,7 +47,7 @@ function StoryPage() {
       <section className="mt-20 bg-wine py-16 text-cream md:py-20">
         <div className="wrap">
           <p className="kicker kicker-gold">A spark on the Hillsborough</p>
-          <h2 className="mt-3 max-w-3xl font-display text-[clamp(2rem,4vw,3.2rem)] text-[#fff7e9]">
+          <h2 className="mt-3 max-w-3xl title-quote text-[#fff7e9]">
             Advised to do something other than pirates, founder Susan King and
             her daughter Erin Martin West designed costumes straight out of the
             Parisian cabaret, and ooh la la, Les Belles Femmes was born.
@@ -61,9 +61,7 @@ function StoryPage() {
 
       <section className="wrap mt-20">
         <p className="kicker">The legacy</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
-          A quarter century, in four acts
-        </h2>
+        <h2 className="mt-3 title-section">A quarter century, in four acts</h2>
         <ol className="mt-12 grid list-none gap-10 p-0">
           {timeline.map((chapter) => (
             <li
@@ -84,9 +82,7 @@ function StoryPage() {
 
       <section className="wrap mt-20">
         <p className="kicker">Parade season</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
-          Dress the part. Ride together.
-        </h2>
+        <h2 className="mt-3 title-section">Dress the part. Ride together.</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {paradeNotes.map((item) => (
             <section key={item.title} className="panel p-7">

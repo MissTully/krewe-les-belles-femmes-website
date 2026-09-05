@@ -37,7 +37,7 @@ function Home() {
           <h1 className="mt-1 font-display text-[clamp(3.1rem,9vw,6.6rem)] leading-[0.95] text-[#fff8ee]">
             {krewe.name}
           </h1>
-          <p className="mt-3 font-display text-[clamp(1.45rem,3vw,2.2rem)] font-medium italic text-[#fff6e9]">
+          <p className="mt-3 lede-display font-medium text-[#fff6e9]">
             {krewe.tagline}
           </p>
           <p className="motto-row mt-4 text-gold-soft">
@@ -75,7 +75,7 @@ function Home() {
       <section className="wrap grid items-center gap-12 py-20 md:grid-cols-[1.05fr_0.85fr] md:py-28">
         <div>
           <p className="kicker">We’ve been looking for you</p>
-          <h2 className="section-title mt-3 font-display text-[clamp(2.3rem,5vw,3.8rem)]">
+          <h2 className="title-section mt-3">
             A sisterhood with a little sparkle.
           </h2>
           <p className="mt-5 max-w-xl text-[1.05rem] leading-relaxed text-ink">
@@ -106,7 +106,7 @@ function Home() {
 
       <section className="wrap pb-8">
         <p className="kicker">The heart of LBF</p>
-        <h2 className="mt-3 max-w-3xl font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+        <h2 className="mt-3 max-w-3xl title-section">
           More than a parade. More than a party.
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -140,7 +140,7 @@ function Home() {
 
       <section className="wrap py-20 md:py-24">
         <p className="kicker">The year at a glance</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+        <h2 className="mt-3 title-section">
           There’s always a reason to gather.
         </h2>
         <div className="mt-10 grid border-t border-gold/30 md:grid-cols-4">
@@ -190,7 +190,7 @@ function Home() {
       <section className="wrap py-20 md:py-24">
         <p className="kicker">The boutique</p>
         <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
-          <h2 className="max-w-xl font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+          <h2 className="max-w-xl title-section">
             Tote, tee, a little sparkle.
           </h2>
           <Ticket to="/shop" variant="ink">
@@ -225,7 +225,7 @@ function Home() {
 
       <section className="wrap py-20 md:py-24">
         <p className="kicker">Stories from the sisterhood</p>
-        <h2 className="mt-3 max-w-3xl font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+        <h2 className="mt-3 max-w-3xl title-section">
           The quiet courage they inspire in one another.
         </h2>
         <div className="mt-12 grid gap-10 md:grid-cols-2">
@@ -252,9 +252,7 @@ function Home() {
 
       <section className="wrap pb-20">
         <p className="kicker">The house philosophy</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
-          Live boldly. Laugh loudly.
-        </h2>
+        <h2 className="mt-3 title-section">Live boldly. Laugh loudly.</h2>
         <ul className="mt-8 grid list-none gap-3 p-0 sm:grid-cols-2 md:grid-cols-3">
           {houseLines.map((line) => (
             <li

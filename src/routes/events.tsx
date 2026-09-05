@@ -110,9 +110,7 @@ function EventsPage() {
 
       <section className="wrap mt-20">
         <p className="kicker">The year at a glance</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
-          A rhythm, not a rigid calendar.
-        </h2>
+        <h2 className="mt-3 title-section">A rhythm, not a rigid calendar.</h2>
         <div className="mt-10 grid border-t border-gold/30 md:grid-cols-2">
           {yearRhythm.map((beat, i) => (
             <article

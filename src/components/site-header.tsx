@@ -29,7 +29,10 @@ export function SiteHeader() {
       </a>
       <header className="site-header">
         <div className="flex items-center justify-between gap-4 px-4 py-3 md:px-7">
-          <Link to="/" className="flex min-h-11 items-center gap-3 no-underline">
+          <Link
+            to="/"
+            className="flex min-h-11 items-center gap-3 no-underline"
+          >
             <img
               src={art.mark}
               alt=""
@@ -48,12 +51,15 @@ export function SiteHeader() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-x-4 gap-y-1 xl:flex" aria-label="Main navigation">
+          <nav
+            className="hidden items-center gap-x-4 gap-y-1 xl:flex"
+            aria-label="Main navigation"
+          >
             {items.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className="inline-flex min-h-11 items-center text-[0.72rem] font-medium tracking-[0.12em] text-cream/85 no-underline uppercase transition-colors hover:text-gold-soft"
+                className="inline-flex min-h-11 items-center text-[0.72rem] font-medium tracking-[0.14em] text-cream/85 no-underline uppercase transition-colors hover:text-gold-soft"
                 activeProps={{ className: "text-gold-soft" }}
               >
                 {item.label}
@@ -61,7 +67,7 @@ export function SiteHeader() {
             ))}
             <Link
               to="/stage-door"
-              className="inline-flex min-h-11 items-center rounded-full border border-gold px-3 text-[0.68rem] font-semibold tracking-[0.16em] text-gold-soft no-underline uppercase"
+              className="inline-flex min-h-11 items-center rounded-full border border-gold px-3 text-[0.68rem] font-semibold tracking-[0.14em] text-gold-soft no-underline uppercase"
             >
               Stage Door
             </Link>

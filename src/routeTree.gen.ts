@@ -12,12 +12,14 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as GivingRouteImport } from './routes/giving'
+import { Route as MembersRouteImport } from './routes/members'
 import { Route as MembershipRouteImport } from './routes/membership'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as SisterhoodRouteImport } from './routes/sisterhood'
 import { Route as SoireeRouteImport } from './routes/soiree'
 import { Route as StageDoorRouteImport } from './routes/stage-door'
 import { Route as StoryRouteImport } from './routes/story'
+import { Route as MembersEditRouteImport } from './routes/members.edit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -32,6 +34,11 @@ const EventsRoute = EventsRouteImport.update({
 const GivingRoute = GivingRouteImport.update({
   id: '/giving',
   path: '/giving',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MembersRoute = MembersRouteImport.update({
+  id: '/members',
+  path: '/members',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MembershipRoute = MembershipRouteImport.update({
@@ -64,40 +71,51 @@ const StoryRoute = StoryRouteImport.update({
   path: '/story',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MembersEditRoute = MembersEditRouteImport.update({
+  id: '/edit',
+  path: '/edit',
+  getParentRoute: () => MembersRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/events': typeof EventsRoute
   '/giving': typeof GivingRoute
+  '/members': typeof MembersRouteWithChildren
   '/membership': typeof MembershipRoute
   '/shop': typeof ShopRoute
   '/sisterhood': typeof SisterhoodRoute
   '/soiree': typeof SoireeRoute
   '/stage-door': typeof StageDoorRoute
   '/story': typeof StoryRoute
+  '/members/edit': typeof MembersEditRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/events': typeof EventsRoute
   '/giving': typeof GivingRoute
+  '/members': typeof MembersRouteWithChildren
   '/membership': typeof MembershipRoute
   '/shop': typeof ShopRoute
   '/sisterhood': typeof SisterhoodRoute
   '/soiree': typeof SoireeRoute
   '/stage-door': typeof StageDoorRoute
   '/story': typeof StoryRoute
+  '/members/edit': typeof MembersEditRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/events': typeof EventsRoute
   '/giving': typeof GivingRoute
+  '/members': typeof MembersRouteWithChildren
   '/membership': typeof MembershipRoute
   '/shop': typeof ShopRoute
   '/sisterhood': typeof SisterhoodRoute
   '/soiree': typeof SoireeRoute
   '/stage-door': typeof StageDoorRoute
   '/story': typeof StoryRoute
+  '/members/edit': typeof MembersEditRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -105,40 +123,47 @@ export interface FileRouteTypes {
     | '/'
     | '/events'
     | '/giving'
+    | '/members'
     | '/membership'
     | '/shop'
     | '/sisterhood'
     | '/soiree'
     | '/stage-door'
     | '/story'
+    | '/members/edit'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/events'
     | '/giving'
+    | '/members'
     | '/membership'
     | '/shop'
     | '/sisterhood'
     | '/soiree'
     | '/stage-door'
     | '/story'
+    | '/members/edit'
   id:
     | '__root__'
     | '/'
     | '/events'
     | '/giving'
+    | '/members'
     | '/membership'
     | '/shop'
     | '/sisterhood'
     | '/soiree'
     | '/stage-door'
     | '/story'
+    | '/members/edit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EventsRoute: typeof EventsRoute
   GivingRoute: typeof GivingRoute
+  MembersRoute: typeof MembersRouteWithChildren
   MembershipRoute: typeof MembershipRoute
   ShopRoute: typeof ShopRoute
   SisterhoodRoute: typeof SisterhoodRoute
@@ -168,6 +193,13 @@ declare module '@tanstack/react-router' {
       path: '/giving'
       fullPath: '/giving'
       preLoaderRoute: typeof GivingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/members': {
+      id: '/members'
+      path: '/members'
+      fullPath: '/members'
+      preLoaderRoute: typeof MembersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/membership': {
@@ -212,13 +244,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/members/edit': {
+      id: '/members/edit'
+      path: '/edit'
+      fullPath: '/members/edit'
+      preLoaderRoute: typeof MembersEditRouteImport
+      parentRoute: typeof MembersRoute
+    }
   }
 }
+
+interface MembersRouteChildren {
+  MembersEditRoute: typeof MembersEditRoute
+}
+
+const MembersRouteChildren: MembersRouteChildren = {
+  MembersEditRoute: MembersEditRoute,
+}
+
+const MembersRouteWithChildren =
+  MembersRoute._addFileChildren(MembersRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EventsRoute: EventsRoute,
   GivingRoute: GivingRoute,
+  MembersRoute: MembersRouteWithChildren,
   MembershipRoute: MembershipRoute,
   ShopRoute: ShopRoute,
   SisterhoodRoute: SisterhoodRoute,

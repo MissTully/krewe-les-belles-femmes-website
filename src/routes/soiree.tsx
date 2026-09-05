@@ -21,9 +21,7 @@ function SoireePage() {
           <h1 className="mt-3 font-display text-[clamp(3.2rem,9vw,6.4rem)] leading-[0.92] text-[#fff7e9]">
             {soiree.title}
           </h1>
-          <p className="mt-4 font-display text-[clamp(1.4rem,3vw,2.1rem)] italic text-gold-soft">
-            {soiree.dateLabel}
-          </p>
+          <p className="mt-4 lede-display text-gold-soft">{soiree.dateLabel}</p>
           <p className="mt-1 text-sm tracking-[0.18em] text-cream/80 uppercase">
             {soiree.venue}
           </p>
@@ -51,7 +49,7 @@ function SoireePage() {
       <section className="wrap grid items-center gap-12 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-20">
         <div>
           <p className="kicker">A quarter century</p>
-          <h2 className="mt-3 font-display text-[clamp(2.2rem,4.5vw,3.5rem)]">
+          <h2 className="mt-3 title-section">
             Silver, feathers, and the women who made the legend.
           </h2>
           <p className="mt-5 max-w-xl text-[1.05rem] leading-relaxed">
