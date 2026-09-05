@@ -112,9 +112,7 @@ export function ShopCheckout() {
   return (
     <div id="checkout" className="scroll-mt-28">
       <p className="kicker">Checkout</p>
-      <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
-        Send the order to the krewe.
-      </h2>
+      <h2 className="mt-3 title-section">Send the order to the krewe.</h2>
       <p className="mt-4 max-w-xl text-muted">
         We’ll save the request on this device, then open an email so it actually
         reaches the boutique chair. Payment is collected with a Square invoice;

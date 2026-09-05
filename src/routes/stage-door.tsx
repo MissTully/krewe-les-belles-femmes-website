@@ -37,7 +37,7 @@ function StageDoorPage() {
 
       <section className="wrap py-16">
         <p className="kicker kicker-gold">Tonight’s playbill</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)] text-[#fff7e9]">
+        <h2 className="mt-3 title-section text-[#fff7e9]">
           The season, in five acts.
         </h2>
         <ol className="mt-10 grid list-none gap-0 p-0">

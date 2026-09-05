@@ -52,9 +52,7 @@ function SisterhoodPage() {
 
       <section className="wrap mt-20">
         <p className="kicker">Why members stay</p>
-        <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
-          Four reasons the circle holds.
-        </h2>
+        <h2 className="mt-3 title-section">Four reasons the circle holds.</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {reasons.map((reason) => (
             <article key={reason.kicker} className="panel p-7">
@@ -81,9 +79,7 @@ function SisterhoodPage() {
       <section className="wrap mt-20 grid items-start gap-12 md:grid-cols-[1.05fr_0.95fr]">
         <div>
           <p className="kicker">How to join</p>
-          <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
-            No pressure. Just connection.
-          </h2>
+          <h2 className="mt-3 title-section">No pressure. Just connection.</h2>
           <p className="mt-4 max-w-xl text-muted">
             Putting yourself out there can feel intimidating. We keep
             recruitment warm and easy: no stuffy interviews, only genuine
@@ -129,9 +125,7 @@ function SisterhoodPage() {
         </div>
         <div>
           <p className="kicker">{lesBeaux.name}</p>
-          <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3rem)]">
-            {lesBeaux.title}
-          </h2>
+          <h2 className="mt-3 title-section">{lesBeaux.title}</h2>
           <p className="mt-4 leading-relaxed text-muted">{lesBeaux.copy}</p>
           <dl className="mt-10 grid gap-6">
             {membershipFaq.map((item) => (
@@ -148,7 +142,7 @@ function SisterhoodPage() {
 
       <section className="wrap mt-20">
         <p className="kicker">Stories from the sisterhood</p>
-        <h2 className="mt-3 max-w-3xl font-display text-[clamp(2.1rem,4.5vw,3.3rem)]">
+        <h2 className="mt-3 max-w-3xl title-section">
           The quiet courage they inspire in one another.
         </h2>
         <div className="mt-12 grid gap-10">
@@ -179,9 +173,7 @@ function SisterhoodPage() {
         />
         <div>
           <p className="kicker">A note from the board</p>
-          <h2 className="mt-3 font-display text-[clamp(2.2rem,4vw,3.4rem)]">
-            Dream big. Laugh loudly.
-          </h2>
+          <h2 className="mt-3 title-section">Dream big. Laugh loudly.</h2>
           <p className="mt-5 text-[1.05rem] leading-relaxed">
             LBF is defined less by the corsets and the Eiffel Tower float than
             by 2 a.m. phone calls, fierce professional support, and the belief
