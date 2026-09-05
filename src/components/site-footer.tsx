@@ -15,42 +15,72 @@ export function SiteFooter() {
               className="brand-crest"
               draggable={false}
             />
-            <strong className="font-display text-2xl font-semibold text-cream">{krewe.fullName}</strong>
+            <strong className="font-display text-2xl font-semibold text-cream">
+              {krewe.fullName}
+            </strong>
           </div>
           <p className="max-w-md text-sm leading-relaxed">
-            {krewe.city} · Established {krewe.founded}. A women’s krewe with Les Beaux, the male auxiliary — and a
-            year-round sisterhood guided by Truth, Beauty, Freedom, and Love.
+            {krewe.city} · Established {krewe.founded}. A women’s krewe with Les
+            Beaux, the male auxiliary, and a year-round sisterhood guided by
+            Truth, Beauty, Freedom, and Love.
           </p>
-          <p className="mt-4 font-display text-xl italic text-gold-soft">{krewe.motto.join(" · ")}</p>
+          <p className="mt-4 font-display text-xl italic text-gold-soft">
+            {krewe.motto.join(" · ")}
+          </p>
         </div>
 
         <div className="grid gap-2 self-start text-sm">
           <p className="kicker kicker-gold mb-2">Playbill</p>
           {nav.map((item) => (
-            <Link key={item.to} to={item.to} className="min-h-10 text-cream no-underline hover:text-gold-soft">
+            <Link
+              key={item.to}
+              to={item.to}
+              className="min-h-10 text-cream no-underline hover:text-gold-soft"
+            >
               {item.label}
             </Link>
           ))}
-          <Link to="/stage-door" className="min-h-10 text-cream no-underline hover:text-gold-soft">
+          <Link
+            to="/stage-door"
+            className="min-h-10 text-cream no-underline hover:text-gold-soft"
+          >
             Stage Door
           </Link>
         </div>
 
         <div className="grid gap-2 self-start text-sm">
           <p className="kicker kicker-gold mb-2">Connect</p>
-          <a href={links.facebook} className="min-h-10 text-cream no-underline hover:text-gold-soft" target="_blank" rel="noreferrer">
+          <a
+            href={links.facebook}
+            className="min-h-10 text-cream no-underline hover:text-gold-soft"
+            target="_blank"
+            rel="noreferrer"
+          >
             Facebook
           </a>
-          <Link to="/shop" className="min-h-10 text-cream no-underline hover:text-gold-soft">
+          <Link
+            to="/shop"
+            className="min-h-10 text-cream no-underline hover:text-gold-soft"
+          >
             Boutique
           </Link>
-          <a href={links.shop} className="min-h-10 text-cream no-underline hover:text-gold-soft" target="_blank" rel="noreferrer">
+          <a
+            href={links.shop}
+            className="min-h-10 text-cream no-underline hover:text-gold-soft"
+            target="_blank"
+            rel="noreferrer"
+          >
             Square shop
           </a>
-          <a href={`mailto:${links.email}`} className="min-h-10 text-cream no-underline hover:text-gold-soft">
+          <a
+            href={`mailto:${links.email}`}
+            className="min-h-10 text-cream no-underline hover:text-gold-soft"
+          >
             Membership inquiry
           </a>
-          <p className="mt-3 max-w-xs text-xs leading-relaxed text-cream/55">{links.mailing}</p>
+          <p className="mt-3 max-w-xs text-xs leading-relaxed text-cream/55">
+            {links.mailing}
+          </p>
         </div>
       </div>
       <p className="wrap mt-12 text-xs tracking-wide text-cream/45">

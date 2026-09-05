@@ -20,7 +20,7 @@ function StoryPage() {
           <p className="text-[1.05rem] leading-relaxed">
             A small group of women looked at the traditional parade scene and
             wanted something more. They didn’t just want to ride on floats. They
-            wanted a sanctuary of sisterhood — a place where brilliant,
+            wanted a sanctuary of sisterhood: a place where brilliant,
             college-educated women could leave the pressures of the boardroom,
             pin a feather into a top hat, and laugh until their ribs ached.
           </p>
@@ -50,10 +50,10 @@ function StoryPage() {
           <h2 className="mt-3 max-w-3xl font-display text-[clamp(2rem,4vw,3.2rem)] text-[#fff7e9]">
             Advised to do something other than pirates, founder Susan King and
             her daughter Erin Martin West designed costumes straight out of the
-            Parisian cabaret — and ooh la la, Les Belles Femmes was born.
+            Parisian cabaret, and ooh la la, Les Belles Femmes was born.
           </h2>
           <p className="mt-6 text-sm tracking-wide text-gold-soft">
-            Tampa, 2002 — with founding members Pat Smith, Nora Lee Smith, and
+            Tampa, 2002, with founding members Pat Smith, Nora Lee Smith, and
             Raymond King, and first recruit Ellen Arena
           </p>
         </div>

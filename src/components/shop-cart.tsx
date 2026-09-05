@@ -112,33 +112,56 @@ function CartDrawer({ onClose }: { onClose: () => void }) {
 
         <div className="flex-1 overflow-y-auto px-5 py-4">
           {lines.length === 0 ? (
-            <p className="py-8 text-sm text-muted">The bag is empty — the tote and crest tee are waiting.</p>
+            <p className="py-8 text-sm text-muted">
+              The bag is empty; the tote and crest tee are waiting.
+            </p>
           ) : (
             <ul className="grid gap-5">
               {lines.map((line) => {
                 const product = productById[line.id];
                 return (
-                  <li key={`${line.id}-${line.size}`} className="grid grid-cols-[4.5rem_1fr] gap-3">
-                    <img src={product.image} alt="" className="h-[4.5rem] w-[4.5rem] object-cover" />
+                  <li
+                    key={`${line.id}-${line.size}`}
+                    className="grid grid-cols-[4.5rem_1fr] gap-3"
+                  >
+                    <img
+                      src={product.image}
+                      alt=""
+                      className="h-[4.5rem] w-[4.5rem] object-cover"
+                    />
                     <div>
-                      <p className="font-display text-lg leading-tight">{lineLabel(line)}</p>
-                      <p className="mt-1 text-sm text-muted">{money(product.price)}</p>
+                      <p className="font-display text-lg leading-tight">
+                        {lineLabel(line)}
+                      </p>
+                      <p className="mt-1 text-sm text-muted">
+                        {money(product.price)}
+                      </p>
                       <div className="mt-2 flex items-center justify-between gap-2">
                         <div className="flex items-center gap-1">
                           <button
                             type="button"
                             className="inline-flex min-h-10 min-w-10 items-center justify-center border border-gold/50"
                             aria-label="Decrease quantity"
-                            onClick={() => setCartQty(line.id, line.size, line.qty - 1)}
+                            onClick={() =>
+                              setCartQty(line.id, line.size, line.qty - 1)
+                            }
                           >
                             <Minus size={14} />
                           </button>
-                          <span className="min-w-8 text-center text-sm">{line.qty}</span>
+                          <span className="min-w-8 text-center text-sm">
+                            {line.qty}
+                          </span>
                           <button
                             type="button"
                             className="inline-flex min-h-10 min-w-10 items-center justify-center border border-gold/50"
                             aria-label="Increase quantity"
-                            onClick={() => setCartQty(line.id, line.size, Math.min(12, line.qty + 1))}
+                            onClick={() =>
+                              setCartQty(
+                                line.id,
+                                line.size,
+                                Math.min(12, line.qty + 1),
+                              )
+                            }
                           >
                             <Plus size={14} />
                           </button>
@@ -167,7 +190,11 @@ function CartDrawer({ onClose }: { onClose: () => void }) {
             </div>
             <div className="flex justify-between text-muted">
               <dt>Shipping</dt>
-              <dd>{shipping === 0 && subtotal > 0 ? "Complimentary" : money(shipping)}</dd>
+              <dd>
+                {shipping === 0 && subtotal > 0
+                  ? "Complimentary"
+                  : money(shipping)}
+              </dd>
             </div>
             <div className="mt-2 flex justify-between font-display text-xl">
               <dt>Total</dt>
@@ -175,11 +202,20 @@ function CartDrawer({ onClose }: { onClose: () => void }) {
             </div>
           </dl>
           {lines.length > 0 ? (
-            <Link to="/shop" hash="checkout" className="ticket ticket-gold mt-5 w-full" onClick={onClose}>
+            <Link
+              to="/shop"
+              hash="checkout"
+              className="ticket ticket-gold mt-5 w-full"
+              onClick={onClose}
+            >
               Checkout
             </Link>
           ) : (
-            <Link to="/shop" className="ticket ticket-ink mt-5 w-full" onClick={onClose}>
+            <Link
+              to="/shop"
+              className="ticket ticket-ink mt-5 w-full"
+              onClick={onClose}
+            >
               Visit the boutique
             </Link>
           )}

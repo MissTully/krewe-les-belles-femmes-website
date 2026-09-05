@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { mailtoInquiry } from "@/lib/content";
-import { getSoireeInterest, saveSoireeInterest, type SoireeInterest } from "@/lib/forms";
+import {
+  getSoireeInterest,
+  saveSoireeInterest,
+  type SoireeInterest,
+} from "@/lib/forms";
 import { Ticket } from "@/components/ticket-link";
 
 export function SoireeForm() {
@@ -38,10 +42,14 @@ export function SoireeForm() {
 
   const mailto = saved
     ? mailtoInquiry(
-        "Silver Soirée interest — November 14, 2026",
-        [`Name: ${saved.name}`, `Email: ${saved.email}`, `Party size: ${saved.party}`, "", "I would like to be considered for the Silver Soirée."].join(
-          "\n",
-        ),
+        "Silver Soirée interest: November 14, 2026",
+        [
+          `Name: ${saved.name}`,
+          `Email: ${saved.email}`,
+          `Party size: ${saved.party}`,
+          "",
+          "I would like to be considered for the Silver Soirée.",
+        ].join("\n"),
       )
     : "";
 
@@ -49,21 +57,27 @@ export function SoireeForm() {
     <div>
       <h2 className="font-display text-3xl">Request an invitation</h2>
       <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
-        The Silver Soirée is by invitation. Leave your name and we will save it here — then send the note so the
-        ball committee actually receives it.
+        The Silver Soirée is by invitation. Leave your name and we will save it
+        here, then send the note so the ball committee actually receives it.
       </p>
 
       {saved ? (
         <div className="banner-ok mt-6" role="status">
-          You are on the interest list as {saved.name}, party of {saved.party}. Send the email so the krewe can follow
-          up.
+          You are on the interest list as {saved.name}, party of {saved.party}.
+          Send the email so the krewe can follow up.
         </div>
       ) : null}
 
       <form className="mt-6 grid gap-4" onSubmit={onSubmit} noValidate>
         <label className="form-field">
           <span className="kicker">Name</span>
-          <input name="name" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} required />
+          <input
+            name="name"
+            autoComplete="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
         </label>
         <label className="form-field">
           <span className="kicker">Email</span>
@@ -78,7 +92,11 @@ export function SoireeForm() {
         </label>
         <label className="form-field">
           <span className="kicker">Party size</span>
-          <select name="party" value={party} onChange={(e) => setParty(e.target.value)}>
+          <select
+            name="party"
+            value={party}
+            onChange={(e) => setParty(e.target.value)}
+          >
             {["1", "2", "3", "4", "5", "6+"].map((n) => (
               <option key={n} value={n}>
                 {n}

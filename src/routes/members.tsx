@@ -4,7 +4,11 @@ import { PageHero } from "@/components/page-hero";
 import { ProfileCard } from "@/components/profile-card";
 import { Ticket } from "@/components/ticket-link";
 import { listMemberProfiles } from "@/lib/profile-actions";
-import { mergeProfiles, readLocalProfiles, type PublicProfile } from "@/lib/profiles";
+import {
+  mergeProfiles,
+  readLocalProfiles,
+  type PublicProfile,
+} from "@/lib/profiles";
 import "@/styles/profiles.css";
 
 export const Route = createFileRoute("/members")({ component: MembersPage });
@@ -41,7 +45,7 @@ function MembersPage() {
       <PageHero
         kicker="Comp cards"
         title="Put a face to the circle"
-        lede="A photograph, a name, and a few lines — so sisters can recognize one another on the boulevard and around the table."
+        lede="A photograph, a name, and a few lines, so sisters can recognize one another on the boulevard and around the table."
       />
 
       <div className="wrap mt-8 flex flex-wrap items-center gap-3">
@@ -49,7 +53,8 @@ function MembersPage() {
           Make my card
         </Ticket>
         <p className="m-0 max-w-xl text-sm text-muted">
-          Email stays off the card. Keep an edit code so you can change the photograph or the lines later.
+          Email stays off the card. Keep an edit code so you can change the
+          photograph or the lines later.
         </p>
       </div>
 

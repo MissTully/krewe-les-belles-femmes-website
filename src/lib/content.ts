@@ -78,7 +78,7 @@ export const pillars = [
     to: "/giving",
     kicker: "Giving Back",
     title: "Beauty with purpose",
-    copy: "Beyond the parties and parades, we stand shoulder-to-shoulder for Tampa organizations that matter — from The Spring and the Pediatric Cancer Foundation to children’s hospital visits with the ReliaQuest Bowl.",
+    copy: "Beyond the parties and parades, we stand shoulder-to-shoulder for Tampa organizations that matter, from The Spring and the Pediatric Cancer Foundation to children’s hospital visits with the ReliaQuest Bowl.",
     image: art.gift,
     alt: "Gloved hands offering a small wrapped gift, drawn as a lithograph.",
   },
@@ -93,7 +93,7 @@ export const yearRhythm = [
   {
     when: "November 2026",
     title: "The Silver Soirée",
-    note: "Saturday, November 14 at Carrollwood Country Club — a quarter-century of Truth, Beauty, Freedom, and Love.",
+    note: "Saturday, November 14 at Carrollwood Country Club: a quarter-century of Truth, Beauty, Freedom, and Love.",
   },
   {
     when: "Parade season",
@@ -128,7 +128,7 @@ export const reasons = [
   {
     kicker: "02",
     title: "The magic of the parade route",
-    copy: "Nothing matches the rush of standing atop our Eiffel Tower and Moulin Rouge windmill float — tossing beads, feeling the music, and looking down the line to see your best friends smiling back.",
+    copy: "Nothing matches the rush of standing atop our Eiffel Tower and Moulin Rouge windmill float: tossing beads, feeling the music, and looking down the line to see your best friends smiling back.",
   },
   {
     kicker: "03",
@@ -149,7 +149,7 @@ export const stories = [
     byline: "Claire, member since 2018",
     quote:
       "I walked in expecting polite small talk. Instead I found myself sitting cross-legged on a rug, laughing so hard my ribs ached. These women didn’t care about titles. They cared about me.",
-    body: "I joined LBF during a season of my life when I felt like I was running on empty — balancing work, family, and everything in between. The first informal book club gathering reminded me how much fun it is to be alive. In LBF I didn’t just find a social group. I found women who celebrate my wins, hold my hand through hard days, and remind me to add a little extra sparkle to ordinary Tuesdays.",
+    body: "I joined LBF during a season of my life when I felt like I was running on empty, balancing work, family, and everything in between. The first informal book club gathering reminded me how much fun it is to be alive. In LBF I didn’t just find a social group. I found women who celebrate my wins, hold my hand through hard days, and remind me to add a little extra sparkle to ordinary Tuesdays.",
   },
   {
     chapter: "Chapter Two",
@@ -157,7 +157,7 @@ export const stories = [
     byline: "Elena, Parade Committee",
     quote:
       "Watching the neon lights reflect off our boots while the crowd cheered, I caught the eye of a new member standing next to me, her face completely lit up with joy. That moment is everything LBF is about.",
-    body: "If you’ve ever watched the Sant’ Yago Knight Parade from the sidewalk, it’s magical. When you’re up on our float — velvet corset, feathered hat, closest friends on every side — it is electric. Stepping out of your comfort zone, embracing the pageantry, and realizing you are part of something magnificent, surrounded by women who adore you.",
+    body: "If you’ve ever watched the Sant’ Yago Knight Parade from the sidewalk, it’s magical. When you’re up on our float, in a velvet corset and feathered hat with your closest friends on every side, it is electric. Stepping out of your comfort zone, embracing the pageantry, and realizing you are part of something magnificent, surrounded by women who adore you.",
   },
 ] as const;
 
@@ -165,7 +165,7 @@ export const timeline = [
   {
     years: "2002–2010",
     title: "The first roll",
-    copy: "Susan King wanted to start a new krewe and was advised to do something other than pirates. So she worked with her daughter Erin Martin West and a circle of friends to design costumes inspired by the Moulin Rouge — the real Parisian cabaret behind the movie — and, ooh la la, Les Belles Femmes was born in Tampa in 2002. Founding members Pat Smith and Nora Lee Smith stood beside them; Raymond King served as the krewe’s first and only King, the seed of the Les Beaux male auxiliary; and Ellen Arena became the very first recruit. In 2004 the krewe held its first charity event at the Tampa Museum — sponsored by Mumm Cordon Rouge Champagne — beside touring lithographs by Toulouse-Lautrec, the artist who lived above the Moulin Rouge and first put its dancers on a poster.",
+    copy: "Susan King wanted to start a new krewe and was advised to do something other than pirates. So she worked with her daughter Erin Martin West and a circle of friends to design costumes inspired by the Moulin Rouge, the real Parisian cabaret behind the movie, and, ooh la la, Les Belles Femmes was born in Tampa in 2002. Founding members Pat Smith and Nora Lee Smith stood beside them; Raymond King served as the krewe’s first and only King, the seed of the Les Beaux male auxiliary; and Ellen Arena became the very first recruit. In 2004 the krewe held its first charity event at the Tampa Museum, sponsored by Mumm Cordon Rouge Champagne, beside touring lithographs by Toulouse-Lautrec, the artist who lived above the Moulin Rouge and first put its dancers on a poster.",
   },
   {
     years: "The middle chapters",
@@ -175,7 +175,7 @@ export const timeline = [
   {
     years: "2018–2024",
     title: "The tower rises",
-    copy: "Artistic ambitions scaled. The signature masterpiece arrived: “The Tampa Bay Moulin Rouge,” a towering float with a miniature Eiffel Tower and a spinning windmill. Ybor at night, historic brick, boas catching the wind — and the giving kept pace: NFL Alumni tournaments, the ReliaQuest Bowl’s Ybor New Year’s Eve parade and children’s hospital visits, Chow Down for Ryan’s Animal Rescue Foundation, and Handbags & Happy Hour for The Spring. The clubhouse creed: Forget glass slippers. This princess wears boots.",
+    copy: "Artistic ambitions scaled. The signature masterpiece arrived: “The Tampa Bay Moulin Rouge,” a towering float with a miniature Eiffel Tower and a spinning windmill. Ybor at night, historic brick, boas catching the wind. The giving kept pace: NFL Alumni tournaments, the ReliaQuest Bowl’s Ybor New Year’s Eve parade and children’s hospital visits, Chow Down for Ryan’s Animal Rescue Foundation, and Handbags & Happy Hour for The Spring. The clubhouse creed: Forget glass slippers. This princess wears boots.",
   },
   {
     years: "2026",
@@ -187,27 +187,27 @@ export const timeline = [
 export const paradeNotes = [
   {
     title: "The look",
-    note: "Individual creativity is encouraged, but the standards hold: a black top hat or fancy fascinator, boned corset, dance skirt above the knee, feather boas, black boots — and lots and lots of bling.",
+    note: "Individual creativity is encouraged, but the standards hold: a black top hat or fancy fascinator, boned corset, dance skirt above the knee, feather boas, black boots, and lots and lots of bling.",
   },
   {
     title: "The float",
-    note: "“The Tampa Bay Moulin Rouge” — a miniature Eiffel Tower and a turning windmill, dressed in curtains, lights, and enough beads to make a boulevard glitter.",
+    note: "“The Tampa Bay Moulin Rouge”: a miniature Eiffel Tower and a turning windmill, dressed in curtains, lights, and enough beads to make a boulevard glitter.",
   },
   {
     title: "The parades",
-    note: "Gasparilla Pirate Fest, the Sant’ Yago Knight Parade in Ybor City, and Tampa holiday parades — with the sisterhood on every deck.",
+    note: "Gasparilla Pirate Fest, the Sant’ Yago Knight Parade in Ybor City, and Tampa holiday parades, with the sisterhood on every deck.",
   },
 ] as const;
 
 export const partners = [
   {
     name: "The Spring of Tampa Bay",
-    note: "Standing with survivors of domestic violence — participating and donating at the annual Handbags & Happy Hour at the Bryan Glazer Family JCC, plus clothing drives.",
+    note: "Standing with survivors of domestic violence: participating and donating at the annual Handbags & Happy Hour at the Bryan Glazer Family JCC, plus clothing drives.",
     href: "https://thespring.org/",
   },
   {
     name: "Pediatric Cancer Foundation",
-    note: "Years alongside “Fashion Funds a Cure” — chauffeuring moms and children to the Day of Pampering, assisting “Cuts for a Cure,” and supporting the gala dinner.",
+    note: "Years alongside “Fashion Funds a Cure”: chauffeuring moms and children to the Day of Pampering, assisting “Cuts for a Cure,” and supporting the gala dinner.",
     href: "https://www.gopf.org/",
   },
   {
@@ -217,7 +217,7 @@ export const partners = [
   },
   {
     name: "Ryan’s Animal Rescue Foundation",
-    note: "Founded by Buccaneers alumnus Logan Ryan and his wife Ashley — LBF raised funds and joined Tampa’s first Chow Down event.",
+    note: "Founded by Buccaneers alumnus Logan Ryan and his wife Ashley. LBF raised funds and joined Tampa’s first Chow Down event.",
     href: "https://www.rarf.org/",
   },
 ] as const;
@@ -225,7 +225,7 @@ export const partners = [
 export const givingMoments = [
   {
     title: "ABC’s Extreme Home Makeover",
-    note: "Invited to entertain viewers and construction crews during the Davis Island remodel — and recorded a “Welcome Home!” video for the owners.",
+    note: "Invited to entertain viewers and construction crews during the Davis Island remodel, and recorded a “Welcome Home!” video for the owners.",
   },
   {
     title: "Steve Yerrid Foundation Kid’s Fishing Derby",
@@ -233,7 +233,7 @@ export const givingMoments = [
   },
   {
     title: "Children’s Parade luncheon",
-    note: "Sponsored by Bonefish Grill for many years — moms dressed in LBF outfits, beads in hand, before rolling in the Children’s Parade together.",
+    note: "Sponsored by Bonefish Grill for many years: moms dressed in LBF outfits, beads in hand, before rolling in the Children’s Parade together.",
   },
   {
     title: "NFL Alumni Association, Tampa Bay Chapter",
@@ -245,7 +245,7 @@ export const givingMoments = [
   },
   {
     title: "Broken for Better",
-    note: "Kurt and Denette Schaer’s marriage-coaching nonprofit — the silent auction recipient at the 2023 annual ball.",
+    note: "Kurt and Denette Schaer’s marriage-coaching nonprofit, the silent auction recipient at the 2023 annual ball.",
   },
   {
     title: "Clothing & school drives",
@@ -262,7 +262,7 @@ export const joiningSteps = [
   {
     step: "02",
     title: "Meet the sisterhood",
-    note: "Attend at least three recruitment socials in the application year (prior parade guesting or security work can substitute). No stuffy interviews — genuine connection.",
+    note: "Attend at least three recruitment socials in the application year (prior parade guesting or security work can substitute). No stuffy interviews, just genuine connection.",
   },
   {
     step: "03",
@@ -275,7 +275,7 @@ export const membershipFacts = [
   {
     label: "Sisterhood",
     value: "50–75 women",
-    note: "Lively ladies from their 20s through their 70s — professional working and retired women, intentionally intimate so everyone is known.",
+    note: "Lively ladies from their 20s through their 70s: professional working and retired women, intentionally intimate so everyone is known.",
   },
   {
     label: "Auxiliary",
@@ -285,7 +285,7 @@ export const membershipFacts = [
   {
     label: "Annual dues",
     value: "$450",
-    note: "As listed with the Inter-Krewe Council. Confirm current figures with membership — costumes, beads, and events are additional.",
+    note: "As listed with the Inter-Krewe Council. Confirm current figures with membership; costumes, beads, and events are additional.",
   },
   {
     label: "Season",
@@ -297,7 +297,7 @@ export const membershipFacts = [
 export const membershipFaq = [
   {
     q: "Do I need a member to invite me?",
-    a: "Yes — prospective members come as guests of current members. If you do not yet know someone in the krewe, send a note and we will help you find a first gathering.",
+    a: "Yes. Prospective members come as guests of current members. If you do not yet know someone in the krewe, send a note and we will help you find a first gathering.",
   },
   {
     q: "Is there an interview?",
@@ -319,7 +319,7 @@ export const soiree = {
   date: "2026-11-14",
   venue: "Carrollwood Country Club",
   city: "Tampa, Florida",
-  lede: "Celebrating over twenty-five years of Truth, Beauty, Freedom, and Love — a night of silver, feathers, and the women who made the legend.",
+  lede: "Celebrating over twenty-five years of Truth, Beauty, Freedom, and Love: a night of silver, feathers, and the women who made the legend.",
 };
 
 export const hearAbout = [
@@ -396,7 +396,7 @@ export const events: KreweEvent[] = [
     kind: "parade",
     certainty: "month",
     notes:
-      "Ybor at night — historic brick, neon, and the windmill against the Florida sky.",
+      "Ybor at night: historic brick, neon, and the windmill against the Florida sky.",
   },
   {
     id: "recruitment-2027",
@@ -417,7 +417,7 @@ export const events: KreweEvent[] = [
 export const lesBeaux = {
   name: "Les Beaux",
   title: "The Les Beaux auxiliary",
-  copy: "Les Belles Femmes is a women’s krewe with Les Beaux, its male auxiliary. The men who love and support the sisterhood share in the pageantry, the fellowship, and the work of showing up for Tampa. Founding member Raymond King served as the krewe’s first — and only — King.",
+  copy: "Les Belles Femmes is a women’s krewe with Les Beaux, its male auxiliary. The men who love and support the sisterhood share in the pageantry, the fellowship, and the work of showing up for Tampa. Founding member Raymond King served as the krewe’s first and only King.",
 };
 
 export const audienceLabel: Record<EventAudience, string> = {

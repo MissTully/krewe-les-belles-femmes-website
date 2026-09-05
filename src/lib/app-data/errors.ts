@@ -2,11 +2,7 @@ import type { CallToolResult } from "./types.ts";
 import { isLoginRequired } from "./login.ts";
 
 export type CallToolErrorKind =
-  | "login"
-  | "not_connected"
-  | "scope_denied"
-  | "access_denied"
-  | "error";
+  "login" | "not_connected" | "scope_denied" | "access_denied" | "error";
 
 export type CallToolErrorState = {
   kind: CallToolErrorKind;
@@ -37,7 +33,8 @@ export function classifyCallToolError(
   if (raw.includes("scope_denied")) {
     return {
       kind: "scope_denied",
-      message: "This view isn't available — the app requested a tool outside its grant.",
+      message:
+        "This view isn't available: the app requested a tool outside its grant.",
       detail,
     };
   }

@@ -47,7 +47,7 @@ export const products: Product[] = [
     kicker: "Wine cotton",
     price: 3800,
     blurb:
-      "Soft wine cotton with the krewe crest at the heart — for ordinary Tuesdays and silver nights alike.",
+      "Soft wine cotton with the krewe crest at the heart, for ordinary Tuesdays and silver nights alike.",
     note: "Women’s relaxed fit. Machine wash cold, hang dry. Pre-shrunk cotton.",
     image: art.tee,
     alt: "Wine t-shirt hanging on a gold hanger, printed with the Les Belles Femmes 25th-anniversary crest.",
@@ -55,10 +55,15 @@ export const products: Product[] = [
   },
 ];
 
-export const productById = Object.fromEntries(products.map((p) => [p.id, p])) as Record<ProductId, Product>;
+export const productById = Object.fromEntries(
+  products.map((p) => [p.id, p]),
+) as Record<ProductId, Product>;
 
 export function money(cents: number) {
-  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(cents / 100);
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(cents / 100);
 }
 
 function readCart(): CartLine[] {
@@ -66,7 +71,9 @@ function readCart(): CartLine[] {
   try {
     const raw = window.localStorage.getItem(CART_KEY);
     const parsed = raw ? (JSON.parse(raw) as CartLine[]) : [];
-    return Array.isArray(parsed) ? parsed.filter((line) => line.id && line.qty > 0) : [];
+    return Array.isArray(parsed)
+      ? parsed.filter((line) => line.id && line.qty > 0)
+      : [];
   } catch {
     return [];
   }
@@ -92,13 +99,17 @@ export function addToCart(id: ProductId, size: string, qty = 1) {
 
 export function setCartQty(id: ProductId, size: string, qty: number) {
   const next = readCart()
-    .map((line) => (line.id === id && line.size === size ? { ...line, qty } : line))
+    .map((line) =>
+      line.id === id && line.size === size ? { ...line, qty } : line,
+    )
     .filter((line) => line.qty > 0);
   writeCart(next);
 }
 
 export function removeFromCart(id: ProductId, size: string) {
-  writeCart(readCart().filter((line) => !(line.id === id && line.size === size)));
+  writeCart(
+    readCart().filter((line) => !(line.id === id && line.size === size)),
+  );
 }
 
 export function clearCart() {
@@ -110,7 +121,10 @@ export function cartCount(lines = readCart()) {
 }
 
 export function cartSubtotal(lines = readCart()) {
-  return lines.reduce((n, line) => n + productById[line.id].price * line.qty, 0);
+  return lines.reduce(
+    (n, line) => n + productById[line.id].price * line.qty,
+    0,
+  );
 }
 
 export function cartShipping(subtotal: number) {
@@ -125,5 +139,7 @@ export function cartTotal(lines = readCart()) {
 
 export function lineLabel(line: CartLine) {
   const product = productById[line.id];
-  return line.size === "One size" ? product.name : `${product.name} · ${line.size}`;
+  return line.size === "One size"
+    ? product.name
+    : `${product.name} · ${line.size}`;
 }
