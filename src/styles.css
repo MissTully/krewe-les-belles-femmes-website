@@ -294,10 +294,61 @@
   animation: rise 700ms var(--ease-lbf) both;
 }
 
+/* Silver Soirée pop-out seal on the home page. */
+.soiree-badge {
+  animation: badge-pop 650ms var(--ease-lbf) both;
+}
+
+.soiree-badge-seal {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 9999px;
+  border: 3px double var(--color-gold);
+  background: radial-gradient(
+    circle at 32% 28%,
+    #ffffff 0%,
+    var(--color-silver) 55%,
+    #9d998f 100%
+  );
+  box-shadow:
+    0 0 0 5px var(--color-wine),
+    0 18px 40px color-mix(in srgb, var(--color-velvet) 38%, transparent);
+  transform: rotate(-6deg);
+  transition: transform 220ms var(--ease-lbf);
+}
+
+@media (min-width: 640px) {
+  .soiree-badge-seal {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+}
+
+.soiree-badge-seal:hover,
+.soiree-badge-seal:focus-visible {
+  transform: rotate(0deg) scale(1.06);
+}
+
+@keyframes badge-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) translateY(24px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rise,
   .ticket,
-  .act-card img {
+  .act-card img,
+  .soiree-badge,
+  .soiree-badge-seal {
     animation: none;
     transition: none;
   }
