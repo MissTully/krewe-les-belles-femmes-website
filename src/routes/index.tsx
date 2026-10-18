@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Crest } from "@/components/crest";
 import { Ornament } from "@/components/ornament";
 import { PhotoFrame } from "@/components/photo-frame";
+import { SoireeBadge } from "@/components/soiree-badge";
 import { Ticket } from "@/components/ticket-link";
 import {
   art,
@@ -19,6 +20,7 @@ export const Route = createFileRoute("/")({ component: Home });
 function Home() {
   return (
     <>
+      <SoireeBadge />
       <section className="relative isolate min-h-[min(92vh,54rem)] overflow-hidden text-cream">
         <img
           src={art.cover}
